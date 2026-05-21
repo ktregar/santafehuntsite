@@ -1,0 +1,325 @@
+/* ============================================================
+   Santa Fe Hunt — Colors & Type
+   Brand: Traditional foxhunting club, Southern California, est. 1969
+   Palette anchors: Navy Blue + Sutter's Gold (heritage gold leaf)
+   ============================================================ */
+
+/* ----- Webfonts (Google Fonts substitutions; see README) ----- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ============================================================
+     COLORS — Brand
+     ============================================================ */
+
+  /* Navy blue — drawn from the logo circle ring; primary brand color */
+  --sfh-navy-50:  #f1f5fb;
+  --sfh-navy-100: #dbe6f3;
+  --sfh-navy-200: #b6cce6;
+  --sfh-navy-300: #7ba3cf;
+  --sfh-navy-400: #4378b4;
+  --sfh-navy-500: #1f5aa6;   /* PRIMARY navy */
+  --sfh-navy-600: #1a4a8a;
+  --sfh-navy-700: #163d72;
+  --sfh-navy-800: #112c54;
+  --sfh-navy-900: #0a1d39;   /* deep ink, used for body text */
+
+  /* Sutter's Gold — drawn from the wheat-laurel & embossed mark */
+  --sfh-gold-50:  #fbf6ea;
+  --sfh-gold-100: #f4e6c2;
+  --sfh-gold-200: #ecd293;
+  --sfh-gold-300: #e3bc66;
+  --sfh-gold-400: #d9a441;   /* PRIMARY gold (Sutter's Gold) */
+  --sfh-gold-500: #c08a2a;
+  --sfh-gold-600: #9c6e1f;
+  --sfh-gold-700: #75521a;
+  --sfh-gold-800: #4f3712;
+  --sfh-gold-900: #2c1f0a;
+
+  /* Royal blue — accent (brighter, more saturated than the primary navy) */
+  --sfh-royal-300: #8aabe6;
+  --sfh-royal-400: #5a85d6;
+  --sfh-royal-500: #2f63c4;   /* accent */
+  --sfh-royal-600: #234ea3;
+  --sfh-royal-700: #1a3d80;
+
+  /* Backwards-compat aliases (older preview cards) */
+  --sfh-teal-300: var(--sfh-royal-300);
+  --sfh-teal-400: var(--sfh-royal-400);
+  --sfh-teal-500: var(--sfh-royal-500);
+  --sfh-teal-600: var(--sfh-royal-600);
+  --sfh-teal-700: var(--sfh-royal-700);
+
+  /* Hunting Pink (scarlet coat) — used SPARINGLY, ceremonial */
+  --sfh-pink-500: #b32a2a;   /* the traditional 'pink' of hunt liveries */
+  --sfh-pink-600: #8e1f1f;
+
+  /* Neutrals — warm cream + parchment, evoking aged paper / leather */
+  --sfh-cream:    #faf6ee;   /* page background */
+  --sfh-parchment:#f3ecdc;   /* card / panel background */
+  --sfh-stone-100:#e8e1cf;
+  --sfh-stone-200:#cfc6b1;
+  --sfh-stone-300:#a89d83;
+  --sfh-stone-400:#7a715b;
+  --sfh-stone-500:#52493a;
+  --sfh-ink:      #1a1410;   /* near-black, warm */
+
+  /* Semantic surfaces */
+  --bg:           var(--sfh-cream);
+  --bg-elevated:  #ffffff;
+  --bg-panel:     var(--sfh-parchment);
+  --bg-inverse:   var(--sfh-navy-900);
+
+  /* Foreground tiers */
+  --fg-1:         var(--sfh-ink);          /* headlines, primary copy */
+  --fg-2:         var(--sfh-navy-900);     /* secondary heading / body */
+  --fg-3:         var(--sfh-stone-500);    /* muted, captions */
+  --fg-4:         var(--sfh-stone-400);    /* hint, meta */
+  --fg-on-navy:   var(--sfh-cream);
+  --fg-on-gold:   var(--sfh-navy-900);
+
+  /* Accents */
+  --accent-primary:   var(--sfh-navy-500);
+  --accent-secondary: var(--sfh-gold-400);
+  --accent-tertiary:  var(--sfh-royal-500);
+
+  /* Borders / hairlines (warm, not cool gray) */
+  --border-hairline: rgba(26, 20, 16, 0.10);
+  --border-soft:     rgba(26, 20, 16, 0.18);
+  --border-strong:   rgba(26, 20, 16, 0.32);
+  --border-gold:     var(--sfh-gold-400);
+
+  /* Semantic state */
+  --color-success: #4a7c3a;   /* moss green, field-appropriate */
+  --color-warning: var(--sfh-gold-500);
+  --color-danger:  var(--sfh-pink-500);
+  --color-info:    var(--sfh-navy-500);
+
+  /* ============================================================
+     TYPE — Foundations
+     Display:  Cormorant Garamond  (heritage, high-contrast serif)
+     Body:     Libre Caslon Text   (readable book-serif, warm)
+     UI/Sans:  Source Sans 3       (clean, used for nav / buttons / meta)
+     ============================================================ */
+
+  --font-display: 'Cormorant Garamond', 'Garamond', 'Hoefler Text', Georgia, serif;
+  --font-serif:   'Libre Caslon Text', 'Caslon', Georgia, 'Times New Roman', serif;
+  --font-sans:    'Source Sans 3', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* Base scale — modest modular scale, ~1.25 (major third) */
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;       /* base */
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-30: 1.875rem;
+  --fs-36: 2.25rem;
+  --fs-48: 3rem;
+  --fs-60: 3.75rem;
+  --fs-72: 4.5rem;
+
+  /* Line heights */
+  --lh-tight:  1.1;
+  --lh-snug:   1.25;
+  --lh-normal: 1.5;
+  --lh-relaxed:1.65;
+
+  /* Letter spacing — generous tracking on uppercase (engraved feel) */
+  --ls-tight:  -0.01em;
+  --ls-normal: 0;
+  --ls-wide:   0.08em;
+  --ls-wider:  0.16em;     /* SANTA FE HUNT in the logo */
+  --ls-widest: 0.24em;
+
+  /* Weights */
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semibold:600;
+  --fw-bold:    700;
+
+  /* ============================================================
+     SPACING — based on 4px
+     ============================================================ */
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4 */
+  --space-2: 0.5rem;    /* 8 */
+  --space-3: 0.75rem;   /* 12 */
+  --space-4: 1rem;      /* 16 */
+  --space-5: 1.25rem;   /* 20 */
+  --space-6: 1.5rem;    /* 24 */
+  --space-8: 2rem;      /* 32 */
+  --space-10:2.5rem;    /* 40 */
+  --space-12:3rem;      /* 48 */
+  --space-16:4rem;      /* 64 */
+  --space-20:5rem;      /* 80 */
+  --space-24:6rem;      /* 96 */
+
+  /* ============================================================
+     RADIUS — restrained. Heritage brand uses sharp corners + circles.
+     ============================================================ */
+  --radius-none: 0;
+  --radius-sm:   2px;
+  --radius-md:   4px;
+  --radius-lg:   8px;
+  --radius-pill: 999px;
+  --radius-circle: 50%;
+
+  /* ============================================================
+     SHADOWS — soft, warm-tinted (not cool gray)
+     ============================================================ */
+  --shadow-xs: 0 1px 2px rgba(26, 20, 16, 0.06);
+  --shadow-sm: 0 2px 4px rgba(26, 20, 16, 0.08), 0 1px 2px rgba(26, 20, 16, 0.04);
+  --shadow-md: 0 6px 14px rgba(26, 20, 16, 0.10), 0 2px 4px rgba(26, 20, 16, 0.06);
+  --shadow-lg: 0 18px 32px rgba(26, 20, 16, 0.14), 0 4px 8px rgba(26, 20, 16, 0.08);
+  --shadow-inset: inset 0 1px 2px rgba(26, 20, 16, 0.10);
+
+  /* Gold "engraved" inset — for trophy / award-feeling elements */
+  --shadow-engraved: inset 0 1px 0 rgba(255,255,255,0.5),
+                     inset 0 -1px 0 rgba(120, 80, 20, 0.35);
+
+  /* Layout */
+  --container-narrow: 720px;
+  --container:        1080px;
+  --container-wide:   1320px;
+}
+
+/* ============================================================
+   SEMANTIC TYPE — apply directly to elements
+   ============================================================ */
+
+html {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  color: var(--fg-1);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-serif);
+  font-size: var(--fs-18);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-2);
+}
+
+/* Display headlines — the "engraved on the trophy" voice */
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-medium);
+  font-size: clamp(var(--fs-36), 5vw + 1rem, var(--fs-72));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg-1);
+  margin: 0 0 var(--space-4);
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-medium);
+  font-size: clamp(var(--fs-30), 3vw + 1rem, var(--fs-48));
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg-1);
+  margin: 0 0 var(--space-4);
+}
+
+h3, .h3 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-30);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+  margin: 0 0 var(--space-3);
+}
+
+h4, .h4 {
+  font-family: var(--font-serif);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-20);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+  margin: 0 0 var(--space-2);
+}
+
+/* The signature SFH style: sans, uppercase, wide-tracked — used on the logo,
+   on hunt-club ribbons, awards, section eyebrows. */
+.eyebrow, .overline {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-12);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wider);
+  color: var(--accent-primary);
+}
+
+.eyebrow--gold {
+  color: var(--sfh-gold-500);
+}
+
+p {
+  margin: 0 0 var(--space-4);
+  text-wrap: pretty;
+  max-width: 70ch;
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--sfh-gold-300);
+  transition: color 120ms ease, text-decoration-color 120ms ease;
+}
+a:hover {
+  color: var(--sfh-navy-700);
+  text-decoration-color: var(--sfh-gold-400);
+}
+
+small, .meta {
+  font-family: var(--font-sans);
+  font-size: var(--fs-14);
+  color: var(--fg-3);
+}
+
+blockquote, .pullquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-30);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+  border-left: 2px solid var(--sfh-gold-400);
+  padding-left: var(--space-5);
+  margin: var(--space-6) 0;
+}
+
+code, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--sfh-parchment);
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-sm);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--sfh-gold-400) 20%,
+    var(--sfh-gold-400) 80%,
+    transparent
+  );
+  margin: var(--space-8) 0;
+}
+
+/* Decorative double-rule (matches the logo ring) */
+.rule-double {
+  border-top: 1px solid var(--sfh-navy-500);
+  border-bottom: 1px solid var(--sfh-navy-500);
+  height: 4px;
+}

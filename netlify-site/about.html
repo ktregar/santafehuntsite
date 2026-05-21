@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>About | Santa Fe Hunt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/jpeg" href="./assets/logo-color.jpg">
+<link rel="stylesheet" href="./colors_and_type.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sfh-cream); }
+
+/* ── Header ── */
+.site-header {
+  background: var(--sfh-cream);
+  border-top: 1px solid var(--sfh-navy-500);
+  border-bottom: 1px solid var(--sfh-navy-500);
+}
+.site-header-inner {
+  max-width: 1320px; margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.site-header-logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+.site-header-logo img { height: 56px; width: 56px; object-fit: contain; }
+.site-header-name {
+  font-family: var(--font-display); font-size: 22px; font-weight: 600;
+  letter-spacing: 0.04em; color: var(--sfh-navy-900); line-height: 1.1;
+}
+.site-header-sub {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--sfh-gold-500);
+}
+.site-nav { display: flex; gap: 28px; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+.site-nav a { color: var(--fg-2); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent; transition: all 200ms; }
+.site-nav a:hover, .site-nav a.active { color: var(--sfh-navy-500); border-bottom-color: var(--sfh-gold-400); }
+
+/* ── Hero banner ── */
+.page-hero {
+  background: var(--sfh-navy-900);
+  padding: 72px 32px;
+  text-align: center;
+}
+.page-hero .eyebrow { color: var(--sfh-gold-400); margin-bottom: 12px; display: block; }
+.page-hero h1 {
+  font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500; color: var(--sfh-cream); letter-spacing: 0.04em; margin: 0 0 16px;
+}
+.page-hero p {
+  font-family: var(--font-serif); font-size: 18px; color: rgba(250,246,238,0.75);
+  max-width: 600px; margin: 0 auto; line-height: 1.7;
+}
+
+/* ── Page nav tabs ── */
+.page-tabs {
+  background: var(--sfh-parchment);
+  border-bottom: 1px solid var(--border-soft);
+  position: sticky; top: 0; z-index: 5;
+}
+.page-tabs-inner {
+  max-width: 1080px; margin: 0 auto; padding: 0 32px;
+  display: flex; gap: 0;
+}
+.page-tabs a {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600;
+  color: var(--fg-3); text-decoration: none;
+  padding: 16px 24px; border-bottom: 2px solid transparent;
+  transition: all 200ms;
+}
+.page-tabs a:hover { color: var(--sfh-navy-500); }
+.page-tabs a.active { color: var(--sfh-navy-500); border-bottom-color: var(--sfh-gold-400); }
+
+/* ── Body ── */
+.page-body { max-width: 1080px; margin: 0 auto; padding: 64px 32px 96px; }
+
+.section { margin-bottom: 80px; }
+.section-eyebrow {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500);
+  margin: 0 0 8px;
+}
+.section-heading {
+  font-family: var(--font-display); font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500; color: var(--sfh-navy-900); margin: 0 0 6px;
+}
+.section-rule {
+  width: 56px; height: 2px; background: var(--sfh-gold-400); margin: 0 0 40px;
+}
+
+/* History text */
+.history-text p {
+  font-family: var(--font-serif); font-size: 17px; line-height: 1.8;
+  color: var(--fg-2); margin: 0 0 20px; max-width: 72ch;
+}
+.history-text .highlight {
+  font-family: var(--font-display); font-style: italic;
+  font-size: 22px; color: var(--sfh-navy-900);
+  border-left: 3px solid var(--sfh-gold-400);
+  padding-left: 20px; margin: 32px 0;
+}
+
+/* Facts bar */
+.facts-bar {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1px; background: var(--border-soft);
+  border: 1px solid var(--border-soft);
+  margin: 48px 0;
+}
+.fact {
+  background: var(--sfh-cream); padding: 28px 24px; text-align: center;
+}
+.fact-value {
+  font-family: var(--font-display); font-size: 36px; font-weight: 500;
+  color: var(--sfh-navy-900); line-height: 1; margin-bottom: 8px;
+}
+.fact-label {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--sfh-gold-500); font-weight: 600;
+}
+
+/* Staff grid */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2px; background: var(--border-soft);
+  border: 1px solid var(--border-soft);
+}
+.staff-card {
+  background: var(--sfh-cream); padding: 28px 24px;
+}
+.staff-role {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--sfh-gold-500); font-weight: 600;
+  margin-bottom: 8px;
+}
+.staff-name {
+  font-family: var(--font-display); font-size: 22px; font-weight: 500;
+  color: var(--sfh-navy-900); line-height: 1.2;
+}
+.staff-name.multiple { font-size: 18px; }
+
+/* Masters historical table */
+.history-table {
+  width: 100%; border-collapse: collapse;
+  font-family: var(--font-sans); font-size: 13px;
+}
+.history-table th {
+  text-align: left; padding: 10px 16px;
+  background: var(--sfh-navy-900); color: var(--sfh-cream);
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600;
+}
+.history-table td {
+  padding: 11px 16px; border-bottom: 1px solid var(--border-hairline);
+  color: var(--sfh-navy-900);
+}
+.history-table tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+.history-table tr:hover td { background: rgba(201,168,76,0.07); }
+.history-table td.current { font-weight: 600; color: var(--sfh-navy-500); }
+
+/* Footer */
+.site-footer {
+  background: var(--sfh-navy-900); padding: 48px 32px;
+  text-align: center;
+}
+.site-footer a {
+  color: var(--sfh-gold-300); font-family: var(--font-sans);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; margin: 0 16px;
+}
+.site-footer a:hover { color: var(--sfh-cream); }
+.site-footer-copy {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(250,246,238,0.4); margin-top: 24px;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-header-logo">
+      <img src="./assets/logo-color.jpg" alt="Santa Fe Hunt">
+      <div>
+        <div class="site-header-name">SANTA FE HUNT</div>
+        <div class="site-header-sub">Est. 1969 · MFHA Recognized</div>
+      </div>
+    </a>
+    <nav class="site-nav">
+      <a href="/">Welcome</a>
+      <a href="/about" class="active">About</a>
+      <a href="/join">Join</a>
+      <a href="/events">Events</a>
+      <a href="/members">Members</a>
+      <a href="https://santa-fe-hunt.myshopify.com" target="_blank">Shop</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="eyebrow">Est. 1969 · MFHA Recognized 1987</span>
+  <h1>About the Santa Fe Hunt</h1>
+  <p>A living tradition of foxhunting in Southern California, carried forward by generations of dedicated members, hounds, and horses.</p>
+</div>
+
+<div class="page-tabs">
+  <div class="page-tabs-inner">
+    <a href="#history" class="active">History</a>
+    <a href="#staff">Current Staff</a>
+    <a href="#masters">Masters of the Hunt</a>
+    <a href="#huntsmen">Huntsmen & Staff</a>
+  </div>
+</div>
+
+<div class="page-body">
+
+  <!-- HISTORY -->
+  <div class="section" id="history">
+    <div class="section-eyebrow">1969 – Present</div>
+    <h2 class="section-heading">A Brief History</h2>
+    <div class="section-rule"></div>
+
+    <div class="facts-bar">
+      <div class="fact">
+        <div class="fact-value">1969</div>
+        <div class="fact-label">Founded</div>
+      </div>
+      <div class="fact">
+        <div class="fact-value">1973</div>
+        <div class="fact-label">MFHA Registered</div>
+      </div>
+      <div class="fact">
+        <div class="fact-value">1987</div>
+        <div class="fact-label">MFHA Recognized</div>
+      </div>
+      <div class="fact">
+        <div class="fact-value">2011</div>
+        <div class="fact-label">West Hills Merger</div>
+      </div>
+    </div>
+
+    <div class="history-text">
+      <p>Out of an eastern-bred love of foxhunting, the Santa Fe Hunt was first conceived and founded in 1969 as a "paper chase." The founders were a small group of San Diego residents led by Dr. Sol Roy Rosenthal of Rancho Santa Fe and including Augie and Ruth Handley, Tom Slattery, Tom Krai, Dennis Dale, and Santa Fe's first Master of Foxhounds, Hugh Dale. Following the acquisition of four "foundation" hounds, Mr. James Norment became the first professional huntsman. Growing participation in the hunt built to its Registration by the Masters of Foxhounds Association of America in 1973, and the first SFH Hunt Ball was held at the Westgate Hotel in San Diego that same year.</p>
+
+      <p>During the early years, SFH hunt country was located entirely within San Diego County and included much of the open areas of Rancho Santa Fe as well as Rancho Bernardo, Poway and Penasquitos Canyon. As encroaching development reduced open country in the early 1980s, there was a brief period of relative inactivity for the hunt, until its reorganization and incorporation in 1984. This rejuvenation, spearheaded by past Masters Alex Pisciotta and Augie Handley, resulted in the hunt's expansion into Riverside County and its Recognition by the Masters of Foxhounds Association in 1987. During this period, hunt country included Camp Pendleton and the Naval Weapons Station, as well as areas of Temecula, Rancho California and the Santa Rosa Plateau.</p>
+
+      <div class="highlight">The heart of all SFH activity is the care, breeding, exercise and training of our select pack of MFHA-registered foxhounds.</div>
+
+      <p>Today, the hunt kennels are located in Riverside County, managed by the Professional Kennel-Huntsman Talena Campbell, and over-seen by MFH Terrel E. Paine. We hunt Crossbred hounds and English hounds.</p>
+
+      <p>In 2011, Santa Fe Hunt expanded its membership and territory by combining with the West Hills Hounds. As these two clubs combined to become the Santa Fe Hunt, its hunt territory spans from San Diego County to Ventura and Inyo/Kern Counties.</p>
+
+      <p>West Hills Hounds was founded in 1947, initially the idea of several recently mustered-out infantry officers from Ft. Riley, Kansas, just after the end of World War II. Among them was George A. Burns and Dan Dailey, the famous MGM song and dance star. George was the club's first president and Dan served as Master of Foxhounds from 1952–1960. Registered with the MFHA in 1959, the club's membership included a large number of Hollywood luminaries, including Ronald Reagan, Randolph Scott, John Huston, Spencer Tracy, Walt Disney, George Raft and Burgess Meredith.</p>
+
+      <p>Our members are geographically dispersed and represent a cross-section of Southern California lifestyles and professions, including physicians, lawyers, teachers, artists, veterinarians, military officers, pilots, entrepreneurs, and individuals in the travel, entertainment, racehorse breeding-and-training professions, and amateur competitive riding.</p>
+
+      <p>Our formal hunt season begins in November and typically ends in April, with hounds going out 2 or 3 times a week. Hound exercise or "roading" and training "autumn hunting" fill the calendar for the balance of each year. Social gatherings and competitive riding events throughout each year include the Hunt Ball, Hound Show, Christmas Party, Puppy "Auction," riding clinics, Race Meets and camping trips. We work in conjunction with area Pony Clubs to foster horsemanship and to enhance community participation in English cross-country riding and traditional fox hunting.</p>
+    </div>
+  </div>
+
+  <!-- CURRENT STAFF -->
+  <div class="section" id="staff">
+    <div class="section-eyebrow">Current Season</div>
+    <h2 class="section-heading">Hunt Staff & Board</h2>
+    <div class="section-rule"></div>
+
+    <div class="staff-grid">
+      <div class="staff-card">
+        <div class="staff-role">Joint Masters of Foxhounds</div>
+        <div class="staff-name multiple">Terrel E. Paine, MFH<br>Marti Manser, MFH</div>
+      </div>
+      <div class="staff-card">
+        <div class="staff-role">President</div>
+        <div class="staff-name">Marti Manser</div>
+      </div>
+      <div class="staff-card">
+        <div class="staff-role">Vice President</div>
+        <div class="staff-name">Marian Cerilly</div>
+      </div>
+      <div class="staff-card">
+        <div class="staff-role">Treasurer</div>
+        <div class="staff-name">Dr. Kristen Tregar</div>
+      </div>
+      <div class="staff-card">
+        <div class="staff-role">Secretary</div>
+        <div class="staff-name">Alexandra Langenberg</div>
+      </div>
+      <div class="staff-card">
+        <div class="staff-role">Member at Large</div>
+        <div class="staff-name">Jim Seilsopour</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MASTERS OF THE HUNT -->
+  <div class="section" id="masters">
+    <div class="section-eyebrow">Hunt History</div>
+    <h2 class="section-heading">Masters of the Hunt</h2>
+    <div class="section-rule"></div>
+    <table class="history-table">
+      <thead>
+        <tr><th>Master</th><th>Years</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Mr. Hugh Dale</td><td>1970–1976</td></tr>
+        <tr><td>Mr. Charles Mourceau</td><td>1976–1977</td></tr>
+        <tr><td>Mr. Hal Ramser</td><td>1978–1979</td></tr>
+        <tr><td>Mr. Arnold Kirkeby</td><td>1979–1980</td></tr>
+        <tr><td>Mr. Dan Bledsoe</td><td>1979–1981</td></tr>
+        <tr><td>Mr. John Lindsay</td><td>1982–1983</td></tr>
+        <tr><td>Mr. Alex Pisciotta</td><td>1983–1987</td></tr>
+        <tr><td>Mr. August Handley</td><td>1985–2005</td></tr>
+        <tr><td>Mr. Larry Byers</td><td>1988–1990</td></tr>
+        <tr><td>Mr. Peter Bulkley</td><td>1988–1990</td></tr>
+        <tr><td>Mrs. Allen Senall</td><td>1990–1992</td></tr>
+        <tr><td class="current">Mr. Terrel E. Paine</td><td class="current">1990–Present</td></tr>
+        <tr><td>Mr. Charles Schooler, Jr.</td><td>1993–1998</td></tr>
+        <tr><td>Mr. Mitch Jacobs</td><td>1997–2012 (WHH 1997–2010)</td></tr>
+        <tr><td>Mr. Kenneth E. Ristau, Jr.</td><td>1998–2000</td></tr>
+        <tr><td>Mr. Philip S. Brailsford</td><td>2009–2011</td></tr>
+        <tr><td class="current">Mr. Donald Parker</td><td class="current">2011–2013, 2016–Present</td></tr>
+        <tr><td>Ms. Georgia Storm</td><td>2014–2015</td></tr>
+        <tr><td class="current">Ms. Marti Manser</td><td class="current">2020–Present</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- HUNTSMEN & STAFF -->
+  <div class="section" id="huntsmen">
+    <div class="section-eyebrow">Hunt History</div>
+    <h2 class="section-heading">Huntsmen & Professional Staff</h2>
+    <div class="section-rule"></div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px;">
+
+      <div>
+        <h4 style="font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sfh-gold-500); font-weight: 600; margin: 0 0 16px;">Huntsmen</h4>
+        <table class="history-table">
+          <tbody>
+            <tr><td>Mr. James Norment</td></tr>
+            <tr><td>Mr. Hugh Dale, MFH</td></tr>
+            <tr><td>Mr. Paul Crockett</td></tr>
+            <tr><td>Mr. Dennis Dale</td></tr>
+            <tr><td>Ms. Sandy Hackney</td></tr>
+            <tr><td>Ms. Bonnie Herman</td></tr>
+            <tr><td>Mr. Alex Pisciotta, MFH</td></tr>
+            <tr><td>Mr. John Brake</td></tr>
+            <tr><td>Mr. Larry Byers, MFH</td></tr>
+            <tr><td>Miss Toni Roesch</td></tr>
+            <tr><td>Mr. Terrel E. Paine, MFH</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <h4 style="font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sfh-gold-500); font-weight: 600; margin: 0 0 16px;">Professional Kennel Huntsmen</h4>
+        <table class="history-table">
+          <tbody>
+            <tr><td>Ms. Linda Knorr</td></tr>
+            <tr><td>Mr. Darren Haeusler</td></tr>
+            <tr><td>Mr. Robert C. Knox</td></tr>
+            <tr><td>Mr. Duncan Stewart</td></tr>
+            <tr><td>Mr. Gary Wingar</td></tr>
+            <tr><td>Mr. Byron Ayala</td></tr>
+            <tr><td>Ms. Talena Campbell</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sfh-gold-500); font-weight: 600; margin: 32px 0 16px;">Kennelman / First Whip</h4>
+        <table class="history-table">
+          <tbody>
+            <tr><td>Ms. Brooke Rogers</td></tr>
+            <tr><td>Mr. James Boyle</td></tr>
+            <tr><td>Ms. Chloe Smyth</td></tr>
+            <tr><td>Ms. Talena Campbell</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div>
+    <a href="/">Welcome</a>
+    <a href="/about">About</a>
+    <a href="/join">Join</a>
+    <a href="/events">Events</a>
+    <a href="/members">Members</a>
+    <a href="https://santa-fe-hunt.myshopify.com" target="_blank">Shop</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div style="margin-top: 20px;">
+    <a href="https://www.instagram.com/santafehounds/?hl=en" target="_blank">Instagram</a>
+    <span style="color: rgba(250,246,238,0.4);">·</span>
+    <a href="https://www.facebook.com/SantaFeHunt" target="_blank">Facebook</a>
+  </div>
+  <div class="site-footer-copy">© 2026 Santafehunt.com</div>
+</footer>
+
+</body>
+</html>

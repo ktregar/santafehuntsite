@@ -1,0 +1,19 @@
+# Members area
+/members    /members.html   200
+/members/   /members.html   200
+
+# Awards
+/awards     /awards.html    200
+/awards/    /awards.html    200
+
+# About
+/about      /about.html     200
+/about/     /about.html     200
+
+# Etiquette
+/etiquette  /etiquette.html 200
+/etiquette/ /etiquette.html 200
+
+# Catch-all: send any unknown path back to the homepage so the site
+# never shows a 404 for visitors who follow old links.
+/*    /index.html   200

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Santa Fe Hunt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Santa Fe Hunt — traditional foxhunting in Southern California, established 1969. MFHA-recognized since 1987.">
+<link rel="icon" type="image/jpeg" href="./assets/logo-color.jpg">
+<link rel="stylesheet" href="./colors_and_type.css">
+<style>
+  body { margin: 0; background: var(--sfh-cream); }
+  #root > * + * { display: block; }
+  /* Splash while React/Babel boot — avoids flash of unstyled blank page */
+  #splash {
+    position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+    background: var(--sfh-cream); z-index: 999; transition: opacity 400ms ease;
+  }
+  #splash img { width: 120px; height: 120px; object-fit: contain; opacity: 0.85; }
+  #splash.hidden { opacity: 0; pointer-events: none; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="splash"><img src="./assets/logo-color.jpg" alt="Santa Fe Hunt"></div>
+<div id="root"></div>
+<script type="text/babel" src="./Header.jsx"></script>
+<script type="text/babel" src="./Hero.jsx"></script>
+<script type="text/babel" src="./EventList.jsx"></script>
+<script type="text/babel" src="./Gallery.jsx"></script>
+<script type="text/babel" src="./Etiquette.jsx"></script>
+<script type="text/babel" src="./MemberSpotlight.jsx"></script>
+<script type="text/babel" src="./Footer.jsx"></script>
+<script type="text/babel">
+function App() {
+  return (
+    <div>
+      <Header />
+      <Hero />
+      <EventList />
+      <Gallery />
+      <Etiquette />
+      <MemberSpotlight />
+      <Footer />
+    </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+// Hide splash once first paint settles
+requestAnimationFrame(() => {
+  setTimeout(() => {
+    const s = document.getElementById('splash');
+    if (s) { s.classList.add('hidden'); setTimeout(() => s.remove(), 500); }
+  }, 300);
+});
+</script>
+</body>
+</html>

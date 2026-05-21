@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Awards | Santa Fe Hunt Members</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/jpeg" href="./assets/logo-color.jpg">
+<link rel="stylesheet" href="./colors_and_type.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sfh-cream); }
+
+.members-header { background: var(--sfh-navy-900); padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.members-header a { color: var(--sfh-gold-300); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; font-weight: 500; font-family: var(--font-sans); }
+.members-header a:hover { color: var(--sfh-cream); }
+.members-header-title { font-family: var(--font-display); font-size: 18px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sfh-cream); }
+
+.members-subnav { background: var(--sfh-parchment); border-bottom: 1px solid var(--border-soft); }
+.members-subnav-inner { max-width: 1080px; margin: 0 auto; padding: 0 32px; display: flex; }
+.members-subnav a { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--fg-3); text-decoration: none; padding: 16px 24px; border-bottom: 2px solid transparent; transition: all 200ms; }
+.members-subnav a:hover { color: var(--sfh-navy-500); }
+.members-subnav a.active { color: var(--sfh-navy-500); border-bottom-color: var(--sfh-gold-400); }
+
+.page-body { max-width: 1080px; margin: 0 auto; padding: 64px 32px 96px; }
+
+.page-intro { margin-bottom: 64px; }
+.section-eyebrow { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin: 0 0 8px; }
+.page-intro h1 { font-family: var(--font-display); font-size: clamp(32px, 4vw, 52px); font-weight: 500; color: var(--sfh-navy-900); margin: 0 0 6px; }
+.section-rule { width: 56px; height: 2px; background: var(--sfh-gold-400); margin: 0 0 24px; }
+.page-intro p { font-family: var(--font-serif); font-size: 17px; line-height: 1.8; color: var(--fg-2); max-width: 72ch; margin: 0; }
+
+/* Award sections */
+.award-section { margin-bottom: 72px; }
+.award-header { background: var(--sfh-navy-900); padding: 28px 32px; margin-bottom: 0; }
+.award-title { font-family: var(--font-display); font-size: 26px; font-weight: 500; color: var(--sfh-cream); margin: 0 0 8px; }
+.award-desc { font-family: var(--font-serif); font-style: italic; font-size: 15px; color: rgba(250,246,238,0.75); margin: 0; line-height: 1.6; max-width: 72ch; }
+
+.award-table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: 13px; }
+.award-table th { text-align: left; padding: 10px 16px; background: var(--sfh-navy-500); color: var(--sfh-cream); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; }
+.award-table td { padding: 11px 16px; border-bottom: 1px solid var(--border-hairline); color: var(--sfh-navy-900); }
+.award-table tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+.award-table tr:hover td { background: rgba(201,168,76,0.07); }
+.award-table td.year { font-weight: 600; color: var(--sfh-navy-500); white-space: nowrap; }
+.award-table td.tbd { color: var(--sfh-stone-300); font-style: italic; }
+.award-table tr.recent td { background: rgba(201,168,76,0.08); }
+.award-table tr.recent td.year { color: var(--sfh-gold-600); }
+
+.pending-note {
+  background: var(--sfh-parchment); border-left: 3px solid var(--sfh-gold-400);
+  padding: 14px 20px; font-family: var(--font-sans); font-size: 12px;
+  letter-spacing: 0.06em; color: var(--fg-3);
+}
+
+.site-footer { background: var(--sfh-navy-900); padding: 48px 32px; text-align: center; }
+.site-footer a { color: var(--sfh-gold-300); font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; margin: 0 16px; }
+.site-footer a:hover { color: var(--sfh-cream); }
+.site-footer-copy { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(250,246,238,0.4); margin-top: 24px; }
+</style>
+</head>
+<body>
+
+<div class="members-header">
+  <a href="/members">← Members Home</a>
+  <div class="members-header-title">Members Area</div>
+  <a href="/">Main Site</a>
+</div>
+
+<div class="members-subnav">
+  <div class="members-subnav-inner">
+    <a href="/members">Updates</a>
+    <a href="/members#calendar">Calendar</a>
+    <a href="/members#roster">Roster</a>
+    <a href="/awards" class="active">Awards</a>
+  </div>
+</div>
+
+<div class="page-body">
+
+  <div class="page-intro">
+    <div class="section-eyebrow">Perpetual Trophies</div>
+    <h1>Hunt Awards</h1>
+    <div class="section-rule"></div>
+    <p>Awards are given usually at the end of the formal hunting season, at the Annual Meeting or at Closing Hunt, except for those perpetual trophies that are part of riding competitions.</p>
+  </div>
+
+  <!-- MASTERS' FOX MASK AWARD -->
+  <div class="award-section">
+    <div class="award-header">
+      <div class="award-title">Masters' Fox Mask Award</div>
+      <p class="award-desc">Awarded once a season by the Santa Fe Hunt Joint Masters of Foxhounds, this trophy acknowledges members who have demonstrated extraordinary service and dedication to the hunt. This trophy was created in honor of Mrs. Fran Joswick, retired SFH member and founder of the Therapeutic Riding Program in San Juan Capistrano.</p>
+    </div>
+    <table class="award-table">
+      <thead><tr><th>Season</th><th>Recipient</th></tr></thead>
+      <tbody>
+        <tr><td class="year">1997/98</td><td>Dave Kuhlman &amp; Marjorie Molloy</td></tr>
+        <tr><td class="year">1998/99</td><td>Linda Paine</td></tr>
+        <tr><td class="year">1999/00</td><td>Peter Bulkley</td></tr>
+        <tr><td class="year">2000/01</td><td>Bill &amp; Lisa Koska</td></tr>
+        <tr><td class="year">2001/02</td><td>Gary &amp; Clarice Grado</td></tr>
+        <tr><td class="year">2002/03</td><td>Jack O'Donnell</td></tr>
+        <tr><td class="year">2003/04</td><td>Dave Kuhlman &amp; Marjorie Molloy</td></tr>
+        <tr><td class="year">2004/05</td><td>Samaniego Family</td></tr>
+        <tr><td class="year">2005/06</td><td>Peter Bulkley</td></tr>
+        <tr><td class="year">2006/07</td><td>Debra Huett</td></tr>
+        <tr><td class="year">2007/08</td><td>Philip &amp; Julie Brailsford</td></tr>
+        <tr><td class="year">2008/09</td><td>Bruce &amp; Hallie Tilley</td></tr>
+        <tr><td class="year">2009/10</td><td>Cheryl Reynolds</td></tr>
+        <tr><td class="year">2010/11</td><td>Philip &amp; Julie Brailsford</td></tr>
+        <tr><td class="year">2011/12</td><td>Clare Williams</td></tr>
+        <tr><td class="year">2012/13</td><td>Master Don Parker</td></tr>
+        <tr><td class="year">2013/14</td><td>Robert Breshears</td></tr>
+        <tr><td class="year">2014/15</td><td>Gary and Clarice Grado</td></tr>
+        <tr><td class="year">2015/16</td><td>Georgia Storm</td></tr>
+        <tr><td class="year">2016/17</td><td>Don Parker, MFH &amp; Marti Manser</td></tr>
+        <tr><td class="year">2017/18</td><td>Gary and Clarice Grado</td></tr>
+        <tr><td class="year">2018/19</td><td>Debra Huett</td></tr>
+        <tr><td class="year">2019/20</td><td>Marti Manser</td></tr>
+        <tr><td class="year">2020/21</td><td>Jim Seilsopour</td></tr>
+        <tr><td class="year">2021/22</td><td>Clare Williams</td></tr>
+        <tr><td class="year">2022/23</td><td>Marian Cerilly</td></tr>
+        <tr class="recent"><td class="year">2023/24</td><td class="tbd">Marian Cerilly (to confirm)</td></tr>
+        <tr class="recent"><td class="year">2024/25</td><td>Dr. Kristen Tregar</td></tr>
+      </tbody>
+    </table>
+    <div class="pending-note">2023/24 recipient to be confirmed. Please contact the Masters to verify.</div>
+  </div>
+
+  <!-- FIELD HUNTER OF THE YEAR -->
+  <div class="award-section">
+    <div class="award-header">
+      <div class="award-title">Field Hunter of the Year</div>
+      <p class="award-desc">Awarded annually by the Santa Fe Hunt Masters, this trophy commemorates "Blazer," a SFH foundation hound, and recognizes outstanding equine performance in the hunt field.</p>
+    </div>
+    <table class="award-table">
+      <thead><tr><th>Season</th><th>Horse</th><th>Owner</th></tr></thead>
+      <tbody>
+        <tr><td class="year">1995/96</td><td>"T-Rex"</td><td>owned by the Bowers</td></tr>
+        <tr><td class="year">1997/98</td><td>"Gerrod"</td><td>owned by the Grado's</td></tr>
+        <tr><td class="year">1998/99</td><td>"Scott's Fleet Star"</td><td>owned by Kuhlman's</td></tr>
+        <tr><td class="year">1999/00</td><td>"Three Boys Pal"</td><td>owned by Karoline Sauls</td></tr>
+        <tr><td class="year">2001/02</td><td>"Spooner"</td><td>owned by Shelia MacLachlan</td></tr>
+        <tr><td class="year">2002/03</td><td>"Pacific Eagle"</td><td>owned by Leslie Danzer</td></tr>
+        <tr><td class="year">2003/04</td><td>"Spooner"</td><td>owned by Shelia MacLachlan</td></tr>
+        <tr><td class="year">2004/05</td><td>"Valentino"</td><td>owned by Marjorie Molloy</td></tr>
+        <tr><td class="year">2005/06</td><td>"Humvee"</td><td>owned by Jonathon Yormark</td></tr>
+        <tr><td class="year">2006/07</td><td>"One Trick Pony"</td><td>owned by Sue Church</td></tr>
+        <tr><td class="year">2007/08</td><td>"Love em &amp; Leave em"</td><td>owned by the Paine's</td></tr>
+        <tr><td class="year">2008/09</td><td>"Jewel"</td><td>owned by Linda Fisler</td></tr>
+        <tr><td class="year">2009/10</td><td>"A Grade"</td><td>owned by the Paine's</td></tr>
+        <tr><td class="year">2010/11</td><td>"Bubba"</td><td>owned by Gary Grado</td></tr>
+        <tr><td class="year">2011/12</td><td>"Nikki"</td><td>owned by Jane Langridge</td></tr>
+        <tr><td class="year">2012/13</td><td>"Daiquiri"</td><td>owned by Debra Huett</td></tr>
+        <tr><td class="year">2013/14</td><td>"Crossed Out"</td><td>owned by the Paine's</td></tr>
+        <tr><td class="year">2014/15</td><td>"Scarteen"</td><td>owned by Patricia Stevens</td></tr>
+        <tr><td class="year">2015/16</td><td>"Phiala"</td><td>owned by Heather Young</td></tr>
+        <tr><td class="year">2016/17</td><td>"Sophia Dolce"</td><td>owned by the Paine's</td></tr>
+        <tr><td class="year">2017/18</td><td>"Manser"</td><td>owned by Don Parker</td></tr>
+        <tr><td class="year">2018/19</td><td>"Creole Rose"</td><td>owned by Joel Fisler</td></tr>
+        <tr><td class="year">2019/20</td><td>"Peri"</td><td>owned by Laurie Brumage</td></tr>
+        <tr><td class="year">2020/21</td><td>"Attaché"</td><td>owned by the Paines</td></tr>
+        <tr><td class="year">2021/22</td><td>"Santini"</td><td>owned by Marti Manser</td></tr>
+        <tr><td class="year">2022/23</td><td>"Memphis"</td><td>owned by Alexandra Langenberg</td></tr>
+        <tr class="recent"><td class="year">2023/24</td><td class="tbd" colspan="2">To be confirmed</td></tr>
+        <tr class="recent"><td class="year">2024/25</td><td class="tbd" colspan="2">To be confirmed</td></tr>
+      </tbody>
+    </table>
+    <div class="pending-note">2023/24 and 2024/25 recipients to be confirmed.</div>
+  </div>
+
+  <!-- HOLLY HOUND -->
+  <div class="award-section">
+    <div class="award-header">
+      <div class="award-title">Holly Hound</div>
+      <p class="award-desc">This honor is granted to the best hound of the previous season and the current season's autumn hunting, symbolized by a sprig of holly worn by that hound at the Opening Meet, as announced there.</p>
+    </div>
+    <table class="award-table">
+      <thead><tr><th>Season</th><th>Hound</th></tr></thead>
+      <tbody>
+        <tr><td class="year">2012/13</td><td>Farrah</td></tr>
+        <tr><td class="year">2013/14</td><td>Faerie</td></tr>
+        <tr><td class="year">2014/15</td><td>Rowdy</td></tr>
+        <tr><td class="year">2015/16</td><td>Rae</td></tr>
+        <tr><td class="year">2017/18</td><td>Rebel</td></tr>
+        <tr><td class="year">2018/19</td><td>Farside</td></tr>
+        <tr><td class="year">2019/20</td><td>Rowdy</td></tr>
+        <tr><td class="year">2020/21</td><td>Feisty</td></tr>
+        <tr><td class="year">2021/22</td><td>Fume'</td></tr>
+        <tr><td class="year">2022/23</td><td>Flirtie</td></tr>
+        <tr class="recent"><td class="year">2023/24</td><td class="tbd">To be confirmed</td></tr>
+        <tr class="recent"><td class="year">2024/25</td><td class="tbd">Not awarded this season</td></tr>
+      </tbody>
+    </table>
+    <div class="pending-note">2023/24 Holly Hound to be confirmed.</div>
+  </div>
+
+  <!-- GOOD SEAT AWARD -->
+  <div class="award-section">
+    <div class="award-header">
+      <div class="award-title">Good Seat Award</div>
+      <p class="award-desc">This trophy is a humorous acknowledgment of horse-and-rider in the hunt field, awarded at the close of the season by the previous year's recipient.</p>
+    </div>
+    <table class="award-table">
+      <thead><tr><th>Season</th><th>Recipient</th></tr></thead>
+      <tbody>
+        <tr><td class="year">1990/91</td><td>Chip Schooler</td></tr>
+        <tr><td class="year">1991/92</td><td>Gary Grado</td></tr>
+        <tr><td class="year">1993/94</td><td>Daniel Samaniego</td></tr>
+        <tr><td class="year">1994/95</td><td>Rae Hodges</td></tr>
+        <tr><td class="year">1995/96</td><td>Diane Schooler</td></tr>
+        <tr><td class="year">1998/99</td><td>Peter Bulkley</td></tr>
+        <tr><td class="year">1999/00</td><td>Margie Molloy</td></tr>
+        <tr><td class="year">2000/01</td><td>Daniel Samaniego</td></tr>
+        <tr><td class="year">2001/02</td><td>Kulhman Family</td></tr>
+        <tr><td class="year">2002/03</td><td>Rachel Lathorp</td></tr>
+        <tr><td class="year">2003/04</td><td>Debra Huett</td></tr>
+        <tr><td class="year">2004/05</td><td>Don Parker</td></tr>
+        <tr><td class="year">2005/06</td><td>Don Parker</td></tr>
+        <tr><td class="year">2006/07</td><td>Don Parker</td></tr>
+        <tr><td class="year">2007/08</td><td>Clare Williams</td></tr>
+        <tr><td class="year">2008/09</td><td>Joel Fisler</td></tr>
+        <tr><td class="year">2009/10</td><td>Clare Williams</td></tr>
+        <tr><td class="year">2010/11</td><td>Rosemary Cawood</td></tr>
+        <tr><td class="year">2011/12</td><td>Anabel Bybee</td></tr>
+        <tr><td class="year">2012/13</td><td>Anabel Bybee</td></tr>
+        <tr><td class="year">2013/14</td><td>Brent Lance</td></tr>
+        <tr><td class="year">2014/15</td><td>Laura Bell</td></tr>
+        <tr><td class="year">2015/16</td><td>Richard Cornwell</td></tr>
+        <tr><td class="year">2016/17</td><td>Clarice Grado</td></tr>
+        <tr><td class="year">2017/18</td><td>Marti Manser</td></tr>
+        <tr><td class="year">2018/19</td><td>Terry Paine</td></tr>
+        <tr><td class="year">2019/20</td><td>Erika Novak</td></tr>
+        <tr><td class="year">2020/21</td><td>Ryann Guy</td></tr>
+        <tr><td class="year">2021/22</td><td>Kristen Tregar</td></tr>
+        <tr><td class="year">2022/23</td><td>Heather Young</td></tr>
+        <tr class="recent"><td class="year">2023/24</td><td>Jim Seilsopour</td></tr>
+        <tr class="recent"><td class="year">2024/25</td><td>Amelie Barratt</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div>
+    <a href="/">Welcome</a>
+    <a href="/about">About</a>
+    <a href="/join">Join</a>
+    <a href="/events">Events</a>
+    <a href="/members">Members</a>
+    <a href="https://santa-fe-hunt.myshopify.com" target="_blank">Shop</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div style="margin-top: 20px;">
+    <a href="https://www.instagram.com/santafehounds/?hl=en" target="_blank">Instagram</a>
+    <span style="color: rgba(250,246,238,0.4);">·</span>
+    <a href="https://www.facebook.com/SantaFeHunt" target="_blank">Facebook</a>
+  </div>
+  <div class="site-footer-copy">© 2026 Santafehunt.com</div>
+</footer>
+
+</body>
+</html>

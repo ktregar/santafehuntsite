@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Etiquette & Attire | Santa Fe Hunt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/jpeg" href="./assets/logo-color.jpg">
+<link rel="stylesheet" href="./colors_and_type.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sfh-cream); }
+
+.site-header {
+  background: var(--sfh-cream);
+  border-top: 1px solid var(--sfh-navy-500);
+  border-bottom: 1px solid var(--sfh-navy-500);
+}
+.site-header-inner {
+  max-width: 1320px; margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.site-header-logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+.site-header-logo img { height: 56px; width: 56px; object-fit: contain; }
+.site-header-name { font-family: var(--font-display); font-size: 22px; font-weight: 600; letter-spacing: 0.04em; color: var(--sfh-navy-900); line-height: 1.1; }
+.site-header-sub { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--sfh-gold-500); }
+.site-nav { display: flex; gap: 28px; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+.site-nav a { color: var(--fg-2); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent; transition: all 200ms; }
+.site-nav a:hover, .site-nav a.active { color: var(--sfh-navy-500); border-bottom-color: var(--sfh-gold-400); }
+
+.page-hero { background: var(--sfh-navy-900); padding: 72px 32px; text-align: center; }
+.page-hero .eyebrow { color: var(--sfh-gold-400); margin-bottom: 12px; display: block; font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 600; }
+.page-hero h1 { font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px); font-weight: 500; color: var(--sfh-cream); letter-spacing: 0.04em; margin: 0 0 16px; }
+.page-hero p { font-family: var(--font-serif); font-size: 18px; color: rgba(250,246,238,0.75); max-width: 600px; margin: 0 auto; line-height: 1.7; }
+
+.page-tabs { background: var(--sfh-parchment); border-bottom: 1px solid var(--border-soft); position: sticky; top: 0; z-index: 5; }
+.page-tabs-inner { max-width: 1080px; margin: 0 auto; padding: 0 32px; display: flex; }
+.page-tabs a { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--fg-3); text-decoration: none; padding: 16px 24px; border-bottom: 2px solid transparent; transition: all 200ms; }
+.page-tabs a:hover { color: var(--sfh-navy-500); }
+.page-tabs a.active { color: var(--sfh-navy-500); border-bottom-color: var(--sfh-gold-400); }
+
+.page-body { max-width: 1080px; margin: 0 auto; padding: 64px 32px 96px; }
+
+.section { margin-bottom: 80px; }
+.section-eyebrow { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin: 0 0 8px; }
+.section-heading { font-family: var(--font-display); font-size: clamp(28px, 3vw, 42px); font-weight: 500; color: var(--sfh-navy-900); margin: 0 0 6px; }
+.section-rule { width: 56px; height: 2px; background: var(--sfh-gold-400); margin: 0 0 40px; }
+
+/* Rule cards */
+.rule-group { margin-bottom: 48px; }
+.rule-group-title {
+  font-family: var(--font-serif); font-size: 20px; font-weight: 700;
+  color: var(--sfh-navy-900); margin: 0 0 20px;
+  padding-bottom: 10px; border-bottom: 1px solid var(--border-soft);
+}
+.rule-list { list-style: none; padding: 0; margin: 0; }
+.rule-list li {
+  font-family: var(--font-serif); font-size: 16px; line-height: 1.7;
+  color: var(--fg-2); padding: 12px 0 12px 24px;
+  border-bottom: 1px solid var(--border-hairline);
+  position: relative;
+}
+.rule-list li:last-child { border-bottom: none; }
+.rule-list li::before {
+  content: ''; position: absolute; left: 0; top: 22px;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--sfh-gold-400);
+}
+
+/* Attire cards */
+.attire-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 48px; }
+.attire-card { background: #fff; border: 1px solid var(--border-soft); padding: 32px; }
+.attire-card-title { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--sfh-navy-900); margin: 0 0 6px; }
+.attire-card-sub { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sfh-gold-500); font-weight: 600; margin-bottom: 20px; }
+.attire-item { margin-bottom: 12px; }
+.attire-item-label { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--sfh-navy-900); }
+.attire-item-desc { font-family: var(--font-serif); font-size: 14px; line-height: 1.6; color: var(--fg-2); margin: 3px 0 0; }
+
+/* Buttons progression */
+.buttons-timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2px; background: var(--border-soft); border: 1px solid var(--border-soft); margin-bottom: 48px; }
+.button-step { background: var(--sfh-cream); padding: 28px 24px; }
+.button-step-badge {
+  display: inline-block; width: 32px; height: 32px; border-radius: 50%;
+  margin-bottom: 12px;
+}
+.button-step-badge.black { background: #1a1410; }
+.button-step-badge.gold { background: var(--sfh-gold-400); }
+.button-step-badge.colors { background: linear-gradient(135deg, #b32a2a 50%, var(--sfh-navy-500) 50%); }
+.button-step-title { font-family: var(--font-serif); font-size: 17px; font-weight: 700; color: var(--sfh-navy-900); margin-bottom: 6px; }
+.button-step-year { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sfh-gold-500); font-weight: 600; margin-bottom: 10px; }
+.button-step-desc { font-family: var(--font-serif); font-size: 14px; line-height: 1.6; color: var(--fg-2); }
+
+/* callout box */
+.callout {
+  background: var(--sfh-navy-900); color: var(--sfh-cream);
+  padding: 28px 32px; margin: 40px 0;
+  font-family: var(--font-serif); font-style: italic;
+  font-size: 18px; line-height: 1.7;
+}
+
+.site-footer { background: var(--sfh-navy-900); padding: 48px 32px; text-align: center; }
+.site-footer a { color: var(--sfh-gold-300); font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; margin: 0 16px; }
+.site-footer a:hover { color: var(--sfh-cream); }
+.site-footer-copy { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(250,246,238,0.4); margin-top: 24px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-header-logo">
+      <img src="./assets/logo-color.jpg" alt="Santa Fe Hunt">
+      <div>
+        <div class="site-header-name">SANTA FE HUNT</div>
+        <div class="site-header-sub">Est. 1969 · MFHA Recognized</div>
+      </div>
+    </a>
+    <nav class="site-nav">
+      <a href="/">Welcome</a>
+      <a href="/about">About</a>
+      <a href="/join">Join</a>
+      <a href="/events">Events</a>
+      <a href="/members">Members</a>
+      <a href="https://santa-fe-hunt.myshopify.com" target="_blank">Shop</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="eyebrow">Field Protocol & Dress</span>
+  <h1>Etiquette & Attire</h1>
+  <p>Showing good sport is the prime objective of the Masters and Staff. Good form in the field ensures the safety of all riders, mounts, and hounds — and keeps our hunt country open.</p>
+</div>
+
+<div class="page-tabs">
+  <div class="page-tabs-inner">
+    <a href="#etiquette" class="active">Field Etiquette</a>
+    <a href="#attire">Hunting Attire</a>
+    <a href="#buttons">Buttons & Colors</a>
+  </div>
+</div>
+
+<div class="page-body">
+
+  <!-- ETIQUETTE -->
+  <div class="section" id="etiquette">
+    <div class="section-eyebrow">In the Field</div>
+    <h2 class="section-heading">Hunting Etiquette</h2>
+    <div class="section-rule"></div>
+
+    <div class="rule-group">
+      <div class="rule-group-title">Respect for Masters and Staff</div>
+      <ul class="rule-list">
+        <li>Upon arriving at the hunt, present yourself to the Joint Masters and take care of any capping fees and necessary paperwork. Always thank the Master and Huntsman at the end of the hunt.</li>
+        <li>The Field Master represents the authority of the MFH. Listen carefully to announcements and accord proper respect to members of the field who wear colors, including their right to ride at the front of the field.</li>
+        <li>Arrive at the fixture properly attired and tacked up in sufficient time to be mounted at the appointed hour for introductory remarks.</li>
+        <li>Stay positioned in the field for the entire hunt. Riding alongside the field master or "in his pocket" is only appropriate upon his or her invitation. Always speak very softly and briefly — do not hold lectures in the field.</li>
+        <li>Be very cautious of our hounds. Always turn your horse's head toward the pack and the staff. Make way for the hunt staff at all times. Ride wide of the hounds, never behind or alongside them. Never speak to the hounds unless specifically requested by the staff.</li>
+        <li>The Field Master knows the country and anticipates the line the game runs. It is mandatory to observe his or her leadership.</li>
+        <li>Keep up close and do not lag behind the field. Always excuse yourself from the Field Master before leaving the field.</li>
+      </ul>
+    </div>
+
+    <div class="rule-group">
+      <div class="rule-group-title">Respect for Landowners</div>
+      <ul class="rule-list">
+        <li>Park your rig facing downhill so you can pull away easily without tearing up the landowner's property.</li>
+        <li>Do not ride over plowed or planted ground, lawns, or soft and marshy areas, unless the Field Master so instructs.</li>
+        <li>Leave all gates and fences as they are found.</li>
+        <li>Ride slowly around cattle and sheep so they will not be disturbed.</li>
+        <li>Ask permission before using ranch equipment such as hoses or water faucets. Leave no trash or litter behind.</li>
+      </ul>
+    </div>
+
+    <div class="rule-group">
+      <div class="rule-group-title">Respect for the Field</div>
+      <ul class="rule-list">
+        <li>Always maintain a safe distance between your horse and other riders. Do not crowd jumps or cross in front of others. If your horse has a refusal, go immediately to the rear of the line.</li>
+        <li>A fox hunter is expected to be a capable horseman with a reliable mount. Do not bring green or problem horses into the field — if this is the case, you must ride in third field.</li>
+        <li>If your horse is a kicker, tie a red ribbon on his tail and ride at the extreme end of the field. A green ribbon identifies the new horse. A ribbon is not a license to bring a disobedient horse into close company with others.</li>
+        <li>Do not bump or permit your horse to thrust forward onto others. Do not permit him to rub his head on other mounts or riders.</li>
+        <li>Hunting requires courtesy and tact. Assist guests and new riders whenever you can, or as requested by the Field Master.</li>
+        <li>Stay up and chatter-free while hounds are cast or running. Do not "lark" over fences or obstacles, race, or trail ride.</li>
+        <li>Juniors should ride in the rear of the field unless it is a special "junior day" hunt.</li>
+        <li>When you view a coyote, remove your cap and point quietly in the direction of the coyote and notify the Field Master.</li>
+        <li>Do not pass the Field Master without his or her express permission. Riders are not to leave the field without first excusing themselves from the Field Master.</li>
+      </ul>
+    </div>
+
+    <div class="rule-group">
+      <div class="rule-group-title">The Hunt Breakfast (Punchbowl)</div>
+      <ul class="rule-list">
+        <li>The Hunt Breakfast, known as a "Punchbowl," is a tradition following every weekend and holiday formal hunt. Every full member is obligated to produce a Hunt Breakfast; all other membership classifications are strongly encouraged.</li>
+        <li>Hunters in attendance are required to wear jackets (either Hunt Coats or Ratcatcher), stock ties, and boots. Spurs are to be removed.</li>
+        <li>By tradition, riders do not begin to eat until the staff has seen to the hounds.</li>
+      </ul>
+    </div>
+
+    <div class="rule-group">
+      <div class="rule-group-title">Guest Policy</div>
+      <ul class="rule-list">
+        <li>Guests may only be invited to hunt by a Hunting Member. Members are requested to confirm with the Joint Masters no later than the day/night prior to each hunt. A guest may "cap" only twice.</li>
+        <li>When bringing a guest, arrive early enough to see that your guest is introduced to the Joint Masters, is suitably mounted, properly attired, fully briefed as to field etiquette, and has signed the required releases.</li>
+        <li>Children under 16 years of age must be accompanied by a responsible adult and ride at the rear of the field, except on Junior Hunts.</li>
+        <li>Autumn hunt season is a time for training the young hounds. Guests to the sport may be better introduced during the regular season when the Huntsman is dedicated to showing the best sport possible.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ATTIRE -->
+  <div class="section" id="attire">
+    <div class="section-eyebrow">Dress Code</div>
+    <h2 class="section-heading">Hunting Attire</h2>
+    <div class="section-rule"></div>
+
+    <p style="font-family: var(--font-serif); font-size: 17px; line-height: 1.8; color: var(--fg-2); max-width: 72ch; margin-bottom: 40px;">Formal attire is required for weekends and holidays. Informal or ratcatcher attire is worn on weekdays and during autumn hunting. All members of the Santa Fe Hunt desire great sport and fun, consistent with the formal traditions and history of fox hunting — we ask you to help us achieve that objective.</p>
+
+    <h3 style="font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sfh-gold-500); font-weight: 600; margin: 0 0 20px;">Formal Attire — Weekends &amp; Holidays</h3>
+
+    <div class="attire-grid">
+      <div class="attire-card">
+        <div class="attire-card-title">Gentleman Member</div>
+        <div class="attire-card-sub">Without Awarded Colors</div>
+        <div class="attire-item"><div class="attire-item-label">Shirt</div><div class="attire-item-desc">White; canary with white collar and cuffs also acceptable.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Tie</div><div class="attire-item-desc">White stock tie neatly tied and fastened with a plain, horizontal safety pin. End of the stock should be pinned down to remain tidy.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Hunt Coat</div><div class="attire-item-desc">Black frock or hunting coat. Buttons may be regular buttons or those adopted and awarded by the Hunt. Three buttons on the front of the coat and two buttons on back if frock coat.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Vest</div><div class="attire-item-desc">Canary, tattersall or appropriate color designated by the Master.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Breeches</div><div class="attire-item-desc">May be beige or buff.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Boots</div><div class="attire-item-desc">Plain black calf without tops or laces.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Hat</div><div class="attire-item-desc">Safety helmet in black with chin harness fastened. Ribbon should be up. With the Masters' permission, bowler hat may be worn with formal black hunting coat.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Gloves</div><div class="attire-item-desc">Heavy wash buff, brown or black leather. White wool or string gloves also acceptable.</div></div>
+      </div>
+
+      <div class="attire-card">
+        <div class="attire-card-title">Lady Member</div>
+        <div class="attire-card-sub">Without Awarded Colors</div>
+        <div class="attire-item"><div class="attire-item-label">Shirt</div><div class="attire-item-desc">White; canary with white collar and cuffs also acceptable.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Coat</div><div class="attire-item-desc">Black frock or hunting coat suitably cut, with buttons and collar trimming adopted by the Hunt. A frock coat should have rounded corners with three buttons in front and two on back; hunting coats have rounded corners and three buttons on the front of the coat.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Vest</div><div class="attire-item-desc">Canary, tattersall or appropriate color designated by the Hunt.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Breeches</div><div class="attire-item-desc">Buff, rust, brown or yellow.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Hat</div><div class="attire-item-desc">Velvet hunting cap in black with chin harness fastened, ribbon up. With permission of the Master a black bowler or silk top hat may be worn — crown should be six inches or more and worn only with a frock coat.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Gloves</div><div class="attire-item-desc">Heavy wash leather, buff, black or brown leather. White wool or cotton string gloves are allowed.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Neckwear</div><div class="attire-item-desc">Plain white hunting stock neatly tied and fastened with a plain, horizontal safety pin. Ends should be pinned down.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Boots</div><div class="attire-item-desc">Black calf hunting boots without laces.</div></div>
+      </div>
+
+      <div class="attire-card">
+        <div class="attire-card-title">Members With Colors</div>
+        <div class="attire-card-sub">Gentlemen &amp; Ladies</div>
+        <div class="attire-item"><div class="attire-item-label">Gentlemen</div><div class="attire-item-desc">Scarlet coat with the Sutter's Gold hunt collar, gold engraved buttons on coat and canary vest, white stock tie, plain gold pin, white breeches, heavy wash buff, black or brown leather or white wool or string gloves, and black boots with brown tops.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Ladies</div><div class="attire-item-desc">Navy blue coat with the Sutter's Gold hunt collar, black engraved buttons on coat, and gold engraved buttons on canary vest. Black boots may have patent leather tops. White breeches and white gloves are optional. All remaining dress is the same as outlined above.</div></div>
+      </div>
+    </div>
+
+    <h3 style="font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sfh-gold-500); font-weight: 600; margin: 48px 0 20px;">Informal / Ratcatcher — Weekdays &amp; Autumn Hunting</h3>
+
+    <div class="attire-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+      <div class="attire-card">
+        <div class="attire-card-title">Ladies &amp; Gentlemen</div>
+        <div class="attire-card-sub">Ratcatcher Attire</div>
+        <div class="attire-item"><div class="attire-item-label">Hat</div><div class="attire-item-desc">Black hunting cap, black or brown bowler or approved ASTM helmet with ribbon up and with secure chin strap.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Coat</div><div class="attire-item-desc">Tweed or wool in muted color, tailored and vented.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Shirt</div><div class="attire-item-desc">Ratcatcher or other light colored shirt. Stock tie (plain or colored) with horizontal pin or man's necktie. Polo shirts (any color but red) acceptable in informal autumn hunting in extremely hot weather — check with the Masters in advance.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Breeches</div><div class="attire-item-desc">Earth tone colors — buff, tan, grey or rust.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Boots</div><div class="attire-item-desc">Brown or black leather, dress or field with laces. Rubber boots acceptable with the Master's permission, as are canvas-topped (Newmarket) boots and jodhpur boots.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Gloves</div><div class="attire-item-desc">Black or brown leather or string.</div></div>
+      </div>
+
+      <div class="attire-card">
+        <div class="attire-card-title">Special Notes</div>
+        <div class="attire-card-sub">All Hunts</div>
+        <div class="attire-item"><div class="attire-item-label">Spurs</div><div class="attire-item-desc">Proper with colors, optional otherwise. Must be heavy and blunt, without rowels or chains, set high on heel, with straps the same color as boots.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Raincoats</div><div class="attire-item-desc">Black, dark green, or dark brown only, permitted in severely inclement weather.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Hunting Whip</div><div class="attire-item-desc">Proper with colors and optional. Accustom your horse to its use while at home, not in the field. Whip handle length shall not exceed 30 inches.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Hair</div><div class="attire-item-desc">Hair hanging out loosely from beneath a hunt cap on either a lady or gentleman is never appropriate and must be restrained within a hairnet.</div></div>
+        <div class="attire-item"><div class="attire-item-label">Visiting</div><div class="attire-item-desc">Traditionally, members with colors do not wear colors or buttons of their hunt when visiting another hunt.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUTTONS & COLORS -->
+  <div class="section" id="buttons">
+    <div class="section-eyebrow">Recognition & Advancement</div>
+    <h2 class="section-heading">Hunt Buttons &amp; Colors</h2>
+    <div class="section-rule"></div>
+
+    <p style="font-family: var(--font-serif); font-size: 17px; line-height: 1.8; color: var(--fg-2); max-width: 72ch; margin-bottom: 40px;">The awarding of hunt buttons and colors is at the discretion of the Masters. The following guidelines are generally observed.</p>
+
+    <div class="buttons-timeline">
+      <div class="button-step">
+        <div class="button-step-badge black"></div>
+        <div class="button-step-title">Black Buttons</div>
+        <div class="button-step-year">After one year as a Regular Member</div>
+        <div class="button-step-desc">Black engraved "SFH" hunt buttons for your coat may be awarded after one year as a Regular Hunting Member.</div>
+      </div>
+      <div class="button-step">
+        <div class="button-step-badge gold"></div>
+        <div class="button-step-title">Gold Buttons</div>
+        <div class="button-step-year">After two years as a Regular Member</div>
+        <div class="button-step-desc">Gold hunt "SFH" buttons for the vest may be awarded after two years as a Regular Hunting Member.</div>
+      </div>
+      <div class="button-step">
+        <div class="button-step-badge colors"></div>
+        <div class="button-step-title">Hunt Colors</div>
+        <div class="button-step-year">After three years as a Regular Member</div>
+        <div class="button-step-desc">After three years as a Regular Hunting Member you are eligible for consideration for colors at the Masters' discretion, based on special service and support of the hunt; horsemanship exhibited in the field; knowledge of hounds, hunt etiquette, hunt tradition, hunt country, footing, fences, gates, and covers; and appropriate assistance provided to others.</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div>
+    <a href="/">Welcome</a>
+    <a href="/about">About</a>
+    <a href="/join">Join</a>
+    <a href="/events">Events</a>
+    <a href="/members">Members</a>
+    <a href="https://santa-fe-hunt.myshopify.com" target="_blank">Shop</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div style="margin-top: 20px;">
+    <a href="https://www.instagram.com/santafehounds/?hl=en" target="_blank">Instagram</a>
+    <span style="color: rgba(250,246,238,0.4);">·</span>
+    <a href="https://www.facebook.com/SantaFeHunt" target="_blank">Facebook</a>
+  </div>
+  <div class="site-footer-copy">© 2026 Santafehunt.com</div>
+</footer>
+
+</body>
+</html>
