@@ -34,7 +34,7 @@ function MemberSpotlight() {
               "The heart of all SFH activity is the care, breeding, exercise and training of our select pack of MFHA-registered foxhounds."
             </blockquote>
             <div style={{ fontFamily: 'var(--font-sans)', fontSize: 13, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--fg-3)', marginTop: 18, paddingLeft: 26 }}>
-              — Terrel E. Paine, MFH
+              — Terrel E. Paine, MFH · ✓ deploy test
             </div>
           </div>
         </div>
