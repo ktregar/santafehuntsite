@@ -32,7 +32,7 @@ function Footer() {
           <a href="https://www.facebook.com/SantaFeHunt" target="_blank" style={{ fontFamily: 'var(--font-sans)', fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--sfh-gold-300)', textDecoration: 'none' }}>Facebook</a>
         </div>
         <div style={{ fontFamily: 'var(--font-sans)', fontSize: 10, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(250,246,238,0.4)', marginTop: 24 }}>
-          © 2026 Santafehunt.com
+          © 2026 Santa Fe Hunt
         </div>
       </div>
     </footer>
