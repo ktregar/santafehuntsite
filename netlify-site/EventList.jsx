@@ -14,10 +14,10 @@ function SectionEyebrow({ label, gold }) {
 
 function EventList() {
   const events = [
-    { date: 'Nov 8',  day: 'Sat', title: 'Opening Meet',                  location: 'Hipico Equestrian Center · Santa Fe',     tag: 'Formal' },
-    { date: 'Nov 12', day: 'Wed', title: 'Roading & Autumn Hunting',       location: 'Riverside County kennels',                tag: 'Practice' },
-    { date: 'Dec 6',  day: 'Sat', title: 'Hunt Ball',                      location: 'Westgate Hotel · San Diego',              tag: 'Social' },
-    { date: 'Mar 21', day: 'Sat', title: 'Spring 2026 Hunter Pace',        location: 'Santa Rosa Plateau',                       tag: 'Pace' },
+    { date: 'May 30',  day: 'Sat', title: 'Hunter Pace',             location: 'Costo Ranch',     tag: 'Pace' },
+    { date: 'Oct 17',  day: 'Sat', title: 'Mock Hunt',               location: 'Location TBA',    tag: 'Hunt' },
+    { date: 'Oct 25',  day: 'Sun', title: 'Halloween Hunter Pace',   location: 'Location TBA',    tag: 'Pace' },
+    { date: 'Nov 14',  day: 'Sat', title: 'Opening Hunt',            location: 'Garner Ranch',    tag: 'Formal' },
   ];
   return (
     <section style={{ padding: '96px 32px', background: 'var(--sfh-cream)' }}>
