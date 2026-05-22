@@ -15,8 +15,8 @@ function SectionEyebrow({ label, gold }) {
 function EventList() {
   const events = [
     { date: 'May 30',  day: 'Sat', title: 'Hunter Pace',             location: 'Costo Ranch',     tag: 'Pace' },
-    { date: 'Oct 17',  day: 'Sat', title: 'Mock Hunt',               location: 'Location TBA',    tag: 'Hunt' },
-    { date: 'Oct 25',  day: 'Sun', title: 'Halloween Hunter Pace',   location: 'Location TBA',    tag: 'Pace' },
+    { date: 'Oct 17',  day: 'Sat', title: 'Mock Hunt',               location: 'Mountain Center, CA',    tag: 'Hunt' },
+    { date: 'Oct 25',  day: 'Sun', title: 'Halloween Hunter Pace',   location: 'Anza, CA',               tag: 'Pace' },
     { date: 'Nov 14',  day: 'Sat', title: 'Opening Hunt',            location: 'Garner Ranch',    tag: 'Formal' },
   ];
   return (
@@ -24,7 +24,7 @@ function EventList() {
       <div style={{ maxWidth: 1080, margin: '0 auto' }}>
         <SectionEyebrow label="Upcoming Events" />
         <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 48, lineHeight: 1.1, letterSpacing: '-0.01em', textAlign: 'center', margin: '0 0 8px', color: 'var(--fg-1)' }}>
-          The 2025–26 Season
+          The 2026–27 Season
         </h2>
         <p style={{ fontFamily: 'var(--font-serif)', fontSize: 18, lineHeight: 1.6, color: 'var(--fg-3)', textAlign: 'center', maxWidth: '60ch', margin: '0 auto 56px' }}>
           Hounds go out twice a week — Tuesdays and Saturdays. A punch bowl follows every weekend hunt.
