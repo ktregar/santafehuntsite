@@ -22,12 +22,12 @@ function EventList() {
   return (
     <section style={{ padding: '96px 32px', background: 'var(--sfh-cream)' }}>
       <div style={{ maxWidth: 1080, margin: '0 auto' }}>
-        <SectionEyebrow label="Upcoming Fixtures" />
+        <SectionEyebrow label="Upcoming Events" />
         <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 48, lineHeight: 1.1, letterSpacing: '-0.01em', textAlign: 'center', margin: '0 0 8px', color: 'var(--fg-1)' }}>
           The 2025–26 Season
         </h2>
         <p style={{ fontFamily: 'var(--font-serif)', fontSize: 18, lineHeight: 1.6, color: 'var(--fg-3)', textAlign: 'center', maxWidth: '60ch', margin: '0 auto 56px' }}>
-          Hounds go out twice a week — Wednesdays and Saturdays. A punch bowl follows every weekend hunt.
+          Hounds go out twice a week — Tuesdays and Saturdays. A punch bowl follows every weekend hunt.
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 20 }}>
           {events.map(e => (
