@@ -12,7 +12,8 @@ function Footer() {
         <nav style={{ display: 'flex', gap: 32, fontFamily: 'var(--font-sans)', fontSize: 11, letterSpacing: '0.24em', textTransform: 'uppercase', fontWeight: 500 }}>
           {[
             { label: 'Welcome', href: '#' },
-            { label: 'About', href: '#' },
+            { label: 'About', href: '/about' },
+            { label: 'Etiquette', href: '/etiquette' },
             { label: 'Join', href: '#' },
             { label: 'Events', href: '#' },
             { label: 'Members', href: '/members' },
