@@ -61,6 +61,14 @@ function Etiquette() {
             </li>
           ))}
         </ol>
+        <div style={{ textAlign: 'center', marginTop: 48 }}>
+          <a href="/etiquette" style={{
+            fontFamily: 'var(--font-sans)', fontSize: 12, fontWeight: 600,
+            letterSpacing: '0.18em', textTransform: 'uppercase',
+            color: 'var(--sfh-navy-900)', textDecoration: 'none',
+            borderBottom: '2px solid var(--sfh-gold-400)', paddingBottom: 3,
+          }}>Read the Full Etiquette Guide →</a>
+        </div>
       </div>
     </section>
   );

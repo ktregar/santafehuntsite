@@ -5,6 +5,7 @@ function Header() {
   const navItems = [
     { label: 'Welcome', href: '/' },
     { label: 'About', href: '/about' },
+    { label: 'Etiquette', href: '/etiquette' },
     { label: 'Join', href: '/join' },
     { label: 'Events', href: '/events' },
     { label: 'Pictures', href: '/pictures' },
