@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Join | Santa Fe Hunt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/jpeg" href="./assets/logo-color.jpg">
+<link rel="stylesheet" href="./colors_and_type.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sfh-cream); }
+
+/* ── Header ── */
+.site-header {
+  background: var(--sfh-cream);
+  border-top: 1px solid var(--sfh-navy-500);
+  border-bottom: 1px solid var(--sfh-navy-500);
+}
+.site-header-inner {
+  max-width: 1320px; margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.site-header-logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+.site-header-logo img { height: 56px; width: 56px; object-fit: contain; }
+.site-header-name {
+  font-family: var(--font-display); font-size: 22px; font-weight: 600;
+  letter-spacing: 0.04em; color: var(--sfh-navy-900); line-height: 1.1;
+}
+.site-header-sub {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--sfh-gold-500);
+}
+.site-nav { display: flex; gap: 28px; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+.site-nav a { color: var(--fg-2); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent; transition: all 200ms; }
+.site-nav a:hover, .site-nav a.active { color: var(--sfh-navy-500); border-bottom-color: var(--sfh-gold-400); }
+
+/* ── Hero ── */
+.page-hero {
+  background: var(--sfh-navy-900);
+  padding: 72px 32px;
+  text-align: center;
+}
+.page-hero .eyebrow {
+  color: var(--sfh-gold-400); margin-bottom: 12px; display: block;
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600;
+}
+.page-hero h1 {
+  font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500; color: var(--sfh-cream); letter-spacing: 0.04em; margin: 0 0 16px;
+}
+.page-hero p {
+  font-family: var(--font-serif); font-size: 18px; color: rgba(250,246,238,0.75);
+  max-width: 600px; margin: 0 auto; line-height: 1.7;
+}
+
+/* ── Page body ── */
+.page-body { max-width: 1080px; margin: 0 auto; padding: 64px 32px 96px; }
+
+/* ── Section labels ── */
+.section-eyebrow {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin: 0 0 8px;
+}
+.section-heading {
+  font-family: var(--font-display); font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500; color: var(--sfh-navy-900); margin: 0 0 6px;
+}
+.section-rule { width: 56px; height: 2px; background: var(--sfh-gold-400); margin: 0 0 40px; }
+
+/* ── CTA button ── */
+.btn-primary {
+  display: inline-block;
+  background: var(--sfh-navy-900);
+  color: var(--sfh-cream);
+  font-family: var(--font-sans);
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  text-decoration: none;
+  padding: 18px 44px;
+  border: 2px solid var(--sfh-navy-900);
+  transition: all 200ms;
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--sfh-navy-900);
+  text-decoration: none;
+  border-color: var(--sfh-navy-900);
+}
+
+/* ── Platinum cards ── */
+.platinum-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 72px;
+}
+.platinum-card {
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  border-top: 4px solid var(--sfh-navy-900);
+  padding: 36px 32px;
+}
+.card-tier {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin-bottom: 4px;
+}
+.card-name {
+  font-family: var(--font-display); font-size: 32px; font-weight: 500;
+  color: var(--sfh-navy-900); margin: 0 0 20px; line-height: 1;
+}
+.card-price {
+  font-family: var(--font-display); font-size: 52px; font-weight: 600;
+  color: var(--sfh-navy-900); line-height: 1; margin-bottom: 28px;
+  padding-bottom: 24px; border-bottom: 1px solid var(--border-hairline);
+}
+.card-includes {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-stone-400); margin-bottom: 14px;
+}
+.card-features { list-style: none; padding: 0; margin: 0 0 16px; }
+.card-features li {
+  font-family: var(--font-serif); font-size: 16px; color: var(--fg-2);
+  padding: 9px 0; border-bottom: 1px solid var(--border-hairline);
+  display: flex; align-items: flex-start; gap: 10px; line-height: 1.5;
+}
+.card-features li::before { content: '—'; color: var(--sfh-gold-400); flex-shrink: 0; margin-top: 1px; }
+.card-note {
+  font-family: var(--font-sans); font-size: 11px; color: var(--sfh-stone-400);
+  font-style: italic; margin-top: 4px;
+}
+
+/* ── Other tier cards ── */
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2px;
+  background: var(--border-soft);
+  border: 1px solid var(--border-soft);
+}
+.tier-card { background: var(--sfh-cream); padding: 28px 24px; }
+.tier-price {
+  font-family: var(--font-display); font-size: 34px; font-weight: 500;
+  color: var(--sfh-navy-900); line-height: 1; margin-bottom: 6px;
+}
+.tier-name {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin-bottom: 12px;
+}
+.tier-desc {
+  font-family: var(--font-serif); font-size: 15px; color: var(--fg-3); line-height: 1.65;
+}
+.tier-note {
+  font-family: var(--font-sans); font-size: 11px; color: var(--sfh-stone-300);
+  margin-top: 10px; font-style: italic;
+}
+
+/* ── Footer ── */
+.site-footer { background: var(--sfh-navy-900); padding: 48px 32px; text-align: center; }
+.site-footer a {
+  color: var(--sfh-gold-300); font-family: var(--font-sans);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; margin: 0 16px;
+}
+.site-footer a:hover { color: var(--sfh-cream); }
+.site-footer-copy {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(250,246,238,0.4); margin-top: 24px;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-header-logo">
+      <img src="./assets/logo-color.jpg" alt="Santa Fe Hunt">
+      <div>
+        <div class="site-header-name">SANTA FE HUNT</div>
+        <div class="site-header-sub">Est. 1969 · MFHA Recognized</div>
+      </div>
+    </a>
+    <nav class="site-nav">
+      <a href="/">Welcome</a>
+      <a href="/about">About</a>
+      <a href="/etiquette">Etiquette</a>
+      <a href="/join" class="active">Join</a>
+      <a href="/events">Events</a>
+      <a href="/members">Members</a>
+      <a href="https://santa-fe-hunt.myshopify.com" target="_blank">Shop</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="eyebrow">2026–27 Season · Now Open</span>
+  <h1>Join the Santa Fe Hunt</h1>
+  <p>A living tradition of foxhunting in Southern California. Find the membership that fits your season.</p>
+</div>
+
+<div class="page-body">
+
+  <!-- Registration CTA -->
+  <div style="text-align: center; padding: 56px 0; border-bottom: 1px solid var(--border-hairline); margin-bottom: 72px;">
+    <div class="section-eyebrow" style="display: block; margin-bottom: 20px;">Ready to ride?</div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAdyp2FA97mtJpRHOWqhJ5mAl-fB0tgM0PtVvlIepeMuP9vw/viewform?usp=header"
+       target="_blank" class="btn-primary">
+      Register for the 2026–27 Season &rarr;
+    </a>
+    <p style="font-family: var(--font-serif); font-size: 15px; color: var(--fg-3); margin: 20px auto 0; max-width: 480px; line-height: 1.7;">
+      Prefer to skip the handling fee? After registering, you're welcome to pay by
+      Zelle to <strong style="color: var(--sfh-navy-900);">santafehounds@gmail.com</strong>.
+    </p>
+  </div>
+
+  <!-- All-Inclusive Voting Memberships -->
+  <div style="margin-bottom: 72px;">
+    <div class="section-eyebrow">All-Inclusive</div>
+    <h2 class="section-heading">Voting Memberships</h2>
+    <div class="section-rule"></div>
+
+    <div class="platinum-grid">
+
+      <div class="platinum-card">
+        <div class="card-tier">Platinum</div>
+        <div class="card-name">Family</div>
+        <div class="card-price">$3,050</div>
+        <div class="card-includes">What's Included</div>
+        <ul class="card-features">
+          <li>Unlimited hunting for 2 adults</li>
+          <li>Children under 18 included</li>
+          <li>All event invitations</li>
+          <li>MFHA fee included</li>
+          <li>Voting rights after year two</li>
+        </ul>
+        <div class="card-note">Our most comprehensive family membership.</div>
+      </div>
+
+      <div class="platinum-card">
+        <div class="card-tier">Platinum</div>
+        <div class="card-name">Individual</div>
+        <div class="card-price">$2,150</div>
+        <div class="card-includes">What's Included</div>
+        <ul class="card-features">
+          <li>Unlimited hunting for 1 adult</li>
+          <li>Spouses &amp; partners invited to all non-hunting events</li>
+          <li>All event invitations</li>
+          <li>MFHA fee included</li>
+          <li>Voting rights after year two</li>
+        </ul>
+        <div class="card-note">Full access for one hunter, social access for a partner.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Other Membership Options -->
+  <div>
+    <div class="section-eyebrow">Additional Options</div>
+    <h2 class="section-heading">Other Membership Levels</h2>
+    <div class="section-rule"></div>
+
+    <div class="tiers-grid">
+
+      <div class="tier-card">
+        <div class="tier-price">$1,250</div>
+        <div class="tier-name">Gold</div>
+        <div class="tier-desc">Eight hunting days annually, Opening &amp; Closing Hunt, two additional discounted days, unlimited autumn hunting, and all event invitations.</div>
+        <div class="tier-note">Includes MFHA fee</div>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-price">$650</div>
+        <div class="tier-name">Silver</div>
+        <div class="tier-desc">Three hunting days annually, Opening &amp; Closing Hunt, two additional discounted days, unlimited autumn hunting, and all event invitations.</div>
+        <div class="tier-note">Includes MFHA fee</div>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-price">$500</div>
+        <div class="tier-name">Non-Resident Hunter</div>
+        <div class="tier-desc">For full-hunting members of other MFHA-recognized hunts residing outside California 7 or more months per year. Unlimited hunting and all events.</div>
+        <div class="tier-note">Includes MFHA fee · Proof of other hunt membership required</div>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-price">$300</div>
+        <div class="tier-name">Non-Hunting</div>
+        <div class="tier-desc">All event invitations and member pricing for non-hunting club activities.</div>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-price">$285</div>
+        <div class="tier-name">Junior Hunter</div>
+        <div class="tier-desc">Unlimited hunting with adult supervision and all event access.</div>
+        <div class="tier-note">For unmarried members ages 12–21</div>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-price">$125</div>
+        <div class="tier-name">Out-of-State Supporter</div>
+        <div class="tier-desc">Event invitations and hunt mailings for those who love the hunt from afar.</div>
+        <div class="tier-note">For California non-residents (7+ months per year)</div>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-price">Free</div>
+        <div class="tier-name">Young Hunter / USPC</div>
+        <div class="tier-desc">Unlimited hunting with adult supervision and all event invitations.</div>
+        <div class="tier-note">For members under 12, or USPC members under 18</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div>
+    <a href="/">Welcome</a>
+    <a href="/about">About</a>
+    <a href="/etiquette">Etiquette</a>
+    <a href="/join">Join</a>
+    <a href="/events">Events</a>
+    <a href="/members">Members</a>
+    <a href="https://santa-fe-hunt.myshopify.com" target="_blank">Shop</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div style="margin-top: 20px;">
+    <a href="https://www.instagram.com/santafehounds/?hl=en" target="_blank">Instagram</a>
+    <span style="color: rgba(250,246,238,0.4);">·</span>
+    <a href="https://www.facebook.com/SantaFeHunt" target="_blank">Facebook</a>
+  </div>
+  <div class="site-footer-copy">&copy; 2026 Santa Fe Hunt</div>
+</footer>
+
+</body>
+</html>
