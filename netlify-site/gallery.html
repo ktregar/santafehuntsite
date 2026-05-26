@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Gallery | Santa Fe Hunt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/jpeg" href="./assets/logo-color.jpg">
+<link rel="stylesheet" href="./colors_and_type.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sfh-cream); }
+
+/* ── Header ── */
+.site-header {
+  background: var(--sfh-cream);
+  border-top: 1px solid var(--sfh-navy-500);
+  border-bottom: 1px solid var(--sfh-navy-500);
+}
+.site-header-inner {
+  max-width: 1320px; margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.site-header-logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+.site-header-logo img { height: 56px; width: 56px; object-fit: contain; }
+.site-header-name {
+  font-family: var(--font-display); font-size: 22px; font-weight: 600;
+  letter-spacing: 0.04em; color: var(--sfh-navy-900); line-height: 1.1;
+}
+.site-header-sub {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--sfh-gold-500);
+}
+.site-nav { display: flex; gap: 28px; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+.site-nav a { color: var(--fg-2); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent; transition: all 200ms; }
+.site-nav a:hover, .site-nav a.active { color: var(--sfh-navy-500); border-bottom-color: var(--sfh-gold-400); }
+
+/* ── Hero banner ── */
+.page-hero {
+  background: var(--sfh-navy-900);
+  padding: 72px 32px;
+  text-align: center;
+}
+.page-hero .eyebrow { color: var(--sfh-gold-400); margin-bottom: 12px; display: block; }
+.page-hero h1 {
+  font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500; color: var(--sfh-cream); letter-spacing: 0.04em; margin: 0 0 16px;
+}
+.page-hero p {
+  font-family: var(--font-serif); font-size: 18px; color: rgba(250,246,238,0.75);
+  max-width: 600px; margin: 0 auto; line-height: 1.7;
+}
+
+/* ── Body ── */
+.page-body { max-width: 1200px; margin: 0 auto; padding: 72px 32px 96px; }
+
+.section-eyebrow {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500);
+  margin: 0 0 8px;
+}
+.section-heading {
+  font-family: var(--font-display); font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500; color: var(--sfh-navy-900); margin: 0 0 6px;
+}
+.section-rule {
+  width: 56px; height: 2px; background: var(--sfh-gold-400); margin: 0 0 48px;
+}
+
+/* ── Photo grid ── */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+.photo-card { position: relative; overflow: hidden; background: var(--sfh-navy-900); }
+
+.photo-card img {
+  display: block; width: 100%; height: 300px;
+  object-fit: cover; object-position: center;
+  transition: transform 400ms ease, opacity 400ms ease;
+  opacity: 0.92;
+}
+
+.photo-card:hover img {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+.photo-caption {
+  padding: 14px 16px 16px;
+  background: var(--sfh-navy-900);
+}
+.photo-caption-text {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-400);
+  margin: 0;
+}
+.photo-caption-sub {
+  font-family: var(--font-serif); font-size: 13px; color: rgba(250,246,238,0.65);
+  margin: 3px 0 0; line-height: 1.4;
+}
+
+/* ── Footer ── */
+.site-footer {
+  background: var(--sfh-navy-900); padding: 48px 32px;
+  text-align: center;
+}
+.site-footer a {
+  color: var(--sfh-gold-300); font-family: var(--font-sans);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; margin: 0 16px;
+}
+.site-footer a:hover { color: var(--sfh-cream); }
+.site-footer-copy {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(250,246,238,0.4); margin-top: 24px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .photo-grid { grid-template-columns: repeat(2, 1fr); }
+  .photo-card img { height: 240px; }
+}
+@media (max-width: 560px) {
+  .photo-grid { grid-template-columns: 1fr; }
+  .site-nav { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-header-logo">
+      <img src="./assets/logo-color.jpg" alt="Santa Fe Hunt">
+      <div>
+        <div class="site-header-name">SANTA FE HUNT</div>
+        <div class="site-header-sub">Est. 1969 · MFHA Recognized</div>
+      </div>
+    </a>
+    <nav class="site-nav">
+      <a href="/">Welcome</a>
+      <a href="/about">About</a>
+      <a href="/etiquette">Etiquette</a>
+      <a href="/join">Join</a>
+      <a href="/events">Events</a>
+      <a href="/gallery" class="active">Gallery</a>
+      <a href="/members">Members</a>
+      <a href="https://santa-fe-hunt.myshopify.com" target="_blank">Shop</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="eyebrow">Santa Fe Hunt</span>
+  <h1>Gallery</h1>
+  <p>Hounds, horses, and hunt country — life in the field.</p>
+</div>
+
+<div class="page-body">
+  <div class="section-eyebrow">Photos</div>
+  <h2 class="section-heading">From the Field</h2>
+  <div class="section-rule"></div>
+
+  <div class="photo-grid">
+
+    <div class="photo-card">
+      <img src="./assets/photos/blessing-of-hounds.jpg" alt="Blessing of the Hounds">
+      <div class="photo-caption">
+        <p class="photo-caption-text">Blessing of the Hounds</p>
+        <p class="photo-caption-sub">Staff and field gather with the pack to open the season</p>
+      </div>
+    </div>
+
+    <div class="photo-card">
+      <img src="./assets/photos/master-pack.jpg" alt="Huntsman with the pack">
+      <div class="photo-caption">
+        <p class="photo-caption-text">Huntsman with the Pack</p>
+        <p class="photo-caption-sub">Working the hounds across open country in Riverside County</p>
+      </div>
+    </div>
+
+    <div class="photo-card">
+      <img src="./assets/photos/staff-line.jpg" alt="Hunt staff with the pack">
+      <div class="photo-caption">
+        <p class="photo-caption-text">Hunt Staff</p>
+        <p class="photo-caption-sub">Staff riders with the pack at the meet</p>
+      </div>
+    </div>
+
+    <div class="photo-card">
+      <img src="./assets/photos/hounds-running.jpg" alt="The field riding through the pines">
+      <div class="photo-caption">
+        <p class="photo-caption-text">Through the Back Country</p>
+        <p class="photo-caption-sub">The field moving through pines and high desert scrub</p>
+      </div>
+    </div>
+
+    <div class="photo-card">
+      <img src="./assets/photos/riders-pines.jpg" alt="Members in the field">
+      <div class="photo-caption">
+        <p class="photo-caption-text">Members in the Field</p>
+        <p class="photo-caption-sub">Riders crossing a winter landscape</p>
+      </div>
+    </div>
+
+    <div class="photo-card">
+      <img src="./assets/photos/desert-ride.jpg" alt="Riding through spring wildflowers">
+      <div class="photo-caption">
+        <p class="photo-caption-text">Spring in Hunt Country</p>
+        <p class="photo-caption-sub">Riding through the wildflower bloom</p>
+      </div>
+    </div>
+
+    <div class="photo-card">
+      <img src="./assets/photos/wildflowers-pink.jpg" alt="Members among spring wildflowers">
+      <div class="photo-caption">
+        <p class="photo-caption-text">Wildflower Season</p>
+        <p class="photo-caption-sub">Yellow and purple blooms across the valley</p>
+      </div>
+    </div>
+
+    <div class="photo-card">
+      <img src="./assets/photos/wildflowers-yellow.jpg" alt="The field in spring">
+      <div class="photo-caption">
+        <p class="photo-caption-text">The Field in Spring</p>
+        <p class="photo-caption-sub">A spring morning ride through the high desert</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div>
+    <a href="/">Welcome</a>
+    <a href="/about">About</a>
+    <a href="/etiquette">Etiquette</a>
+    <a href="/join">Join</a>
+    <a href="/events">Events</a>
+    <a href="/members">Members</a>
+    <a href="https://santa-fe-hunt.myshopify.com" target="_blank">Shop</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div style="margin-top: 20px;">
+    <a href="https://www.instagram.com/santafehounds/?hl=en" target="_blank">Instagram</a>
+    <span style="color: rgba(250,246,238,0.4);">·</span>
+    <a href="https://www.facebook.com/SantaFeHunt" target="_blank">Facebook</a>
+  </div>
+  <div class="site-footer-copy">© 2026 Santafehunt.com</div>
+</footer>
+
+</body>
+</html>

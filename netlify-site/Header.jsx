@@ -8,7 +8,7 @@ function Header() {
     { label: 'Etiquette', href: '/etiquette' },
     { label: 'Join', href: '/join' },
     { label: 'Events', href: '/events' },
-    { label: 'Pictures', href: '/pictures' },
+    { label: 'Gallery', href: '/gallery' },
     { label: 'Contact', href: '/contact' },
     { label: 'Members', href: '/members' },
     { label: 'Shop', href: 'https://santa-fe-hunt.myshopify.com', target: '_blank' },
