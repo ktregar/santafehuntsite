@@ -18,6 +18,10 @@
 /join        /join.html     200
 /join/       /join.html     200
 
+# Contact
+/contact     /contact.html  200
+/contact/    /contact.html  200
+
 # Catch-all: send any unknown path back to the homepage so the site
 # never shows a 404 for visitors who follow old links.
 /*    /index.html   200
