@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Events | Santa Fe Hunt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/jpeg" href="./assets/logo-color.jpg">
+<link rel="stylesheet" href="./colors_and_type.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sfh-cream); }
+
+/* ── Header ── */
+.site-header {
+  background: var(--sfh-cream);
+  border-top: 1px solid var(--sfh-navy-500);
+  border-bottom: 1px solid var(--sfh-navy-500);
+}
+.site-header-inner {
+  max-width: 1320px; margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.site-header-logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+.site-header-logo img { height: 56px; width: 56px; object-fit: contain; }
+.site-header-name {
+  font-family: var(--font-display); font-size: 22px; font-weight: 600;
+  letter-spacing: 0.04em; color: var(--sfh-navy-900); line-height: 1.1;
+}
+.site-header-sub {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--sfh-gold-500);
+}
+.site-nav { display: flex; gap: 28px; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+.site-nav a { color: var(--fg-2); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent; transition: all 200ms; }
+.site-nav a:hover, .site-nav a.active { color: var(--sfh-navy-500); border-bottom-color: var(--sfh-gold-400); }
+
+/* ── Hero banner ── */
+.page-hero {
+  background: var(--sfh-navy-900);
+  padding: 72px 32px;
+  text-align: center;
+}
+.page-hero .eyebrow { color: var(--sfh-gold-400); margin-bottom: 12px; display: block; }
+.page-hero h1 {
+  font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500; color: var(--sfh-cream); letter-spacing: 0.04em; margin: 0 0 16px;
+}
+.page-hero p {
+  font-family: var(--font-serif); font-size: 18px; color: rgba(250,246,238,0.75);
+  max-width: 600px; margin: 0 auto; line-height: 1.7;
+}
+
+/* ── Body ── */
+.page-body { max-width: 1080px; margin: 0 auto; padding: 72px 32px 96px; }
+
+.section { margin-bottom: 80px; }
+.section-eyebrow {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500);
+  margin: 0 0 8px;
+}
+.section-heading {
+  font-family: var(--font-display); font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500; color: var(--sfh-navy-900); margin: 0 0 6px;
+}
+.section-rule {
+  width: 56px; height: 2px; background: var(--sfh-gold-400); margin: 0 0 40px;
+}
+
+/* ── Featured event card ── */
+.event-card {
+  border: 1px solid var(--border-soft);
+  overflow: hidden;
+}
+
+.event-card-header {
+  background: var(--sfh-navy-900);
+  padding: 36px 40px;
+}
+.event-card-eyebrow {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-400);
+  margin: 0 0 10px;
+}
+.event-card-title {
+  font-family: var(--font-display); font-size: clamp(24px, 3vw, 38px);
+  font-weight: 500; color: var(--sfh-cream); letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.event-details-bar {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+}
+.event-detail {
+  background: var(--sfh-cream);
+  padding: 20px 24px;
+}
+.event-detail-label {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500);
+  margin: 0 0 4px;
+}
+.event-detail-value {
+  font-family: var(--font-display); font-size: 18px; font-weight: 500;
+  color: var(--sfh-navy-900); line-height: 1.3; margin: 0;
+}
+.event-detail-sub {
+  font-family: var(--font-sans); font-size: 11px; color: var(--fg-3);
+  margin: 2px 0 0; letter-spacing: 0.04em;
+}
+
+.event-body {
+  padding: 36px 40px;
+  display: grid; grid-template-columns: 1fr 280px; gap: 48px; align-items: start;
+}
+
+.event-description p {
+  font-family: var(--font-serif); font-size: 17px; line-height: 1.8;
+  color: var(--fg-2); margin: 0 0 16px; max-width: 60ch;
+}
+.event-description p:last-child { margin-bottom: 0; }
+
+.event-requirements {
+  background: var(--sfh-parchment);
+  border: 1px solid var(--border-soft);
+  padding: 24px;
+}
+.event-req-heading {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-navy-900);
+  margin: 0 0 14px;
+}
+.event-req-list {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.event-req-list li {
+  font-family: var(--font-serif); font-size: 14px; color: var(--fg-2);
+  line-height: 1.5; padding-left: 16px; position: relative;
+}
+.event-req-list li::before {
+  content: '✦'; position: absolute; left: 0;
+  color: var(--sfh-gold-400); font-size: 8px; top: 4px;
+}
+
+.event-ctas {
+  padding: 0 40px 36px;
+  display: flex; gap: 12px; flex-wrap: wrap;
+}
+
+.btn-primary {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 600;
+  background: var(--sfh-navy-900); color: var(--sfh-cream);
+  border: none; padding: 16px 32px; cursor: pointer;
+  text-decoration: none; display: inline-block;
+  transition: background 200ms;
+}
+.btn-primary:hover { background: var(--sfh-navy-500); }
+
+.btn-secondary {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 600;
+  background: transparent; color: var(--sfh-navy-900);
+  border: 1px solid var(--sfh-navy-900); padding: 15px 32px; cursor: pointer;
+  text-decoration: none; display: inline-block;
+  transition: all 200ms;
+}
+.btn-secondary:hover { background: var(--sfh-navy-900); color: var(--sfh-cream); }
+
+/* ── Annual events list ── */
+.annual-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2px; background: var(--border-soft);
+  border: 1px solid var(--border-soft);
+}
+.annual-item {
+  background: var(--sfh-cream); padding: 24px;
+}
+.annual-item-name {
+  font-family: var(--font-display); font-size: 18px; font-weight: 500;
+  color: var(--sfh-navy-900); margin: 0 0 4px;
+}
+.annual-item-desc {
+  font-family: var(--font-serif); font-size: 13px; color: var(--fg-3);
+  line-height: 1.5; margin: 0;
+}
+
+/* ── Footer ── */
+.site-footer {
+  background: var(--sfh-navy-900); padding: 48px 32px;
+  text-align: center;
+}
+.site-footer a {
+  color: var(--sfh-gold-300); font-family: var(--font-sans);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; margin: 0 16px;
+}
+.site-footer a:hover { color: var(--sfh-cream); }
+.site-footer-copy {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(250,246,238,0.4); margin-top: 24px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 760px) {
+  .event-details-bar { grid-template-columns: 1fr; }
+  .event-body { grid-template-columns: 1fr; gap: 32px; }
+  .event-card-header, .event-body, .event-ctas { padding-left: 24px; padding-right: 24px; }
+  .site-nav { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-header-logo">
+      <img src="./assets/logo-color.jpg" alt="Santa Fe Hunt">
+      <div>
+        <div class="site-header-name">SANTA FE HUNT</div>
+        <div class="site-header-sub">Est. 1969 · MFHA Recognized</div>
+      </div>
+    </a>
+    <nav class="site-nav">
+      <a href="/">Welcome</a>
+      <a href="/about">About</a>
+      <a href="/etiquette">Etiquette</a>
+      <a href="/join">Join</a>
+      <a href="/events" class="active">Events</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/members">Members</a>
+      <a href="https://santa-fe-hunt.myshopify.com" target="_blank">Shop</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="eyebrow">Santa Fe Hunt · 2025–26 Season</span>
+  <h1>Events</h1>
+  <p>Hunt days, special events, and social gatherings throughout the season.</p>
+</div>
+
+<div class="page-body">
+
+  <!-- UPCOMING EVENT -->
+  <div class="section">
+    <div class="section-eyebrow">On the Calendar</div>
+    <h2 class="section-heading">Upcoming Events</h2>
+    <div class="section-rule"></div>
+
+    <div class="event-card">
+
+      <div class="event-card-header">
+        <div class="event-card-eyebrow">Open to the Public · Spring 2026</div>
+        <h3 class="event-card-title">Santa Fe Hunt Hunter Pace</h3>
+      </div>
+
+      <div class="event-details-bar">
+        <div class="event-detail">
+          <div class="event-detail-label">Date</div>
+          <div class="event-detail-value">May 30, 2026</div>
+          <div class="event-detail-sub">Saturday</div>
+        </div>
+        <div class="event-detail">
+          <div class="event-detail-label">Time</div>
+          <div class="event-detail-value">8:30 AM – 2:00 PM</div>
+          <div class="event-detail-sub">Check-in begins at 8:30</div>
+        </div>
+        <div class="event-detail">
+          <div class="event-detail-label">Location</div>
+          <div class="event-detail-value">Costo Ranch</div>
+          <div class="event-detail-sub">Anza, CA 92539</div>
+        </div>
+      </div>
+
+      <div class="event-body">
+        <div class="event-description">
+          <p>An East-Coast-style competition open to all levels of rider. Teams of 2 or 3 navigate open terrain and optional jumps, aiming to complete the course as close as possible to an ideal time — no one knows what the ideal time is until the end. It's a test of horsemanship, not speed.</p>
+          <p>Four divisions accommodate English and Western riders of varying experience. Vendors will be on site, followed by a catered lunch and ribbon awards ceremony.</p>
+        </div>
+        <div class="event-requirements">
+          <div class="event-req-heading">What to Know</div>
+          <ul class="event-req-list">
+            <li>ASTM-certified helmets required for all participants</li>
+            <li>Non-members must complete the digital liability waiver before riding</li>
+            <li>Teams of 2 or 3 riders</li>
+            <li>English and Western welcome — four divisions available</li>
+            <li>Lunch and vendors included</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="event-ctas">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4dcAOecNmwIl6PXLUN-r7KgXVWZQIFOmvgk_UQ6vsZP8C9g/viewform?usp=header" target="_blank" class="btn-primary">Register Now</a>
+        <a href="https://waiver.smartwaiver.com/w/czrugtbl1r7mpphfgr3sfw/web/" target="_blank" class="btn-secondary">Sign Waiver (Non-Members)</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HUNT SEASON -->
+  <div class="section">
+    <div class="section-eyebrow">November – April</div>
+    <h2 class="section-heading">The Hunt Season</h2>
+    <div class="section-rule"></div>
+
+    <p style="font-family: var(--font-serif); font-size: 17px; line-height: 1.8; color: var(--fg-2); max-width: 68ch; margin: 0 0 40px;">
+      The formal hunt season runs November through April, with hounds going out two or three times a week in Riverside County. Hunt days are listed in the Members area calendar. Guests may cap (ride as a guest) with advance notice — contact us to arrange.
+    </p>
+
+    <div class="annual-grid">
+      <div class="annual-item">
+        <div class="annual-item-name">Hunt Days</div>
+        <div class="annual-item-desc">Regular hunting 2–3 times weekly, November through April</div>
+      </div>
+      <div class="annual-item">
+        <div class="annual-item-name">Hunt Ball</div>
+        <div class="annual-item-desc">Annual formal dinner and celebration for members and guests</div>
+      </div>
+      <div class="annual-item">
+        <div class="annual-item-name">Hound Show</div>
+        <div class="annual-item-desc">Showcase of the pack — judged by MFHA standards</div>
+      </div>
+      <div class="annual-item">
+        <div class="annual-item-name">Christmas Party</div>
+        <div class="annual-item-desc">Holiday gathering for members and families</div>
+      </div>
+      <div class="annual-item">
+        <div class="annual-item-name">Puppy Auction</div>
+        <div class="annual-item-desc">Sponsor a young hound through their first season</div>
+      </div>
+      <div class="annual-item">
+        <div class="annual-item-name">Hunter Pace</div>
+        <div class="annual-item-desc">Open competition — teams of 2 or 3, English and Western welcome</div>
+      </div>
+      <div class="annual-item">
+        <div class="annual-item-name">Race Meets</div>
+        <div class="annual-item-desc">Point-to-point races and riding clinics</div>
+      </div>
+      <div class="annual-item">
+        <div class="annual-item-name">Camping Trips</div>
+        <div class="annual-item-desc">Multi-day rides in hunt country</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div>
+    <a href="/">Welcome</a>
+    <a href="/about">About</a>
+    <a href="/etiquette">Etiquette</a>
+    <a href="/join">Join</a>
+    <a href="/events">Events</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/members">Members</a>
+    <a href="https://santa-fe-hunt.myshopify.com" target="_blank">Shop</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div style="margin-top: 20px;">
+    <a href="https://www.instagram.com/santafehounds/?hl=en" target="_blank">Instagram</a>
+    <span style="color: rgba(250,246,238,0.4);">·</span>
+    <a href="https://www.facebook.com/SantaFeHunt" target="_blank">Facebook</a>
+  </div>
+  <div class="site-footer-copy">© 2026 Santafehunt.com</div>
+</footer>
+
+</body>
+</html>
