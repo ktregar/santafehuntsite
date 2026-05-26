@@ -150,6 +150,29 @@ body { margin: 0; background: var(--sfh-cream); }
   display: flex; gap: 12px; flex-wrap: wrap;
 }
 
+/* ── Fees ── */
+.event-fees {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+  background: var(--border-soft);
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+}
+.fees-col {
+  background: var(--sfh-cream); padding: 24px 40px;
+}
+.fees-group-label {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500);
+  margin-bottom: 12px;
+}
+.fees-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--font-serif); font-size: 15px; color: var(--sfh-navy-900);
+  padding: 6px 0; border-bottom: 1px solid var(--border-hairline);
+}
+.fees-row:last-child { border-bottom: none; }
+.fees-row span:last-child { font-weight: 600; }
+
 .btn-primary {
   font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.22em;
   text-transform: uppercase; font-weight: 600;
@@ -291,6 +314,20 @@ body { margin: 0; background: var(--sfh-cream); }
             <li>English and Western welcome — four divisions available</li>
             <li>Lunch and vendors included</li>
           </ul>
+        </div>
+      </div>
+
+      <div class="event-fees">
+        <div class="fees-col">
+          <div class="fees-group-label">Members</div>
+          <div class="fees-row"><span>Adult</span><span>$45</span></div>
+          <div class="fees-row"><span>Junior (12 &amp; under)</span><span>$30</span></div>
+        </div>
+        <div class="fees-col">
+          <div class="fees-group-label">Non-Members</div>
+          <div class="fees-row"><span>Adult</span><span>$75</span></div>
+          <div class="fees-row"><span>Junior (12 &amp; under)</span><span>$60</span></div>
+          <div class="fees-row"><span>Non-Rider Lunch Only</span><span>$20</span></div>
         </div>
       </div>
 
