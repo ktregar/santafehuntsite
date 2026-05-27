@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-The Santa Fe Hunt club website. Deploys to Netlify automatically on push to `main`. The deploy root is `netlify-site/` (configured in `netlify.toml` at the repo root). There is **no build step, no package.json, no node_modules** — Netlify just serves `netlify-site/` as static files. Editing a file → commit → push → live in ~30 seconds.
+The Santa Fe Hunt club website, live at **santafehunt.com**. DNS was cut over from the old Wix site, so this repo is now the production site — pushes to `main` ship to the public domain. Deploys to Netlify automatically on push to `main`. The deploy root is `netlify-site/` (configured in `netlify.toml` at the repo root). There is **no build step, no package.json, no node_modules** — Netlify just serves `netlify-site/` as static files. Editing a file → commit → push → live in ~30 seconds.
 
 ## Who edits this site (and how to act for them)
 
@@ -24,13 +24,21 @@ The site mixes two rendering approaches. Know which you're touching before editi
 
 1. **`index.html` — in-browser React/Babel.** Loads React 18 + `@babel/standalone` from unpkg, then `<script type="text/babel" src="...">` tags pull in each `*.jsx` file. Each component file defines a top-level function and assigns it to `window` (e.g. `window.Header = Header`) so sibling scripts can reference it. `index.html` itself composes `<App>` from those globals. There is no module system, no JSX import — components communicate through `window`. `SectionEyebrow` is defined in `EventList.jsx` and re-used by `Etiquette.jsx` via the same window-global pattern.
 
-2. **`about.html`, `awards.html`, `etiquette.html`, `members.html` — static HTML.** Each has its own duplicated header/footer markup and a `<style>` block inline. They do **not** use the React components; if you change navigation or header styling, you must update both the JSX (`Header.jsx`) *and* the inline markup in each static page.
+2. **`about.html`, `awards.html`, `contact.html`, `etiquette.html`, `events.html`, `gallery.html`, `join.html`, `members.html` — static HTML.** Each has its own duplicated header/footer markup and a `<style>` block inline. They do **not** use the React components; if you change navigation or header styling, you must update both the JSX (`Header.jsx`) *and* the inline markup in each static page. Note: `gallery.html` is the live gallery page — the `Gallery.jsx` component used by `index.html` is a separate homepage strip.
 
 Both styles share `colors_and_type.css`, which is the single source of truth for brand colors, typography, and spacing tokens (CSS custom properties prefixed `--sfh-*`). Always reach for an existing token before introducing a hex value.
 
 ## Routing
 
-`_redirects` maps clean URLs to the static files (`/about` → `/about.html`, etc.) and has a catch-all `/* → /index.html 200` so unknown paths land on the homepage rather than 404. Netlify reads this at the deploy root.
+`_redirects` maps clean URLs to the static files (`/about`, `/awards`, `/contact`, `/etiquette`, `/events`, `/gallery`, `/join`, `/members`, each with and without trailing slash) and has a catch-all `/* → /index.html 200` so unknown paths land on the homepage rather than 404. Netlify reads this at the deploy root. When you add a new static page, add its redirect pair here too.
+
+## Forms
+
+`contact.html` submits through **Netlify Forms** (a `<form netlify>` attribute on a plain HTML form — Netlify scrapes it at deploy time and starts collecting submissions). No backend code. If a contact form ever stops collecting submissions, the first check is whether Netlify still sees the form in the deploy log.
+
+## Join page prefill
+
+`join.html` lists membership tiers and has per-tier **Register** buttons that link to the membership form with the chosen tier prefilled (query-string driven). When editing tier names or pricing, keep the button targets in sync so the prefill still matches the form's options.
 
 ## Conventions worth preserving
 
@@ -41,10 +49,15 @@ Both styles share `colors_and_type.css`, which is the single source of truth for
 
 ## Common edits
 
-- **Event dates** → `EventList.jsx` (`events` array)
+- **Homepage event dates** → `EventList.jsx` (`events` array)
+- **Standalone events page** → `events.html`
 - **Quote / attribution** → `MemberSpotlight.jsx`
-- **Social links** → `Footer.jsx`
-- **Etiquette tabs/copy** → `Etiquette.jsx` (`content` object, keyed by tab id)
+- **Homepage hero** → `Hero.jsx`
+- **Homepage gallery strip** → `Gallery.jsx` (separate from the full `gallery.html` page)
+- **Social links** → `Footer.jsx` (and the duplicated footer in each static `.html`)
+- **Etiquette tabs/copy** → `Etiquette.jsx` (`content` object, keyed by tab id) — also rendered as `etiquette.html`
+- **Membership tiers / pricing** → `join.html`
+- **Contact form** → `contact.html` (Netlify Forms)
 - **Colors, fonts, spacing** → `colors_and_type.css` only
 
 ## Performance note (from netlify-site/README.md)
