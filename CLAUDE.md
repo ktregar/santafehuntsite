@@ -24,13 +24,13 @@ The site mixes two rendering approaches. Know which you're touching before editi
 
 1. **`index.html` — in-browser React/Babel.** Loads React 18 + `@babel/standalone` from unpkg, then `<script type="text/babel" src="...">` tags pull in each `*.jsx` file. Each component file defines a top-level function and assigns it to `window` (e.g. `window.Header = Header`) so sibling scripts can reference it. `index.html` itself composes `<App>` from those globals. There is no module system, no JSX import — components communicate through `window`. `SectionEyebrow` is defined in `EventList.jsx` and re-used by `Etiquette.jsx` via the same window-global pattern.
 
-2. **`about.html`, `awards.html`, `contact.html`, `etiquette.html`, `events.html`, `gallery.html`, `join.html`, `members.html` — static HTML.** Each has its own duplicated header/footer markup and a `<style>` block inline. They do **not** use the React components; if you change navigation or header styling, you must update both the JSX (`Header.jsx`) *and* the inline markup in each static page. Note: `gallery.html` is the live gallery page — the `Gallery.jsx` component used by `index.html` is a separate homepage strip.
+2. **`about.html`, `awards.html`, `contact.html`, `etiquette.html`, `events.html`, `gallery.html`, `join.html`, `members.html` — static HTML.** Each has its own duplicated header/footer markup and a `<style>` block inline. They do **not** use the React components; if you change navigation or header styling, you must update both the JSX (`Header.jsx`/`Footer.jsx`) *and* the inline markup in each static page (plus `404.html`). Note: `gallery.html` is the live gallery page — the `Gallery.jsx` component used by `index.html` is a separate homepage strip. `404.html` is the same static-page pattern but only served via the `_redirects` catch-all for unmatched URLs; it's not in the nav.
 
 Both styles share `colors_and_type.css`, which is the single source of truth for brand colors, typography, and spacing tokens (CSS custom properties prefixed `--sfh-*`). Always reach for an existing token before introducing a hex value.
 
 ## Routing
 
-`_redirects` maps clean URLs to the static files (`/about`, `/awards`, `/contact`, `/etiquette`, `/events`, `/gallery`, `/join`, `/members`, each with and without trailing slash) and has a catch-all `/* → /index.html 200` so unknown paths land on the homepage rather than 404. Netlify reads this at the deploy root. When you add a new static page, add its redirect pair here too.
+`_redirects` maps clean URLs to the static files (`/about`, `/awards`, `/contact`, `/etiquette`, `/events`, `/gallery`, `/join`, `/members`, each with and without trailing slash). The catch-all `/* → /404.html 404` renders the branded `404.html` for any unmatched path and returns a real 404 status (so search engines don't index every random slug as a soft duplicate of the homepage). Netlify reads `_redirects` at the deploy root. When you add a new static page, add its redirect pair here too.
 
 ## Forms
 
