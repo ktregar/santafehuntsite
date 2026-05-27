@@ -9,9 +9,9 @@ function Header() {
     { label: 'Join', href: '/join' },
     { label: 'Events', href: '/events' },
     { label: 'Gallery', href: '/gallery' },
-    { label: 'Contact', href: '/contact' },
     { label: 'Members', href: '/members' },
     { label: 'Shop', href: 'https://santa-fe-hunt.myshopify.com', target: '_blank' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   // Inject mobile styles once
@@ -53,7 +53,7 @@ function Header() {
           {/* Desktop nav */}
           <nav className="sfh-nav-desktop" style={{ alignItems: 'center', gap: 20, fontFamily: 'var(--font-sans)', fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', fontWeight: 500 }}>
             {navItems.map(i => (
-              <a key={i.label} href={i.href} target={i.target || '_self'}
+              <a key={i.label} href={i.href} target={i.target || '_self'} rel={i.target === '_blank' ? 'noopener noreferrer' : undefined}
                 style={{
                   color: active === i.label ? 'var(--sfh-navy-500)' : 'var(--fg-2)',
                   textDecoration: 'none',
@@ -99,7 +99,7 @@ function Header() {
             background: 'var(--sfh-cream)',
           }}>
           {navItems.map(i => (
-            <a key={i.label} href={i.href} target={i.target || '_self'}
+            <a key={i.label} href={i.href} target={i.target || '_self'} rel={i.target === '_blank' ? 'noopener noreferrer' : undefined}
               onClick={() => setMenuOpen(false)}
               style={{
                 fontFamily: 'var(--font-sans)', fontSize: 12, letterSpacing: '0.16em',
