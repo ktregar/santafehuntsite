@@ -9,6 +9,25 @@ function Footer() {
           SANTA FE HUNT
         </div>
         <div style={{ width: 80, height: 1, background: 'var(--sfh-gold-400)' }} />
+
+        {/* Mailing list signup */}
+        <form
+          action="https://santafehunt.us4.list-manage.com/subscribe/post?u=aaf6ca70722a337ce1f9f9c05&id=9741c32bf5&f_id=0043d0e7f0"
+          method="post"
+          target="_blank"
+          noValidate
+          style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}
+        >
+          <input type="text" name="FNAME" placeholder="First Name" className="sfh-signup-input" style={{ width: 160, fontSize: 12, padding: '10px 14px' }} />
+          <input type="email" name="EMAIL" placeholder="Email Address" required className="sfh-signup-input" style={{ width: 210, fontSize: 12, padding: '10px 14px' }} />
+          <div aria-hidden="true" style={{ position: 'absolute', left: -5000 }}>
+            <input type="text" name="b_aaf6ca70722a337ce1f9f9c05_9741c32bf5" tabIndex="-1" defaultValue="" />
+          </div>
+          <button type="submit" style={{ fontFamily: 'var(--font-sans)', fontSize: 11, letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600, background: 'var(--sfh-gold-400)', color: 'var(--sfh-navy-900)', border: 'none', padding: '10px 22px', cursor: 'pointer', whiteSpace: 'nowrap' }}>
+            Subscribe
+          </button>
+        </form>
+
         <nav style={{ display: 'flex', gap: 32, fontFamily: 'var(--font-sans)', fontSize: 11, letterSpacing: '0.24em', textTransform: 'uppercase', fontWeight: 500 }}>
           {[
             { label: 'Welcome', href: '/' },
