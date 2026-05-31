@@ -238,11 +238,46 @@ body { margin: 0; background: var(--sfh-cream); }
   text-transform: uppercase; color: rgba(250,246,238,0.4); margin-top: 24px;
 }
 
+/* ── Past event ── */
+.past-note { font-family: var(--font-serif); font-size: 17px; line-height: 1.8; color: var(--fg-2); max-width: 60ch; margin: 0 0 32px; }
+.past-placeholders { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border-soft); }
+.past-placeholder-box { background: var(--sfh-parchment); padding: 32px 40px; text-align: center; }
+.past-placeholder-label { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin: 0 0 8px; }
+.past-placeholder-value { font-family: var(--font-display); font-size: 20px; color: var(--fg-3); font-weight: 500; }
+
+/* ── TBD event card ── */
+.tbd-card { border: 1px solid var(--border-soft); overflow: hidden; margin-bottom: 24px; }
+.tbd-card-header { background: var(--sfh-navy-500); padding: 28px 40px; }
+.tbd-card-eyebrow { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-400); margin: 0 0 8px; }
+.tbd-card-title { font-family: var(--font-display); font-size: clamp(22px, 2.5vw, 32px); font-weight: 500; color: var(--sfh-cream); letter-spacing: 0.02em; margin: 0; }
+.tbd-card-body { padding: 28px 40px; font-family: var(--font-serif); font-size: 16px; line-height: 1.7; color: var(--fg-2); }
+
+/* ── Upcoming event list ── */
+.event-list { display: flex; flex-direction: column; gap: 2px; background: var(--border-soft); border: 1px solid var(--border-soft); margin-bottom: 32px; }
+.event-row { background: var(--sfh-cream); display: flex; align-items: stretch; }
+.event-row-date { background: var(--sfh-navy-900); color: var(--sfh-cream); padding: 20px 24px; min-width: 110px; text-align: center; font-family: var(--font-sans); display: flex; flex-direction: column; justify-content: center; flex-shrink: 0; }
+.event-row-day { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sfh-gold-300); }
+.event-row-datenum { font-family: var(--font-display); font-size: 20px; font-weight: 600; line-height: 1.1; margin-top: 3px; }
+.event-row-body { padding: 18px 28px; flex: 1; }
+.event-row-tag { font-family: var(--font-sans); font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sfh-gold-600); margin-bottom: 4px; }
+.event-row-name { font-family: var(--font-display); font-size: 20px; font-weight: 500; color: var(--sfh-navy-900); margin: 0 0 3px; }
+.event-row-location { font-family: var(--font-serif); font-size: 14px; color: var(--fg-3); }
+
+/* ── Autumn hunt dates ── */
+.hunt-dates { background: var(--sfh-parchment); border: 1px solid var(--border-soft); padding: 28px 32px; }
+.hunt-dates-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.hunt-date-chip { background: var(--sfh-navy-900); color: var(--sfh-cream); font-family: var(--font-sans); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; padding: 7px 14px; }
+
 /* ── Responsive ── */
 @media (max-width: 760px) {
   .event-details-bar { grid-template-columns: 1fr; }
   .event-body { grid-template-columns: 1fr; gap: 32px; }
   .event-card-header, .event-body, .event-ctas { padding-left: 24px; padding-right: 24px; }
+  .past-placeholders { grid-template-columns: 1fr; }
+  .past-placeholder-box { padding: 24px; }
+  .tbd-card-header, .tbd-card-body { padding-left: 24px; padding-right: 24px; }
+  .event-row-date { min-width: 88px; padding: 16px; }
+  .event-row-body { padding: 14px 20px; }
   .site-nav { display: none; }
 }
 </style>
@@ -280,74 +315,105 @@ body { margin: 0; background: var(--sfh-cream); }
 
 <div class="page-body">
 
-  <!-- UPCOMING EVENT -->
+  <!-- PAST EVENT: HUNTER PACE -->
+  <div class="section">
+    <div class="section-eyebrow">May 30, 2026 · Costo Ranch</div>
+    <h2 class="section-heading">Spring Hunter Pace</h2>
+    <div class="section-rule"></div>
+
+    <div class="event-card">
+      <div class="event-card-header">
+        <div class="event-card-eyebrow">Thank You</div>
+        <h3 class="event-card-title">What a wonderful day at Costo Ranch.</h3>
+      </div>
+      <div style="padding: 36px 40px;">
+        <p class="past-note">Thank you to every rider, volunteer, and spectator who came out and made the day such a success. We're so grateful for your support of the Santa Fe Hunt. Results and photos from the day are on their way — check back soon.</p>
+        <div class="past-placeholders">
+          <div class="past-placeholder-box">
+            <div class="past-placeholder-label">Placings &amp; Results</div>
+            <div class="past-placeholder-value">Coming Soon</div>
+          </div>
+          <div class="past-placeholder-box">
+            <div class="past-placeholder-label">Photo Gallery</div>
+            <div class="past-placeholder-value">Coming Soon</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UPCOMING EVENTS -->
   <div class="section">
     <div class="section-eyebrow">On the Calendar</div>
     <h2 class="section-heading">Upcoming Events</h2>
     <div class="section-rule"></div>
 
-    <div class="event-card">
-
-      <div class="event-card-header">
-        <div class="event-card-eyebrow">Open to the Public · Spring 2026</div>
-        <h3 class="event-card-title">Santa Fe Hunt Hunter Pace</h3>
+    <!-- Hunt Gala: TBD -->
+    <div class="tbd-card">
+      <div class="tbd-card-header">
+        <div class="tbd-card-eyebrow">Social · July 2026 · Date To Be Announced</div>
+        <div class="tbd-card-title">Hunt Gala</div>
       </div>
-
-      <div class="event-details-bar">
-        <div class="event-detail">
-          <div class="event-detail-label">Date</div>
-          <div class="event-detail-value">May 30, 2026</div>
-          <div class="event-detail-sub">Saturday</div>
-        </div>
-        <div class="event-detail">
-          <div class="event-detail-label">Time</div>
-          <div class="event-detail-value">8:30 AM – 2:00 PM</div>
-          <div class="event-detail-sub">Check-in begins at 8:30</div>
-        </div>
-        <div class="event-detail">
-          <div class="event-detail-label">Location</div>
-          <div class="event-detail-value">Costo Ranch</div>
-          <div class="event-detail-sub">Anza, CA 92539</div>
-        </div>
+      <div class="tbd-card-body">
+        Details on the Hunt Gala are coming soon — date and location are being finalized. We'll update this page as soon as the board confirms. Members will also receive notice by email.
       </div>
+    </div>
 
-      <div class="event-body">
-        <div class="event-description">
-          <p>An East-Coast-style competition open to all levels of rider. Teams of 2 or 3 navigate open terrain and optional jumps, aiming to complete the course as close as possible to an ideal time — no one knows what the ideal time is until the end. It's a test of horsemanship, not speed.</p>
-          <p>Four divisions accommodate English and Western riders of varying experience. Vendors will be on site, followed by a catered lunch and ribbon awards ceremony.</p>
+    <!-- Confirmed events list -->
+    <div class="event-list">
+
+      <div class="event-row">
+        <div class="event-row-date">
+          <div class="event-row-day">Sat</div>
+          <div class="event-row-datenum">Oct 17</div>
         </div>
-        <div class="event-requirements">
-          <div class="event-req-heading">What to Know</div>
-          <ul class="event-req-list">
-            <li>ASTM-certified helmets required for all participants</li>
-            <li>Non-members must complete the digital liability waiver before riding</li>
-            <li>Teams of 2 or 3 riders</li>
-            <li>English and Western welcome — four divisions available</li>
-            <li>Lunch and vendors included</li>
-          </ul>
+        <div class="event-row-body">
+          <div class="event-row-tag">Clinic</div>
+          <div class="event-row-name">Hunt Clinic</div>
+          <div class="event-row-location">Garner Ranch</div>
         </div>
       </div>
 
-      <div class="event-fees">
-        <div class="fees-col">
-          <div class="fees-group-label">Members</div>
-          <div class="fees-row"><span>Adult</span><span>$45</span></div>
-          <div class="fees-row"><span>Junior (12 &amp; under)</span><span>$30</span></div>
+      <div class="event-row">
+        <div class="event-row-date">
+          <div class="event-row-day">Sun</div>
+          <div class="event-row-datenum">Oct 25</div>
         </div>
-        <div class="fees-col">
-          <div class="fees-group-label">Non-Members</div>
-          <div class="fees-row"><span>Adult</span><span>$75</span></div>
-          <div class="fees-row"><span>Junior (12 &amp; under)</span><span>$60</span></div>
-          <div class="fees-row"><span>Non-Rider Lunch Only</span><span>$20</span></div>
+        <div class="event-row-body">
+          <div class="event-row-tag">Pace · Open to the Public</div>
+          <div class="event-row-name">Halloween Hunter Pace</div>
+          <div class="event-row-location">Costo Ranch · Anza, CA</div>
         </div>
       </div>
 
-      <div class="event-ctas">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4dcAOecNmwIl6PXLUN-r7KgXVWZQIFOmvgk_UQ6vsZP8C9g/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn-primary">Register Now</a>
-        <a href="https://waiver.smartwaiver.com/w/czrugtbl1r7mpphfgr3sfw/web/" target="_blank" rel="noopener noreferrer" class="btn-secondary">Sign Waiver (Non-Members)</a>
+      <div class="event-row">
+        <div class="event-row-date">
+          <div class="event-row-day">Sat</div>
+          <div class="event-row-datenum">Nov 14</div>
+        </div>
+        <div class="event-row-body">
+          <div class="event-row-tag">Formal Hunt</div>
+          <div class="event-row-name">Opening Hunt</div>
+          <div class="event-row-location">Garner Ranch</div>
+        </div>
       </div>
 
     </div>
+
+    <!-- Autumn hunt dates -->
+    <div class="hunt-dates">
+      <div class="event-row-tag">Autumn Hunting · Location TBA</div>
+      <div class="event-row-name" style="font-family: var(--font-display); font-size: 20px; font-weight: 500; color: var(--sfh-navy-900); margin: 4px 0 0;">Autumn Hunt Days</div>
+      <div class="hunt-dates-chips">
+        <div class="hunt-date-chip">Tue · Oct 20</div>
+        <div class="hunt-date-chip">Sat · Oct 24</div>
+        <div class="hunt-date-chip">Tue · Oct 27</div>
+        <div class="hunt-date-chip">Sat · Oct 31</div>
+        <div class="hunt-date-chip">Tue · Nov 3</div>
+        <div class="hunt-date-chip">Sat · Nov 7</div>
+      </div>
+    </div>
+
   </div>
 
   <!-- HUNT SEASON -->
