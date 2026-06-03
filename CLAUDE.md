@@ -60,6 +60,12 @@ Both styles share `colors_and_type.css`, which is the single source of truth for
 - **Contact form** → `contact.html` (Netlify Forms)
 - **Colors, fonts, spacing** → `colors_and_type.css` only
 
+## Mailchimp
+
+The repo's `.mcp.json` registers a Mailchimp MCP server (`uvx mailchimp-mcp`) that's available whenever `MAILCHIMP_API_KEY` is set in the host environment. When it's loaded you have tools for audiences, campaigns, subscribers, templates, segments/tags, automations, and reports — use those instead of curling the REST API. The server is in full read-write mode, so before any send/delete/bulk-subscriber action, confirm scope with the user (show the draft, recipient count, or affected tag) first. If a session doesn't have the Mailchimp tools, the env var isn't set on that machine — point the user at `developer_setup.md` §6b rather than trying to work around it.
+
+The site already has a Mailchimp signup form (see commit `b6e9748`); the audience that form feeds is the same one the MCP sees, so subscribers added through the site show up in audience/member tool calls.
+
 ## Performance note (from netlify-site/README.md)
 
 The in-browser-build approach is intentional for a club site of this size (~1s initial load). If a future task requires real bundling/SEO, that is a larger migration — flag it before changing the deploy model.

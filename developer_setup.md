@@ -88,6 +88,39 @@ Restart Claude Desktop. First time Claude uses Playwright, it'll download Chromi
 
 You can skip this section and add it later if she ever needs it.
 
+## 6b. Mailchimp MCP (for newsletter work)
+
+The repo ships a `.mcp.json` that wires Claude to the Mailchimp account. Claude can then draft and send newsletters, manage subscribers, and pull campaign stats directly. The only per-machine setup is the API key.
+
+### Get the API key
+
+1. Log into Mailchimp → click the avatar (top right) → **Account & billing** → **Extras** → **API keys**.
+2. **Create a key**, label it something like `claude-code-windows` so it's revocable later.
+3. Copy the key — it looks like `abc123def456...-us8`. The `-us8` suffix is the datacenter; the MCP needs the full string including that suffix.
+
+### Set it as a Windows environment variable
+
+The MCP config in `.mcp.json` reads `MAILCHIMP_API_KEY` from the system environment. To set it persistently on Windows:
+
+1. Start menu → search **"environment variables"** → open **"Edit environment variables for your account"**.
+2. Click **New…** under "User variables".
+3. Name: `MAILCHIMP_API_KEY`. Value: paste the key (including the `-usX` suffix).
+4. OK → OK.
+5. **Fully quit and reopen Claude Desktop** so it picks up the new env var.
+
+### Verify it works
+
+In a new Claude Desktop session on the santafehunt folder, ask: *"List my Mailchimp audiences."* Claude should call the MCP and return the audience(s). If it says the server failed to start or the API key is missing, double-check the env var name spelling and that Claude Desktop was fully restarted.
+
+### Safety notes for Kristen
+
+The MCP is in full read-write mode — Claude can create, send, and delete campaigns, and add/remove subscribers. For real sends, always:
+- Ask Claude to **show the draft and recipient count** before sending.
+- Send a **test to your own address first** ("send this as a test to ktregar@gmail.com") before doing a full audience send.
+- For tagging or bulk subscriber changes, ask Claude to **describe what it will do** before executing.
+
+If a key ever leaks (committed by accident, shared in the wrong window), revoke it in Mailchimp's API keys page and create a new one — that page also lists every key's last-used time.
+
 ## 7. Verify the whole pipeline works
 
 Smoke test (do this once with her watching):
