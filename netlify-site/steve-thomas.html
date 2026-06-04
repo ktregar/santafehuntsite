@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Welcome, Dr. Steven Thomas | Santa Fe Hunt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A message from Dr. Steven Thomas, the Santa Fe Hunt's new Honorary Huntsman, introducing himself to our membership and the wider fox hunting community.">
+<meta property="og:title" content="Welcome Our New Honorary Huntsman: Steve Thomas">
+<meta property="og:description" content="A message from Dr. Steven Thomas, introducing himself to the Santa Fe Hunt membership and sharing his excitement for the season ahead.">
+<meta property="og:image" content="https://santafehunt.com/images/steve-thomas-share.jpeg">
+<meta property="og:url" content="https://santafehunt.com/steve-thomas">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Santa Fe Hunt">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Welcome Our New Honorary Huntsman: Steve Thomas">
+<meta name="twitter:description" content="A message from Dr. Steven Thomas, introducing himself to the Santa Fe Hunt membership.">
+<meta name="twitter:image" content="https://santafehunt.com/images/steve-thomas-share.jpeg">
+<link rel="icon" type="image/jpeg" href="./assets/logo-color.jpg">
+<link rel="stylesheet" href="./colors_and_type.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sfh-cream); }
+
+/* ── Header ── */
+.site-header {
+  background: var(--sfh-cream);
+  border-top: 1px solid var(--sfh-navy-500);
+  border-bottom: 1px solid var(--sfh-navy-500);
+}
+.site-header-inner {
+  max-width: 1320px; margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.site-header-logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+.site-header-logo img { height: 56px; width: 56px; object-fit: contain; }
+.site-header-name {
+  font-family: var(--font-display); font-size: 22px; font-weight: 600;
+  letter-spacing: 0.04em; color: var(--sfh-navy-900); line-height: 1.1;
+}
+.site-header-sub {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--sfh-gold-500);
+}
+.site-nav { display: flex; gap: 28px; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+.site-nav a { color: var(--fg-2); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent; transition: all 200ms; }
+.site-nav a:hover { color: var(--sfh-navy-500); border-bottom-color: var(--sfh-gold-400); }
+
+/* ── Page hero ── */
+.page-hero {
+  background: var(--sfh-navy-900);
+  padding: 72px 32px;
+  text-align: center;
+}
+.page-hero .eyebrow { color: var(--sfh-gold-400); margin-bottom: 12px; display: block;
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 600; }
+.page-hero h1 {
+  font-family: var(--font-display); font-size: clamp(32px, 5vw, 58px);
+  font-weight: 500; color: var(--sfh-cream); letter-spacing: 0.04em; margin: 0 0 16px;
+}
+.page-hero p {
+  font-family: var(--font-serif); font-size: 18px; color: rgba(250,246,238,0.75);
+  max-width: 560px; margin: 0 auto; line-height: 1.7;
+}
+
+/* ── Letter layout ── */
+.letter-wrap {
+  max-width: 760px; margin: 64px auto 80px; padding: 0 32px;
+}
+
+/* Hunting diary header card */
+.diary-header {
+  display: flex; align-items: flex-end;
+  background: #b8a96a;
+  border: 2px solid #8b7355;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+.diary-header-title {
+  flex: 0 0 58%; padding: 20px 16px 20px 24px;
+  display: flex; align-items: center;
+}
+.diary-header-title img { width: 100%; height: auto; display: block; }
+.diary-header-rider {
+  flex: 0 0 42%; padding: 12px 16px 0 8px;
+  display: flex; align-items: flex-end;
+}
+.diary-header-rider img { width: 100%; height: auto; display: block; }
+
+/* Rule below header */
+.diary-rule { height: 5px; background: #7a5c2e; }
+
+/* Letter body */
+.letter-body {
+  background: #fdfaf4;
+  border-left: 2px solid #8b7355;
+  border-right: 2px solid #8b7355;
+  border-bottom: 2px solid #8b7355;
+  padding: 40px 48px 36px;
+}
+.letter-body p {
+  font-family: var(--font-serif); font-size: 17px; line-height: 1.8;
+  color: #1a1008; margin: 0 0 18px; max-width: 62ch;
+}
+.letter-body p:last-child { margin-bottom: 0; }
+.letter-sign {
+  font-family: var(--font-serif); font-size: 18px; font-style: italic; color: #1a1008;
+  margin-top: 8px !important;
+}
+
+/* Share nudge */
+.share-bar {
+  margin-top: 40px; padding: 28px 32px;
+  background: var(--sfh-parchment); border: 1px solid var(--border-soft);
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  flex-wrap: wrap;
+}
+.share-bar-text {
+  font-family: var(--font-serif); font-size: 16px; color: var(--sfh-navy-900);
+}
+.share-bar-text strong {
+  font-family: var(--font-display); display: block; font-size: 19px; margin-bottom: 4px;
+}
+.share-btn {
+  display: inline-block; font-family: var(--font-sans); font-size: 11px;
+  letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;
+  background: #1877f2; color: #fff; text-decoration: none;
+  padding: 12px 24px; white-space: nowrap;
+}
+.share-btn:hover { background: #1558b0; }
+
+/* Footer */
+.site-footer {
+  background: var(--sfh-navy-900); padding: 48px 32px;
+  text-align: center;
+}
+.site-footer a {
+  color: var(--sfh-gold-300); font-family: var(--font-sans);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; margin: 0 16px;
+}
+.site-footer a:hover { color: var(--sfh-cream); }
+.site-footer-copy {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(250,246,238,0.4); margin-top: 24px;
+}
+
+@media (max-width: 600px) {
+  .site-nav { display: none; }
+  .letter-body { padding: 28px 24px; }
+  .share-bar { flex-direction: column; align-items: flex-start; }
+  .diary-header-title { flex: 0 0 55%; }
+  .diary-header-rider { flex: 0 0 45%; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-header-logo">
+      <img src="./assets/logo-color.jpg" alt="Santa Fe Hunt">
+      <div>
+        <div class="site-header-name">SANTA FE HUNT</div>
+        <div class="site-header-sub">Est. 1969 · MFHA Recognized</div>
+      </div>
+    </a>
+    <nav class="site-nav">
+      <a href="/">Welcome</a>
+      <a href="/about">About</a>
+      <a href="/etiquette">Etiquette</a>
+      <a href="/join">Join</a>
+      <a href="/events">Events</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/members">Members</a>
+      <a href="https://santa-fe-hunt.myshopify.com" target="_blank" rel="noopener noreferrer">Shop</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="eyebrow">Hunt News · June 2026</span>
+  <h1>Welcome, Dr. Steven Thomas</h1>
+  <p>A message from our new Honorary Huntsman to the Santa Fe Hunt membership.</p>
+</div>
+
+<div class="letter-wrap">
+
+  <!-- Hunting diary header -->
+  <div class="diary-header">
+    <div class="diary-header-title">
+      <img src="./images/huntdiary-title.jpeg" alt="Thomas' Hunting Diary">
+    </div>
+    <div class="diary-header-rider">
+      <img src="./images/huntdiary-rider.jpeg" alt="Horse and rider">
+    </div>
+  </div>
+  <div class="diary-rule"></div>
+
+  <!-- Letter -->
+  <div class="letter-body">
+    <p>Thank you to Masters Paine and Manser for their confidence in appointing me as Honorary Huntsman. I&#8217;m excited to work with the SFH hounds and members!</p>
+
+    <p>My wife Alisa and I are thrilled to be in southern California, nearer to our children and away from the challenging weather of the Midwest. We have two sons in California (and two grandsons) and a daughter in Maine so we will be splitting our time between the coasts.</p>
+
+    <p>As for me, I&#8217;ve been riding horses for much of my life but only started riding English and fox hunting about a quarter century ago. I&#8217;ve served as a whipper-in at three hunts and a Huntsman for nine seasons at the Fort Leavenworth Hunt, where I was also a Joint Master. I&#8217;ve also served as Guest Huntsman at the Belle Meade Performance Trial twice, Trial President at several trials, and have judged many more. I&#8217;ve served as Chairman of the MFHA Hound Show and Performance Trial Committee for the last five and a half years and was recently elected President of the Virginia Foxhound Club, where I will be heavily involved in the Virginia Hound Show in the future. I&#8217;ve also judged most of the hound shows in the US, as well as the North Island Hound Show in New Zealand in 2025.</p>
+
+    <p>I look forward to meeting the SFH members and would like to encourage your involvement with the training and exercising of the pack over the summer. Our staff team is hoping more members will share our passion for getting &#8220;up close and personal&#8221; with the hounds! We look forward to a great year of sport and fun and hope what we provide will entice more riders and hound lovers to join and become involved as the season unfolds.</p>
+
+    <p>I have created a new e-mail address, and I encourage you to reach out whenever you have questions or offers to support the hounds. That address is <a href="mailto:santafehuntsman@gmail.com" style="color:#5a3a10;">santafehuntsman@gmail.com</a>.</p>
+
+    <p>Warm regards,</p>
+    <p class="letter-sign">Steve</p>
+  </div>
+
+  <!-- Share nudge -->
+  <div class="share-bar">
+    <div class="share-bar-text">
+      <strong>Know a fox hunting fan?</strong>
+      Share Steve&#8217;s introduction on Facebook.
+    </div>
+    <a class="share-btn"
+       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsantafehunt.com%2Fsteve-thomas"
+       target="_blank" rel="noopener noreferrer">
+      Share on Facebook
+    </a>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="sfh-mc-wrap" style="max-width:400px; margin:0 auto 48px; text-align:center;">
+    <div style="font-family:var(--font-sans); font-size:10px; letter-spacing:0.24em; text-transform:uppercase; font-weight:600; color:var(--sfh-gold-400); margin-bottom:10px;">Stay in the Loop</div>
+    <div style="font-family:var(--font-display); font-size:24px; color:var(--sfh-cream); margin-bottom:10px; letter-spacing:0.03em;">Join Our Mailing List</div>
+    <p style="font-family:var(--font-serif); font-size:14px; color:rgba(250,246,238,0.6); margin:0 0 20px; line-height:1.6;">Hunt news, event announcements, and seasonal updates.</p>
+    <form action="https://santafehunt.us4.list-manage.com/subscribe/post?u=aaf6ca70722a337ce1f9f9c05&amp;id=9741c32bf5&amp;f_id=0043d0e7f0" method="post" target="_blank" novalidate style="display:flex; flex-direction:column; gap:8px;">
+      <input class="sfh-signup-input" type="text" name="FNAME" placeholder="First Name">
+      <input class="sfh-signup-input" type="email" name="EMAIL" placeholder="Email Address" required>
+      <div aria-hidden="true" style="position:absolute; left:-5000px;"><input type="text" name="b_aaf6ca70722a337ce1f9f9c05_9741c32bf5" tabindex="-1" value=""></div>
+      <button type="submit" style="font-family:var(--font-sans); font-size:11px; letter-spacing:0.22em; text-transform:uppercase; font-weight:600; background:var(--sfh-gold-400); color:var(--sfh-navy-900); border:none; padding:13px 28px; cursor:pointer; margin-top:4px;">Subscribe</button>
+    </form>
+  </div>
+  <div style="width:56px; height:1px; background:rgba(250,246,238,0.15); margin:0 auto 40px;"></div>
+  <div>
+    <a href="/">Welcome</a>
+    <a href="/about">About</a>
+    <a href="/etiquette">Etiquette</a>
+    <a href="/join">Join</a>
+    <a href="/events">Events</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/members">Members</a>
+    <a href="https://santa-fe-hunt.myshopify.com" target="_blank" rel="noopener noreferrer">Shop</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div style="margin-top: 20px;">
+    <a href="https://www.instagram.com/santafehounds/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <span style="color: rgba(250,246,238,0.4);">·</span>
+    <a href="https://www.facebook.com/SantaFeHunt" target="_blank" rel="noopener noreferrer">Facebook</a>
+  </div>
+  <div class="site-footer-copy">© 2026 Santafehunt.com</div>
+</footer>
+
+</body>
+</html>

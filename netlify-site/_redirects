@@ -30,6 +30,10 @@
 /gallery     /gallery.html  200
 /gallery/    /gallery.html  200
 
+# Steve Thomas introduction
+/steve-thomas   /steve-thomas.html  200
+/steve-thomas/  /steve-thomas.html  200
+
 # Catch-all: render a branded 404 page with the correct status code.
 # Known slugs (above) still redirect; only truly unmatched paths land here.
 /*    /404.html     404
