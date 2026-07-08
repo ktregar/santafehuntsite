@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Support the Hounds | Santa Fe Hunt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Sponsor a Santa Fe Hunt hound, shop our kennel wish list, or ask about retired-hound adoption.">
+<meta property="og:title" content="Support the Hounds — Santa Fe Hunt">
+<meta property="og:description" content="Sponsor a Santa Fe Hunt hound, shop our kennel wish list, or ask about retired-hound adoption.">
+<meta property="og:image" content="https://santafehunt.com/assets/photos/hound-portrait-kingsway.jpg">
+<meta property="og:url" content="https://santafehunt.com/hounds">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Santa Fe Hunt">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Support the Hounds — Santa Fe Hunt">
+<meta name="twitter:description" content="Sponsor a Santa Fe Hunt hound, shop our kennel wish list, or ask about retired-hound adoption.">
+<meta name="twitter:image" content="https://santafehunt.com/assets/photos/hound-portrait-kingsway.jpg">
+<link rel="icon" type="image/jpeg" href="./assets/logo-color.jpg">
+<link rel="stylesheet" href="./colors_and_type.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sfh-cream); }
+
+/* ── Header ── */
+.site-header {
+  background: var(--sfh-cream);
+  border-top: 1px solid var(--sfh-navy-500);
+  border-bottom: 1px solid var(--sfh-navy-500);
+}
+.site-header-inner {
+  max-width: 1320px; margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.site-header-logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+.site-header-logo img { height: 56px; width: 56px; object-fit: contain; }
+.site-header-name {
+  font-family: var(--font-display); font-size: 22px; font-weight: 600;
+  letter-spacing: 0.04em; color: var(--sfh-navy-900); line-height: 1.1;
+}
+.site-header-sub {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--sfh-gold-500);
+}
+.site-nav { display: flex; gap: 28px; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+.site-nav a { color: var(--fg-2); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent; transition: all 200ms; }
+.site-nav a:hover, .site-nav a.active { color: var(--sfh-navy-500); border-bottom-color: var(--sfh-gold-400); }
+
+/* ── Hero ── */
+.page-hero {
+  background: var(--sfh-navy-900);
+  padding: 72px 32px;
+  text-align: center;
+}
+.page-hero .eyebrow {
+  color: var(--sfh-gold-400); margin-bottom: 12px; display: block;
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600;
+}
+.page-hero h1 {
+  font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500; color: var(--sfh-cream); letter-spacing: 0.04em; margin: 0 0 16px;
+}
+.page-hero p {
+  font-family: var(--font-serif); font-size: 18px; color: rgba(250,246,238,0.75);
+  max-width: 600px; margin: 0 auto; line-height: 1.7;
+}
+
+/* ── Body ── */
+.page-body { max-width: 1080px; margin: 0 auto; padding: 64px 32px 96px; }
+
+.section { margin-bottom: 80px; }
+.section-eyebrow {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500);
+  margin: 0 0 8px;
+}
+.section-heading {
+  font-family: var(--font-display); font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500; color: var(--sfh-navy-900); margin: 0 0 6px;
+}
+.section-rule { width: 56px; height: 2px; background: var(--sfh-gold-400); margin: 0 0 32px; }
+
+.body-text p {
+  font-family: var(--font-serif); font-size: 17px; line-height: 1.8;
+  color: var(--fg-2); margin: 0 0 20px; max-width: 68ch;
+}
+
+.photo-banner { margin: 40px 0; overflow: hidden; }
+.photo-banner img { width: 100%; height: 380px; object-fit: cover; display: block; }
+
+/* ── CTA button ── */
+.btn-primary {
+  display: inline-block;
+  background: var(--sfh-navy-900);
+  color: var(--sfh-cream);
+  font-family: var(--font-sans);
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 36px;
+  border: 2px solid var(--sfh-navy-900);
+  transition: all 200ms;
+  margin-top: 8px;
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--sfh-navy-900);
+  text-decoration: none;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--sfh-navy-900);
+  font-family: var(--font-sans);
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 36px;
+  border: 2px solid var(--sfh-navy-900);
+  transition: all 200ms;
+  margin-top: 8px;
+}
+.btn-secondary:hover {
+  background: var(--sfh-navy-900);
+  color: var(--sfh-cream);
+}
+
+/* Sponsorship terms */
+.terms-bar {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px; background: var(--border-soft);
+  border: 1px solid var(--border-soft);
+  margin: 32px 0 40px;
+}
+.term {
+  background: var(--sfh-cream); padding: 24px 20px; text-align: center;
+  display: block; text-decoration: none; transition: background 150ms;
+}
+.term:hover { background: var(--sfh-parchment); }
+.term-value {
+  font-family: var(--font-display); font-size: 28px; font-weight: 500;
+  color: var(--sfh-navy-900); line-height: 1; margin-bottom: 6px;
+}
+.term-label {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--sfh-gold-500); font-weight: 600;
+}
+
+/* Panel (wish list / adoption) */
+.support-panel {
+  border-left: 3px solid var(--sfh-gold-400);
+  padding: 28px 32px;
+  background: var(--sfh-parchment);
+}
+
+/* ── Footer ── */
+.site-footer { background: var(--sfh-navy-900); padding: 48px 32px; text-align: center; }
+.site-footer a {
+  color: var(--sfh-gold-300); font-family: var(--font-sans);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; margin: 0 16px;
+}
+.site-footer a:hover { color: var(--sfh-cream); }
+.site-footer-copy {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(250,246,238,0.4); margin-top: 24px;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-header-logo">
+      <img src="./assets/logo-color.jpg" alt="Santa Fe Hunt">
+      <div>
+        <div class="site-header-name">SANTA FE HUNT</div>
+        <div class="site-header-sub">Est. 1969 · MFHA Recognized</div>
+      </div>
+    </a>
+    <nav class="site-nav">
+      <a href="/">Welcome</a>
+      <a href="/about">About</a>
+      <a href="/hounds" class="active">Hounds</a>
+      <a href="/etiquette">Etiquette</a>
+      <a href="/join">Join</a>
+      <a href="/events">Events</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/members">Members</a>
+      <a href="https://santa-fe-hunt.myshopify.com" target="_blank" rel="noopener noreferrer">Shop</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="eyebrow">The Heart of the Hunt</span>
+  <h1>Support the Hounds</h1>
+  <p>Everything Santa Fe Hunt does is built around the care, breeding, and training of our pack. Here's how you can help — whether or not you ride.</p>
+</div>
+
+<div class="page-body">
+
+  <!-- SPONSOR A HOUND -->
+  <div class="section" id="sponsor">
+    <div class="section-eyebrow">Give Back</div>
+    <h2 class="section-heading">Sponsor a Hound</h2>
+    <div class="section-rule"></div>
+
+    <div class="body-text">
+      <p>A hound sponsorship helps cover the everyday cost of keeping our pack fed, healthy, and fit for the field — feed, veterinary care, and kennel upkeep. It's a simple way to support the hounds directly, and it's open to members and non-members alike.</p>
+    </div>
+
+    <div class="terms-bar">
+      <a class="term" href="https://docs.google.com/forms/d/e/1FAIpQLSchAfD3wiA6ett0eSlv_8B3yx913an7yKLBfjhtjDtk2nyyuw/viewform?usp=pp_url&entry.2102565748=Sponsor+a+Hound+(1+month)+-+$45.00" target="_blank" rel="noopener noreferrer"><div class="term-value">$45</div><div class="term-label">1 Month</div></a>
+      <a class="term" href="https://docs.google.com/forms/d/e/1FAIpQLSchAfD3wiA6ett0eSlv_8B3yx913an7yKLBfjhtjDtk2nyyuw/viewform?usp=pp_url&entry.2102565748=Sponsor+a+Hound+(3+months)+-+$135.00" target="_blank" rel="noopener noreferrer"><div class="term-value">$135</div><div class="term-label">3 Months</div></a>
+      <a class="term" href="https://docs.google.com/forms/d/e/1FAIpQLSchAfD3wiA6ett0eSlv_8B3yx913an7yKLBfjhtjDtk2nyyuw/viewform?usp=pp_url&entry.2102565748=Sponsor+a+Hound+(6+months)+-+$270.00" target="_blank" rel="noopener noreferrer"><div class="term-value">$270</div><div class="term-label">6 Months</div></a>
+      <a class="term" href="https://docs.google.com/forms/d/e/1FAIpQLSchAfD3wiA6ett0eSlv_8B3yx913an7yKLBfjhtjDtk2nyyuw/viewform?usp=pp_url&entry.2102565748=Sponsor+a+Hound+(1+year)+-+$540.00" target="_blank" rel="noopener noreferrer"><div class="term-value">$540</div><div class="term-label">1 Year</div></a>
+    </div>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSchAfD3wiA6ett0eSlv_8B3yx913an7yKLBfjhtjDtk2nyyuw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn-primary">Sponsor a Hound &rarr;</a>
+    <p style="font-family: var(--font-sans); font-size: 12px; color: var(--fg-3); margin-top: 14px;">Click a term above to jump straight to that option, or use the button to browse all terms on the form.</p>
+
+    <div class="photo-banner">
+      <img src="./assets/photos/hounds-running.jpg" alt="Santa Fe Hunt pack of hounds running across open field" style="object-position: center 55%;">
+    </div>
+  </div>
+
+  <!-- KENNEL WISH LIST -->
+  <div class="section" id="wishlist">
+    <div class="section-eyebrow">Give Back</div>
+    <h2 class="section-heading">Kennel Wish List</h2>
+    <div class="section-rule"></div>
+
+    <div class="support-panel">
+      <p style="font-family: var(--font-serif); font-size: 16px; line-height: 1.7; color: var(--fg-2); margin: 0 0 18px;">We maintain an Amazon wish list of kennel supplies — everything from hound care items to equipment for the kennels. Purchases ship directly to our hounds in Riverside County.</p>
+      <a href="https://www.amazon.com/registries/gl/guest-view/1NYCHWTW89BDR?ref_=cm_sw_r_cp_ud_ggr-subnav-share_MXC9P4G6CYVEQ8AHWYYJ" target="_blank" rel="noopener noreferrer" class="btn-secondary">View the Kennel Wish List &rarr;</a>
+    </div>
+
+    <div class="photo-banner">
+      <img src="./assets/photos/hound-portrait-kingsway.jpg" alt="Portrait of Santa Fe Hunt hound Kingsway" style="object-position: center 30%;">
+    </div>
+  </div>
+
+  <!-- RETIREMENT & ADOPTION -->
+  <div class="section" id="adoption" style="margin-bottom: 0;">
+    <div class="section-eyebrow">Forever Homes</div>
+    <h2 class="section-heading">Retirement &amp; Adoption</h2>
+    <div class="section-rule"></div>
+
+    <div class="body-text">
+      <p>Every so often, a hound is ready to retire, or discovers that the hunting life just isn't for them. When that happens, we look for the right home to take them in and give them the retirement — or the second career — they deserve.</p>
+      <p>We don't have any hounds available for adoption at the moment, but we're always glad to hear from people interested in giving a retired hound a home. Reach out through our contact form and we'll keep you in mind the next time a hound is looking for a family.</p>
+    </div>
+
+    <a href="/contact" class="btn-secondary">Inquire About Adoption &rarr;</a>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <!-- MAILING LIST SIGNUP -->
+  <div class="sfh-mc-wrap" style="max-width:400px; margin:0 auto 48px; text-align:center;">
+    <div style="font-family:var(--font-sans); font-size:10px; letter-spacing:0.24em; text-transform:uppercase; font-weight:600; color:var(--sfh-gold-400); margin-bottom:10px;">Stay in the Loop</div>
+    <div style="font-family:var(--font-display); font-size:24px; color:var(--sfh-cream); margin-bottom:10px; letter-spacing:0.03em;">Join Our Mailing List</div>
+    <p style="font-family:var(--font-serif); font-size:14px; color:rgba(250,246,238,0.6); margin:0 0 20px; line-height:1.6;">Hunt news, event announcements, and seasonal updates.</p>
+    <form action="https://santafehunt.us4.list-manage.com/subscribe/post?u=aaf6ca70722a337ce1f9f9c05&amp;id=9741c32bf5&amp;f_id=0043d0e7f0" method="post" target="_blank" novalidate style="display:flex; flex-direction:column; gap:8px;">
+      <input class="sfh-signup-input" type="text" name="FNAME" placeholder="First Name">
+      <input class="sfh-signup-input" type="email" name="EMAIL" placeholder="Email Address" required>
+      <div aria-hidden="true" style="position:absolute; left:-5000px;"><input type="text" name="b_aaf6ca70722a337ce1f9f9c05_9741c32bf5" tabindex="-1" value=""></div>
+      <button type="submit" style="font-family:var(--font-sans); font-size:11px; letter-spacing:0.22em; text-transform:uppercase; font-weight:600; background:var(--sfh-gold-400); color:var(--sfh-navy-900); border:none; padding:13px 28px; cursor:pointer; margin-top:4px;">Subscribe</button>
+    </form>
+  </div>
+  <div style="width:56px; height:1px; background:rgba(250,246,238,0.15); margin:0 auto 40px;"></div>
+  <div>
+    <a href="/">Welcome</a>
+    <a href="/about">About</a>
+    <a href="/hounds">Hounds</a>
+    <a href="/etiquette">Etiquette</a>
+    <a href="/join">Join</a>
+    <a href="/events">Events</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/members">Members</a>
+    <a href="https://santa-fe-hunt.myshopify.com" target="_blank" rel="noopener noreferrer">Shop</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div style="margin-top: 20px;">
+    <a href="https://www.instagram.com/santafehounds/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <span style="color: rgba(250,246,238,0.4);">·</span>
+    <a href="https://www.facebook.com/SantaFeHunt" target="_blank" rel="noopener noreferrer">Facebook</a>
+  </div>
+  <div class="site-footer-copy">&copy; 2026 Santa Fe Hunt</div>
+</footer>
+
+</body>
+</html>

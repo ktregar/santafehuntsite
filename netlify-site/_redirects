@@ -10,6 +10,10 @@
 /about      /about.html     200
 /about/     /about.html     200
 
+# Support the Hounds
+/hounds     /hounds.html    200
+/hounds/    /hounds.html    200
+
 # Etiquette
 /etiquette  /etiquette.html 200
 /etiquette/ /etiquette.html 200

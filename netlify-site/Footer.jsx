@@ -32,6 +32,7 @@ function Footer() {
           {[
             { label: 'Welcome', href: '/' },
             { label: 'About', href: '/about' },
+            { label: 'Hounds', href: '/hounds' },
             { label: 'Etiquette', href: '/etiquette' },
             { label: 'Join', href: '/join' },
             { label: 'Events', href: '/events' },
