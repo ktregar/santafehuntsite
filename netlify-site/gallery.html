@@ -112,6 +112,34 @@ body { margin: 0; background: var(--sfh-cream); }
   margin: 3px 0 0; line-height: 1.4;
 }
 
+/* ── Video grid ── */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.video-card { background: var(--sfh-navy-900); }
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  background: #000;
+}
+.video-embed iframe {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%; border: 0;
+}
+.video-caption { padding: 14px 4px 0; }
+.video-caption-text {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-600);
+  margin: 0;
+}
+.video-caption-sub {
+  font-family: var(--font-serif); font-size: 13px; color: var(--fg-3);
+  margin: 3px 0 0; line-height: 1.4;
+}
+
 /* ── Footer ── */
 .site-footer {
   background: var(--sfh-navy-900); padding: 48px 32px;
@@ -136,6 +164,9 @@ body { margin: 0; background: var(--sfh-cream); }
 @media (max-width: 560px) {
   .photo-grid { grid-template-columns: 1fr; }
   .site-nav { display: none; }
+}
+@media (max-width: 700px) {
+  .video-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -274,6 +305,26 @@ body { margin: 0; background: var(--sfh-cream); }
       </div>
     </div>
 
+  </div>
+
+  <div style="margin-top: 96px;">
+    <div class="section-eyebrow">Video</div>
+    <h2 class="section-heading">Take to the Air</h2>
+    <div class="section-rule"></div>
+
+    <div class="video-grid">
+
+      <div class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube-nocookie.com/embed/usEEYkSv_vs" title="SFH Hunt, December 2025 — drone footage" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-caption">
+          <p class="video-caption-text">Hunt Day, December 2025</p>
+          <p class="video-caption-sub">Aerial footage of the field and hounds working the country</p>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
 
