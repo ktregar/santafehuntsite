@@ -2,7 +2,7 @@
   "mcpServers": {
     "mailchimp": {
       "command": "uvx",
-      "args": ["mailchimp-mcp"],
+      "args": ["--with", "mcp<2", "mailchimp-mcp"],
       "env": {
         "MAILCHIMP_API_KEY": "${MAILCHIMP_API_KEY}"
       }
