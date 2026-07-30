@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "santafehunt",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "netlify-site"],
+      "port": 3000
+    }
+  ]
+}

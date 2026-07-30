@@ -7,3 +7,7 @@
 .DS_Store
 Thumbs.db
 *.swp
+
+# Claude Code machine-local settings (permissions, local paths).
+# .claude/launch.json IS tracked — it's the shared dev server config.
+.claude/settings.local.json
