@@ -64,6 +64,13 @@ body { margin: 0; background: var(--sfh-cream); }
   font-family: var(--font-serif); font-size: 18px; color: rgba(250,246,238,0.75);
   max-width: 640px; margin: 0 auto; line-height: 1.7;
 }
+.page-hero .hero-cta { margin-top: 28px; }
+.page-hero .hero-cta .btn-primary { background: var(--sfh-gold-400); color: var(--sfh-navy-900); }
+.page-hero .hero-cta .btn-primary:hover { background: var(--sfh-gold-300); }
+.page-hero .hero-cta-note {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(250,246,238,0.5); margin: 14px 0 0;
+}
 
 /* ── Body ── */
 .page-body { max-width: 1080px; margin: 0 auto; padding: 64px 32px 96px; }
@@ -85,6 +92,22 @@ body { margin: 0; background: var(--sfh-cream); }
   color: var(--fg-2); margin: 0 0 18px; max-width: 66ch;
 }
 .prose p:last-child { margin-bottom: 0; }
+
+/* ── Costume aside ── */
+.costume-aside {
+  display: grid; grid-template-columns: 1fr 380px; gap: 36px; align-items: center;
+  margin-top: 36px; padding-top: 36px; border-top: 1px solid var(--border-hairline);
+}
+.costume-aside p {
+  font-family: var(--font-serif); font-size: 17px; line-height: 1.8;
+  color: var(--fg-2); margin: 0;
+}
+.costume-aside figure { margin: 0; }
+.costume-aside img { width: 100%; height: 260px; object-fit: cover; display: block; }
+.costume-aside figcaption {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--fg-3); margin-top: 8px; text-align: right;
+}
 
 /* ── At-a-glance bar ── */
 .glance {
@@ -234,6 +257,9 @@ body { margin: 0; background: var(--sfh-cream); }
 /* ── Responsive ── */
 @media (max-width: 760px) {
   .glance { grid-template-columns: 1fr; }
+  .costume-aside { grid-template-columns: 1fr; gap: 24px; }
+  .costume-aside img { height: 220px; }
+  .costume-aside figcaption { text-align: left; }
   .division-grid { grid-template-columns: 1fr; }
   .division-photo { height: 190px; }
   .fees { grid-template-columns: 1fr; }
@@ -274,6 +300,10 @@ body { margin: 0; background: var(--sfh-cream); }
   <span class="eyebrow">Sunday, October 11, 2026 · Costo Ranch, Anza</span>
   <h1>Halloween Hunter Pace</h1>
   <p>Teams of two or three riders through open countryside, over optional fences, competing to finish closest to the ideal time. Vendors, lunch, and ribbons to follow.</p>
+  <div class="hero-cta">
+    <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSddzL_ghqyITq0EoLyAMwD9GyHEXzSvLJW7ZfDDXhZrpdH7XA/viewform" target="_blank" rel="noopener noreferrer">Register Now</a>
+    <p class="hero-cta-note">Divisions and fees below</p>
+  </div>
 </div>
 
 <div class="page-body">
@@ -304,7 +334,14 @@ body { margin: 0; background: var(--sfh-cream); }
 
     <div class="prose">
       <p>Join us for our Halloween Hunter Pace. In this East-Coast-style event, teams of two or three riders are invited to ride through open countryside and over optional fences, competing to finish the course closest to the ideal time. There will be vendors and a delicious lunch following the ride, with ribbons awarded at the luncheon.</p>
-      <p>Costumes are encouraged — it is a Halloween pace, after all. ASTM-certified helmets are required for all riders.</p>
+    </div>
+
+    <div class="costume-aside">
+      <p>Costumes are encouraged — it is a Halloween pace, after all! Dress up your horse too if the mood takes you. ASTM-certified helmets are required for all riders, over or under whatever else you have on.</p>
+      <figure>
+        <img src="./assets/photos/pace-cloaked-rider.jpg" alt="A rider in a hooded cloak on a chestnut horse in dappled woodland">
+        <figcaption>Costumes past</figcaption>
+      </figure>
     </div>
   </div>
 
@@ -403,12 +440,12 @@ body { margin: 0; background: var(--sfh-cream); }
       <div class="fees-col">
         <div class="fees-group-label">Members</div>
         <div class="fees-row"><span>Adult SFH Members</span><span>$65</span></div>
-        <div class="fees-row"><span>Junior SFH Members (12 and under)</span><span>$50</span></div>
+        <div class="fees-row"><span>Junior SFH Members (under 18)</span><span>$50</span></div>
       </div>
       <div class="fees-col">
         <div class="fees-group-label">Non-Members</div>
         <div class="fees-row"><span>Adult Non-Members</span><span>$95</span></div>
-        <div class="fees-row"><span>Junior Non-Members (12 and under)</span><span>$80</span></div>
+        <div class="fees-row"><span>Junior Non-Members (under 18)</span><span>$80</span></div>
         <div class="fees-row"><span>Non-Rider Lunch Only</span><span>$25</span></div>
       </div>
     </div>
