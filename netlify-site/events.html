@@ -78,112 +78,6 @@ body { margin: 0; background: var(--sfh-cream); }
   width: 56px; height: 2px; background: var(--sfh-gold-400); margin: 0 0 40px;
 }
 
-/* ── Featured event card ── */
-.event-card {
-  border: 1px solid var(--border-soft);
-  overflow: hidden;
-}
-
-.event-card-header {
-  background: var(--sfh-navy-900);
-  padding: 36px 40px;
-}
-.event-card-eyebrow {
-  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
-  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-400);
-  margin: 0 0 10px;
-}
-.event-card-title {
-  font-family: var(--font-display); font-size: clamp(24px, 3vw, 38px);
-  font-weight: 500; color: var(--sfh-cream); letter-spacing: 0.02em;
-  margin: 0;
-}
-
-.event-details-bar {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 1px; background: var(--border-soft);
-  border-bottom: 1px solid var(--border-soft);
-}
-.event-detail {
-  background: var(--sfh-cream);
-  padding: 20px 24px;
-}
-.event-detail-label {
-  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
-  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500);
-  margin: 0 0 4px;
-}
-.event-detail-value {
-  font-family: var(--font-display); font-size: 18px; font-weight: 500;
-  color: var(--sfh-navy-900); line-height: 1.3; margin: 0;
-}
-.event-detail-sub {
-  font-family: var(--font-sans); font-size: 11px; color: var(--fg-3);
-  margin: 2px 0 0; letter-spacing: 0.04em;
-}
-
-.event-body {
-  padding: 36px 40px;
-  display: grid; grid-template-columns: 1fr 280px; gap: 48px; align-items: start;
-}
-
-.event-description p {
-  font-family: var(--font-serif); font-size: 17px; line-height: 1.8;
-  color: var(--fg-2); margin: 0 0 16px; max-width: 60ch;
-}
-.event-description p:last-child { margin-bottom: 0; }
-
-.event-requirements {
-  background: var(--sfh-parchment);
-  border: 1px solid var(--border-soft);
-  padding: 24px;
-}
-.event-req-heading {
-  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
-  text-transform: uppercase; font-weight: 600; color: var(--sfh-navy-900);
-  margin: 0 0 14px;
-}
-.event-req-list {
-  list-style: none; margin: 0; padding: 0;
-  display: flex; flex-direction: column; gap: 10px;
-}
-.event-req-list li {
-  font-family: var(--font-serif); font-size: 14px; color: var(--fg-2);
-  line-height: 1.5; padding-left: 16px; position: relative;
-}
-.event-req-list li::before {
-  content: '✦'; position: absolute; left: 0;
-  color: var(--sfh-gold-400); font-size: 8px; top: 4px;
-}
-
-.event-ctas {
-  padding: 0 40px 36px;
-  display: flex; gap: 12px; flex-wrap: wrap;
-}
-
-/* ── Fees ── */
-.event-fees {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
-  background: var(--border-soft);
-  border-top: 1px solid var(--border-soft);
-  border-bottom: 1px solid var(--border-soft);
-}
-.fees-col {
-  background: var(--sfh-cream); padding: 24px 40px;
-}
-.fees-group-label {
-  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
-  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500);
-  margin-bottom: 12px;
-}
-.fees-row {
-  display: flex; justify-content: space-between; align-items: baseline;
-  font-family: var(--font-serif); font-size: 15px; color: var(--sfh-navy-900);
-  padding: 6px 0; border-bottom: 1px solid var(--border-hairline);
-}
-.fees-row:last-child { border-bottom: none; }
-.fees-row span:last-child { font-weight: 600; }
-
 .btn-primary {
   font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.22em;
   text-transform: uppercase; font-weight: 600;
@@ -238,13 +132,6 @@ body { margin: 0; background: var(--sfh-cream); }
   text-transform: uppercase; color: rgba(250,246,238,0.4); margin-top: 24px;
 }
 
-/* ── Past event ── */
-.past-note { font-family: var(--font-serif); font-size: 17px; line-height: 1.8; color: var(--fg-2); max-width: 60ch; margin: 0 0 32px; }
-.past-placeholders { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border-soft); }
-.past-placeholder-box { background: var(--sfh-parchment); padding: 32px 40px; text-align: center; }
-.past-placeholder-label { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin: 0 0 8px; }
-.past-placeholder-value { font-family: var(--font-display); font-size: 20px; color: var(--fg-3); font-weight: 500; }
-
 /* ── TBD event card ── */
 .tbd-card { border: 1px solid var(--border-soft); overflow: hidden; margin-bottom: 24px; }
 .tbd-card-header { background: var(--sfh-navy-500); padding: 28px 40px; }
@@ -288,14 +175,9 @@ body { margin: 0; background: var(--sfh-cream); }
 
 /* ── Responsive ── */
 @media (max-width: 760px) {
-  .event-details-bar { grid-template-columns: 1fr; }
-  .event-body { grid-template-columns: 1fr; gap: 32px; }
-  .event-card-header, .event-body, .event-ctas { padding-left: 24px; padding-right: 24px; }
-  .past-placeholders { grid-template-columns: 1fr; }
   .reg-cards { grid-template-columns: 1fr; }
   .reg-card-photo { height: 200px; }
   .reg-card-body { padding: 22px 24px 24px; }
-  .past-placeholder-box { padding: 24px; }
   .tbd-card-header, .tbd-card-body { padding-left: 24px; padding-right: 24px; }
   .event-row-date { min-width: 88px; padding: 16px; }
   .event-row-body { padding: 14px 20px; }
@@ -353,12 +235,12 @@ body { margin: 0; background: var(--sfh-cream); }
 
       <!-- Halloween Hunter Pace -->
       <div class="reg-card">
-        <img class="reg-card-photo" src="./assets/photos/trail-ride-mountain-center-group.jpg" alt="Riders on the trail through the pines">
+        <img class="reg-card-photo" src="./assets/photos/pace-costume-team.jpg" alt="A team of three riders in costume at the hunter pace">
         <div class="reg-card-body">
           <div class="reg-card-eyebrow">Sunday, October 11 · Open to the Public</div>
           <h3 class="reg-card-title">Halloween Hunter Pace</h3>
           <div class="reg-card-meta">Costo Ranch · Anza, CA</div>
-          <p class="reg-card-desc">An East-Coast-style pace over open hunt country — teams of two or three, over optional fences, closest to the ideal time. Four divisions, English and Western. Costumes encouraged; lunch and ribbons to follow.</p>
+          <p class="reg-card-desc">An East-Coast-style pace over open hunt country — teams of two or three, over optional fences, closest to the ideal time. Four divisions, English and Western. Costumes encouraged; lunch and ribbons to follow. <strong>Register by Sept 25 for your shirt size; registration closes Oct 4.</strong></p>
           <div class="reg-card-cta" style="display:flex; gap:10px; flex-wrap:wrap;">
             <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSddzL_ghqyITq0EoLyAMwD9GyHEXzSvLJW7ZfDDXhZrpdH7XA/viewform" target="_blank" rel="noopener noreferrer">Register Now</a>
             <a class="btn-secondary" href="/hunter-pace">Divisions &amp; Fees</a>
