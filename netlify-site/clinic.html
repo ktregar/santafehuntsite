@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mock Hunt &amp; Foxhunting Clinic | Santa Fe Hunt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Santa Fe Hunt mock hunt and foxhunting clinic — Saturday, October 17, 2026. Riders of every discipline and experience level welcome. Three fields plus juniors.">
+<meta property="og:title" content="Mock Hunt &amp; Foxhunting Clinic | Santa Fe Hunt">
+<meta property="og:description" content="Ever seen foxhunting on Downton Abbey and wanted to try it? Riders from any discipline are welcome — three fields for every comfort level, plus juniors.">
+<meta property="og:image" content="https://santafehunt.com/assets/photos/master-pack.jpg">
+<meta property="og:url" content="https://santafehunt.com/clinic">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Santa Fe Hunt">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mock Hunt &amp; Foxhunting Clinic | Santa Fe Hunt">
+<meta name="twitter:description" content="Ever seen foxhunting on Downton Abbey and wanted to try it? Riders from any discipline are welcome — three fields for every comfort level, plus juniors.">
+<meta name="twitter:image" content="https://santafehunt.com/assets/photos/master-pack.jpg">
+<link rel="icon" type="image/jpeg" href="./assets/logo-color.jpg">
+<link rel="stylesheet" href="./colors_and_type.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sfh-cream); }
+
+/* ── Header ── */
+.site-header {
+  background: var(--sfh-cream);
+  border-top: 1px solid var(--sfh-navy-500);
+  border-bottom: 1px solid var(--sfh-navy-500);
+}
+.site-header-inner {
+  max-width: 1320px; margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.site-header-logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+.site-header-logo img { height: 56px; width: 56px; object-fit: contain; }
+.site-header-name {
+  font-family: var(--font-display); font-size: 22px; font-weight: 600;
+  letter-spacing: 0.04em; color: var(--sfh-navy-900); line-height: 1.1;
+}
+.site-header-sub {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--sfh-gold-500);
+}
+.site-nav { display: flex; gap: 28px; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+.site-nav a { color: var(--fg-2); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent; transition: all 200ms; }
+.site-nav a:hover, .site-nav a.active { color: var(--sfh-navy-500); border-bottom-color: var(--sfh-gold-400); }
+
+/* ── Hero ── */
+.page-hero { background: var(--sfh-navy-900); padding: 72px 32px; text-align: center; }
+.page-hero .eyebrow {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600;
+  color: var(--sfh-gold-400); margin-bottom: 12px; display: block;
+}
+.page-hero h1 {
+  font-family: var(--font-display); font-size: clamp(34px, 4.6vw, 60px);
+  font-weight: 500; color: var(--sfh-cream); letter-spacing: 0.04em; margin: 0 0 16px;
+}
+.page-hero p {
+  font-family: var(--font-serif); font-size: 18px; color: rgba(250,246,238,0.75);
+  max-width: 640px; margin: 0 auto; line-height: 1.7;
+}
+.hero-photo { width: 100%; height: clamp(240px, 34vw, 420px); object-fit: cover; display: block; }
+
+/* ── Body ── */
+.page-body { max-width: 1080px; margin: 0 auto; padding: 64px 32px 96px; }
+.section { margin-bottom: 76px; }
+.section:last-child { margin-bottom: 0; }
+.section-eyebrow {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin: 0 0 8px;
+}
+.section-heading {
+  font-family: var(--font-display); font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500; color: var(--sfh-navy-900); margin: 0 0 6px;
+}
+.section-rule { width: 56px; height: 2px; background: var(--sfh-gold-400); margin: 0 0 36px; }
+
+.prose p {
+  font-family: var(--font-serif); font-size: 17px; line-height: 1.8;
+  color: var(--fg-2); margin: 0 0 18px; max-width: 66ch;
+}
+.prose p:last-child { margin-bottom: 0; }
+.lead { font-size: 19px !important; color: var(--sfh-navy-900) !important; }
+
+/* ── At-a-glance ── */
+.glance {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border-soft);
+  border: 1px solid var(--border-soft); margin-bottom: 40px;
+}
+.glance-item { background: var(--sfh-cream); padding: 22px 26px; }
+.glance-label {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin: 0 0 5px;
+}
+.glance-value {
+  font-family: var(--font-display); font-size: 19px; font-weight: 500;
+  color: var(--sfh-navy-900); line-height: 1.3; margin: 0;
+}
+.glance-sub { font-family: var(--font-sans); font-size: 11px; color: var(--fg-3); margin: 3px 0 0; letter-spacing: 0.04em; }
+
+/* ── Field cards ── */
+.field-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border-soft); border: 1px solid var(--border-soft); }
+.field-card { background: var(--sfh-cream); padding: 0 0 24px; display: flex; flex-direction: column; }
+.field-head { background: var(--sfh-navy-900); padding: 20px 24px; }
+.field-order {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-400); margin: 0 0 6px;
+}
+.field-name {
+  font-family: var(--font-display); font-size: 23px; font-weight: 500;
+  color: var(--sfh-cream); letter-spacing: 0.03em; margin: 0;
+}
+.field-body {
+  padding: 20px 24px 0;
+  font-family: var(--font-serif); font-size: 15px; line-height: 1.7; color: var(--fg-2);
+}
+.field-gaits {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.1em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-navy-900);
+  margin-bottom: 8px; line-height: 1.6;
+}
+
+/* ── Juniors callout ── */
+.juniors {
+  background: var(--sfh-parchment);
+  border: 1px solid var(--border-soft); border-left: 4px solid var(--sfh-gold-400);
+  padding: 24px 30px; margin-top: 24px;
+  display: flex; align-items: center; gap: 22px; flex-wrap: wrap;
+}
+.juniors-label {
+  font-family: var(--font-display); font-size: 24px; font-weight: 500;
+  color: var(--sfh-navy-900); letter-spacing: 0.03em; margin: 0;
+}
+.juniors-text {
+  font-family: var(--font-serif); font-size: 16px; line-height: 1.7; color: var(--fg-2);
+  margin: 0; flex: 1; min-width: 220px;
+}
+
+/* ── Kit lists ── */
+.kit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border-soft); border: 1px solid var(--border-soft); }
+.kit-col { background: var(--sfh-parchment); padding: 26px 30px; }
+.kit-heading {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-navy-900); margin: 0 0 14px;
+}
+.kit-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+.kit-list li {
+  font-family: var(--font-serif); font-size: 15px; line-height: 1.6;
+  color: var(--fg-2); padding-left: 16px; position: relative;
+}
+.kit-list li::before {
+  content: '✦'; position: absolute; left: 0;
+  color: var(--sfh-gold-400); font-size: 8px; top: 6px;
+}
+
+/* ── Fees ── */
+.fees { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border-soft); border: 1px solid var(--border-soft); }
+.fees-col { background: var(--sfh-cream); padding: 26px 30px; }
+.fees-group-label {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin-bottom: 6px;
+}
+.fees-group-sub { font-family: var(--font-serif); font-size: 13px; color: var(--fg-3); margin-bottom: 12px; font-style: italic; }
+.fees-row {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  font-family: var(--font-serif); font-size: 15px; color: var(--sfh-navy-900);
+  padding: 8px 0; border-bottom: 1px solid var(--border-hairline);
+}
+.fees-row:last-child { border-bottom: none; }
+.fees-row span:last-child { font-weight: 600; white-space: nowrap; }
+.fees-note { font-family: var(--font-serif); font-size: 14px; line-height: 1.65; color: var(--fg-3); margin: 16px 0 0; }
+
+/* ── Notice ── */
+.notice { background: var(--sfh-parchment); border: 1px solid var(--border-soft); padding: 26px 30px; }
+.notice-heading {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-navy-900); margin: 0 0 12px;
+}
+.notice p { font-family: var(--font-serif); font-size: 15px; line-height: 1.7; color: var(--fg-2); margin: 0 0 12px; }
+.notice p:last-child { margin-bottom: 0; }
+.notice a { color: var(--sfh-navy-900); font-weight: 600; }
+
+/* ── Buttons ── */
+.btn-primary {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 600;
+  background: var(--sfh-navy-900); color: var(--sfh-cream);
+  border: none; padding: 16px 32px; cursor: pointer;
+  text-decoration: none; display: inline-block; transition: background 200ms;
+}
+.btn-primary:hover { background: var(--sfh-navy-500); }
+.btn-pending {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 600;
+  background: transparent; color: var(--fg-3);
+  border: 1px dashed var(--border-soft); padding: 15px 28px; display: inline-block;
+}
+
+/* ── Register strip ── */
+.register-strip {
+  background: var(--sfh-navy-900); padding: 48px 40px 56px; text-align: center;
+  border-bottom: 1px solid rgba(250,246,238,0.15);
+}
+.register-strip .eyebrow {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-400);
+  display: block; margin-bottom: 10px;
+}
+.register-strip h2 {
+  font-family: var(--font-display); font-size: clamp(24px, 3vw, 34px);
+  font-weight: 500; color: var(--sfh-cream); margin: 0 0 10px; letter-spacing: 0.03em;
+}
+.register-strip p {
+  font-family: var(--font-serif); font-size: 16px; color: rgba(250,246,238,0.7);
+  max-width: 54ch; margin: 0 auto 26px; line-height: 1.7;
+}
+.register-strip .btn-primary { background: var(--sfh-gold-400); color: var(--sfh-navy-900); }
+.register-strip .btn-primary:hover { background: var(--sfh-gold-300); }
+.register-strip .btn-pending { color: rgba(250,246,238,0.55); border-color: rgba(250,246,238,0.28); }
+
+/* ── Footer ── */
+.site-footer { background: var(--sfh-navy-900); padding: 48px 32px; text-align: center; }
+.site-footer a {
+  color: var(--sfh-gold-300); font-family: var(--font-sans);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; margin: 0 16px;
+}
+.site-footer a:hover { color: var(--sfh-cream); }
+.site-footer-copy {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(250,246,238,0.4); margin-top: 24px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .field-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .glance { grid-template-columns: 1fr; }
+  .kit-grid { grid-template-columns: 1fr; }
+  .fees { grid-template-columns: 1fr; }
+  .fees-col, .kit-col, .notice { padding: 22px 24px; }
+  .juniors { padding: 22px 24px; }
+  .register-strip { padding: 40px 24px; }
+  .site-nav { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-header-logo">
+      <img src="./assets/logo-color.jpg" alt="Santa Fe Hunt">
+      <div>
+        <div class="site-header-name">SANTA FE HUNT</div>
+        <div class="site-header-sub">Est. 1969 · MFHA Recognized</div>
+      </div>
+    </a>
+    <nav class="site-nav">
+      <a href="/">Welcome</a>
+      <a href="/about">About</a>
+      <a href="/hounds">Hounds</a>
+      <a href="/etiquette">Etiquette</a>
+      <a href="/join">Join</a>
+      <a href="/events" class="active">Events</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/members">Members</a>
+      <a href="https://santa-fe-hunt.myshopify.com" target="_blank" rel="noopener noreferrer">Shop</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="eyebrow">Saturday, October 17, 2026 · Garner Ranch</span>
+  <h1>Mock Hunt &amp; Foxhunting Clinic</h1>
+  <p>Riders from any discipline are welcome, with groups for a range of experience and comfort levels. No foxhunting experience required.</p>
+</div>
+
+<img class="hero-photo" src="./assets/photos/master-pack.jpg" alt="The huntsman and the pack moving off across open country">
+
+<div class="page-body">
+
+  <!-- INTRO -->
+  <div class="section">
+    <div class="section-eyebrow">About the Day</div>
+    <h2 class="section-heading">Come Try Riding to Hounds</h2>
+    <div class="section-rule"></div>
+
+    <div class="glance">
+      <div class="glance-item">
+        <div class="glance-label">Date</div>
+        <div class="glance-value">Saturday, October 17</div>
+        <div class="glance-sub">2026</div>
+      </div>
+      <div class="glance-item">
+        <div class="glance-label">Location</div>
+        <div class="glance-value">Garner Ranch</div>
+        <div class="glance-sub">Exact address sent to registered riders</div>
+      </div>
+      <div class="glance-item">
+        <div class="glance-label">RSVP By</div>
+        <!-- CONFIRM: last year's deadline was Oct 13 for an Oct 18 clinic. -->
+        <div class="glance-value">Monday, October 12</div>
+        <div class="glance-sub">Registration closes</div>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p class="lead">Have you seen foxhunting on Downton Abbey and thought it looked like fun, but haven't had a chance to try it? Do you enjoy riding with friends out in beautiful open spaces? Are you interested in learning more about riding to hounds?</p>
+      <p>If so, come join the Santa Fe Hunt for our mock hunt and foxhunting clinic. This is a very unique experience for anyone who has never done this before, and a good refresher for those who have. Go at your own pace and enjoy the open space with your horse. Learn about the tradition, etiquette, lingo, and history of the fox hunt.</p>
+      <p>Most of all, expect to have fun.</p>
+    </div>
+  </div>
+
+  <!-- FIELDS -->
+  <div class="section">
+    <div class="section-eyebrow">Pick Your Group</div>
+    <h2 class="section-heading">The Three Fields</h2>
+    <div class="section-rule"></div>
+
+    <div class="field-grid">
+
+      <div class="field-card">
+        <div class="field-head">
+          <div class="field-order">First Field</div>
+          <h3 class="field-name">Advanced</h3>
+        </div>
+        <div class="field-body">
+          <div class="field-gaits">Walk · Trot · Canter · Gallop</div>
+          <p style="margin:0;">Jumping up to 3 feet.</p>
+        </div>
+      </div>
+
+      <div class="field-card">
+        <div class="field-head">
+          <div class="field-order">Second Field</div>
+          <h3 class="field-name">Intermediate</h3>
+        </div>
+        <div class="field-body">
+          <div class="field-gaits">Walk · Trot · Canter</div>
+          <p style="margin:0;">Jumping optional.</p>
+        </div>
+      </div>
+
+      <div class="field-card">
+        <div class="field-head">
+          <div class="field-order">Third Field</div>
+          <h3 class="field-name">Hilltoppers</h3>
+        </div>
+        <div class="field-body">
+          <div class="field-gaits">Walk · Some Trotting</div>
+          <p style="margin:0;">No jumping — like a nice trail ride.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="juniors">
+      <h3 class="juniors-label">Juniors</h3>
+      <p class="juniors-text">We love kids — bring them! Junior riders are welcome in the field that suits them best.</p>
+    </div>
+  </div>
+
+  <!-- WHAT TO BRING -->
+  <div class="section">
+    <div class="section-eyebrow">Come Prepared</div>
+    <h2 class="section-heading">What to Wear &amp; Bring</h2>
+    <div class="section-rule"></div>
+
+    <div class="kit-grid">
+      <div class="kit-col">
+        <div class="kit-heading">Rider Attire</div>
+        <ul class="kit-list">
+          <li>Long sleeve shirt with a collar — any color except red</li>
+          <li>Helmets required</li>
+          <li>Boots or shoes with a heel, and half chaps</li>
+        </ul>
+      </div>
+      <div class="kit-col">
+        <div class="kit-heading">Horse &amp; Kit</div>
+        <ul class="kit-list">
+          <li>English or western tack — please, no bling</li>
+          <li>Bring hay, buckets, and water for your horse</li>
+          <li>Pack a chair for our informative luncheon afterwards</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- COSTS -->
+  <div class="section">
+    <div class="section-eyebrow">Entry</div>
+    <h2 class="section-heading">Costs &amp; Fees</h2>
+    <div class="section-rule"></div>
+
+    <div class="fees">
+      <div class="fees-col">
+        <div class="fees-group-label">Members</div>
+        <div class="fees-group-sub">Including lunch and ranch fee for riders</div>
+        <div class="fees-row"><span>Adult SFH Members</span><span>$20</span></div>
+        <div class="fees-row"><span>Junior SFH Members (12 and under)</span><span>Free</span></div>
+      </div>
+      <div class="fees-col">
+        <div class="fees-group-label">Non-Members</div>
+        <div class="fees-group-sub">Including lunch and ranch fee for riders</div>
+        <div class="fees-row"><span>Adult Non-Members</span><span>$150</span></div>
+        <div class="fees-row"><span>Junior Non-Members (12 and under)</span><span>Free</span></div>
+        <div class="fees-row"><span>Non-Rider Lunch Only</span><span>$30</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEFORE YOU RIDE -->
+  <div class="section">
+    <div class="section-eyebrow">Before You Ride</div>
+    <h2 class="section-heading">Waivers &amp; Questions</h2>
+    <div class="section-rule"></div>
+
+    <div class="notice">
+      <div class="notice-heading">Please note</div>
+      <!-- NOTE: this is the 2026-27 season waiver linked from the Members page.
+           If non-members sign a different SmartWaiver form for the clinic, swap the href below. -->
+      <p>Non-members will need to complete a <a href="https://waiver.smartwaiver.com/w/uynxuhks8mmj6bgbecunhn/web/" target="_blank" rel="noopener noreferrer">digital waiver</a> before riding.</p>
+      <p>The specific address for the day will be provided to registered attendees.</p>
+      <!-- CONFIRM: Alexandra's personal cell and email were published on the old Wix
+           page for this event. Remove this line if she isn't the contact this year. -->
+      <p>Got questions? <a href="/contact">Contact us</a>, or reach Alexandra Langenberg at <a href="tel:+18583446541">(858) 344-6541</a> or <a href="mailto:mussmoose@yahoo.com">mussmoose@yahoo.com</a>.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- REGISTER -->
+<!-- ============================================================
+     WHEN THE PAYABLE FORM IS READY:
+     Delete the <span class="btn-pending"> line below and un-comment
+     the <a class="btn-primary"> line above it, pasting the form URL
+     in place of PASTE_FORM_URL.
+     ============================================================ -->
+<div class="register-strip">
+  <span class="eyebrow">RSVP by Monday, October 12</span>
+  <h2>Come Ride With Us</h2>
+  <p>Any discipline, any experience level. Bring your horse, bring your kids, and find out what riding to hounds is all about.</p>
+  <!-- <a class="btn-primary" href="PASTE_FORM_URL" target="_blank" rel="noopener noreferrer">Register Now</a> -->
+  <span class="btn-pending">Registration Opening Soon</span>
+</div>
+
+<footer class="site-footer">
+  <!-- MAILING LIST SIGNUP -->
+  <div class="sfh-mc-wrap" style="max-width:400px; margin:0 auto 48px; text-align:center;">
+    <div style="font-family:var(--font-sans); font-size:10px; letter-spacing:0.24em; text-transform:uppercase; font-weight:600; color:var(--sfh-gold-400); margin-bottom:10px;">Stay in the Loop</div>
+    <div style="font-family:var(--font-display); font-size:24px; color:var(--sfh-cream); margin-bottom:10px; letter-spacing:0.03em;">Join Our Mailing List</div>
+    <p style="font-family:var(--font-serif); font-size:14px; color:rgba(250,246,238,0.6); margin:0 0 20px; line-height:1.6;">Hunt news, event announcements, and seasonal updates.</p>
+    <form action="https://santafehunt.us4.list-manage.com/subscribe/post?u=aaf6ca70722a337ce1f9f9c05&amp;id=9741c32bf5&amp;f_id=0043d0e7f0" method="post" target="_blank" novalidate style="display:flex; flex-direction:column; gap:8px;">
+      <input class="sfh-signup-input" type="text" name="FNAME" placeholder="First Name">
+      <input class="sfh-signup-input" type="email" name="EMAIL" placeholder="Email Address" required>
+      <div aria-hidden="true" style="position:absolute; left:-5000px;"><input type="text" name="b_aaf6ca70722a337ce1f9f9c05_9741c32bf5" tabindex="-1" value=""></div>
+      <button type="submit" style="font-family:var(--font-sans); font-size:11px; letter-spacing:0.22em; text-transform:uppercase; font-weight:600; background:var(--sfh-gold-400); color:var(--sfh-navy-900); border:none; padding:13px 28px; cursor:pointer; margin-top:4px;">Subscribe</button>
+    </form>
+  </div>
+  <div style="width:56px; height:1px; background:rgba(250,246,238,0.15); margin:0 auto 40px;"></div>  <div>
+    <a href="/">Welcome</a>
+    <a href="/about">About</a>
+    <a href="/hounds">Hounds</a>
+    <a href="/etiquette">Etiquette</a>
+    <a href="/join">Join</a>
+    <a href="/events">Events</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/members">Members</a>
+    <a href="https://santa-fe-hunt.myshopify.com" target="_blank" rel="noopener noreferrer">Shop</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div style="margin-top: 20px;">
+    <a href="https://www.instagram.com/santafehounds/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <span style="color: rgba(250,246,238,0.4);">·</span>
+    <a href="https://www.facebook.com/SantaFeHunt" target="_blank" rel="noopener noreferrer">Facebook</a>
+  </div>
+  <div class="site-footer-copy">© 2026 Santafehunt.com</div>
+</footer>
+
+</body>
+</html>

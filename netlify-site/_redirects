@@ -34,6 +34,10 @@
 /hunter-pace   /hunter-pace.html  200
 /hunter-pace/  /hunter-pace.html  200
 
+# Mock Hunt & Foxhunting Clinic
+/clinic        /clinic.html       200
+/clinic/       /clinic.html       200
+
 # Gallery
 /gallery     /gallery.html  200
 /gallery/    /gallery.html  200
