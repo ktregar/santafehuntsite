@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Halloween Hunter Pace | Santa Fe Hunt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Santa Fe Hunt Halloween Hunter Pace — Sunday, October 11, 2026 at Costo Ranch in Anza, CA. Teams of two or three riders, four divisions, English and Western welcome.">
+<meta property="og:title" content="Halloween Hunter Pace | Santa Fe Hunt">
+<meta property="og:description" content="Sunday, October 11, 2026 · Costo Ranch, Anza, CA. Teams of two or three, four divisions, optional fences, lunch and ribbons to follow.">
+<meta property="og:image" content="https://santafehunt.com/assets/photos/pace-division-hunt.jpg">
+<meta property="og:url" content="https://santafehunt.com/hunter-pace">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Santa Fe Hunt">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Halloween Hunter Pace | Santa Fe Hunt">
+<meta name="twitter:description" content="Sunday, October 11, 2026 · Costo Ranch, Anza, CA. Teams of two or three, four divisions, optional fences, lunch and ribbons to follow.">
+<meta name="twitter:image" content="https://santafehunt.com/assets/photos/pace-division-hunt.jpg">
+<link rel="icon" type="image/jpeg" href="./assets/logo-color.jpg">
+<link rel="stylesheet" href="./colors_and_type.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sfh-cream); }
+
+/* ── Header ── */
+.site-header {
+  background: var(--sfh-cream);
+  border-top: 1px solid var(--sfh-navy-500);
+  border-bottom: 1px solid var(--sfh-navy-500);
+}
+.site-header-inner {
+  max-width: 1320px; margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.site-header-logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+.site-header-logo img { height: 56px; width: 56px; object-fit: contain; }
+.site-header-name {
+  font-family: var(--font-display); font-size: 22px; font-weight: 600;
+  letter-spacing: 0.04em; color: var(--sfh-navy-900); line-height: 1.1;
+}
+.site-header-sub {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--sfh-gold-500);
+}
+.site-nav { display: flex; gap: 28px; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+.site-nav a { color: var(--fg-2); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent; transition: all 200ms; }
+.site-nav a:hover, .site-nav a.active { color: var(--sfh-navy-500); border-bottom-color: var(--sfh-gold-400); }
+
+/* ── Hero banner ── */
+.page-hero {
+  background: var(--sfh-navy-900);
+  padding: 72px 32px;
+  text-align: center;
+}
+.page-hero .eyebrow {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600;
+  color: var(--sfh-gold-400); margin-bottom: 12px; display: block;
+}
+.page-hero h1 {
+  font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500; color: var(--sfh-cream); letter-spacing: 0.04em; margin: 0 0 16px;
+}
+.page-hero p {
+  font-family: var(--font-serif); font-size: 18px; color: rgba(250,246,238,0.75);
+  max-width: 640px; margin: 0 auto; line-height: 1.7;
+}
+
+/* ── Body ── */
+.page-body { max-width: 1080px; margin: 0 auto; padding: 64px 32px 96px; }
+.section { margin-bottom: 76px; }
+.section:last-child { margin-bottom: 0; }
+.section-eyebrow {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500);
+  margin: 0 0 8px;
+}
+.section-heading {
+  font-family: var(--font-display); font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500; color: var(--sfh-navy-900); margin: 0 0 6px;
+}
+.section-rule { width: 56px; height: 2px; background: var(--sfh-gold-400); margin: 0 0 36px; }
+
+.prose p {
+  font-family: var(--font-serif); font-size: 17px; line-height: 1.8;
+  color: var(--fg-2); margin: 0 0 18px; max-width: 66ch;
+}
+.prose p:last-child { margin-bottom: 0; }
+
+/* ── At-a-glance bar ── */
+.glance {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border-soft);
+  border: 1px solid var(--border-soft); margin-bottom: 40px;
+}
+.glance-item { background: var(--sfh-cream); padding: 22px 26px; }
+.glance-label {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin: 0 0 5px;
+}
+.glance-value {
+  font-family: var(--font-display); font-size: 19px; font-weight: 500;
+  color: var(--sfh-navy-900); line-height: 1.3; margin: 0;
+}
+.glance-sub { font-family: var(--font-sans); font-size: 11px; color: var(--fg-3); margin: 3px 0 0; letter-spacing: 0.04em; }
+
+/* ── Division cards ── */
+.division-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.division-card {
+  border: 1px solid var(--border-soft); background: var(--sfh-cream);
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.division-photo { width: 100%; height: 210px; object-fit: cover; display: block; }
+.division-head { background: var(--sfh-navy-900); padding: 20px 26px; }
+.division-name {
+  font-family: var(--font-display); font-size: 24px; font-weight: 500;
+  color: var(--sfh-cream); letter-spacing: 0.03em; margin: 0;
+}
+.division-tagline {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-400); margin: 0 0 6px;
+}
+.division-body { padding: 22px 26px 26px; }
+.gait-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+.gait-list li {
+  font-family: var(--font-serif); font-size: 15px; line-height: 1.55;
+  color: var(--fg-2); padding-left: 16px; position: relative;
+}
+.gait-list li::before {
+  content: '✦'; position: absolute; left: 0;
+  color: var(--sfh-gold-400); font-size: 8px; top: 6px;
+}
+.gait-label {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.12em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-navy-900);
+}
+
+/* ── Fees ── */
+.fees {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+  background: var(--border-soft); border: 1px solid var(--border-soft);
+}
+.fees-col { background: var(--sfh-cream); padding: 26px 30px; }
+.fees-group-label {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin-bottom: 14px;
+}
+.fees-row {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  font-family: var(--font-serif); font-size: 15px; color: var(--sfh-navy-900);
+  padding: 8px 0; border-bottom: 1px solid var(--border-hairline);
+}
+.fees-row:last-child { border-bottom: none; }
+.fees-row span:last-child { font-weight: 600; white-space: nowrap; }
+.fees-note {
+  font-family: var(--font-serif); font-size: 14px; line-height: 1.65; color: var(--fg-3);
+  margin: 16px 0 0;
+}
+
+/* ── Notice panel ── */
+.notice {
+  background: var(--sfh-parchment); border: 1px solid var(--border-soft);
+  padding: 26px 30px;
+}
+.notice-heading {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-navy-900); margin: 0 0 12px;
+}
+.notice p {
+  font-family: var(--font-serif); font-size: 15px; line-height: 1.7;
+  color: var(--fg-2); margin: 0 0 12px;
+}
+.notice p:last-child { margin-bottom: 0; }
+.notice a { color: var(--sfh-navy-900); font-weight: 600; }
+
+/* ── Buttons ── */
+.btn-primary {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 600;
+  background: var(--sfh-navy-900); color: var(--sfh-cream);
+  border: none; padding: 16px 32px; cursor: pointer;
+  text-decoration: none; display: inline-block; transition: background 200ms;
+}
+.btn-primary:hover { background: var(--sfh-navy-500); }
+.btn-secondary {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 600;
+  background: transparent; color: var(--sfh-navy-900);
+  border: 1px solid var(--sfh-navy-900); padding: 15px 32px; cursor: pointer;
+  text-decoration: none; display: inline-block; transition: all 200ms;
+}
+.btn-secondary:hover { background: var(--sfh-navy-900); color: var(--sfh-cream); }
+.btn-pending {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 600;
+  background: transparent; color: var(--fg-3);
+  border: 1px dashed var(--border-soft); padding: 15px 28px; display: inline-block;
+}
+
+/* ── Register strip ── */
+.register-strip {
+  background: var(--sfh-navy-900); padding: 48px 40px 56px; text-align: center;
+  border-bottom: 1px solid rgba(250,246,238,0.15);
+}
+.register-strip .eyebrow {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-400);
+  display: block; margin-bottom: 10px;
+}
+.register-strip h2 {
+  font-family: var(--font-display); font-size: clamp(24px, 3vw, 34px);
+  font-weight: 500; color: var(--sfh-cream); margin: 0 0 10px; letter-spacing: 0.03em;
+}
+.register-strip p {
+  font-family: var(--font-serif); font-size: 16px; color: rgba(250,246,238,0.7);
+  max-width: 52ch; margin: 0 auto 26px; line-height: 1.7;
+}
+.register-strip .btn-primary { background: var(--sfh-gold-400); color: var(--sfh-navy-900); }
+.register-strip .btn-primary:hover { background: var(--sfh-gold-300); }
+.register-strip .btn-pending { color: rgba(250,246,238,0.55); border-color: rgba(250,246,238,0.28); }
+
+/* ── Footer ── */
+.site-footer { background: var(--sfh-navy-900); padding: 48px 32px; text-align: center; }
+.site-footer a {
+  color: var(--sfh-gold-300); font-family: var(--font-sans);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; margin: 0 16px;
+}
+.site-footer a:hover { color: var(--sfh-cream); }
+.site-footer-copy {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(250,246,238,0.4); margin-top: 24px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 760px) {
+  .glance { grid-template-columns: 1fr; }
+  .division-grid { grid-template-columns: 1fr; }
+  .division-photo { height: 190px; }
+  .fees { grid-template-columns: 1fr; }
+  .fees-col { padding: 22px 24px; }
+  .notice { padding: 22px 24px; }
+  .register-strip { padding: 40px 24px; }
+  .site-nav { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-header-logo">
+      <img src="./assets/logo-color.jpg" alt="Santa Fe Hunt">
+      <div>
+        <div class="site-header-name">SANTA FE HUNT</div>
+        <div class="site-header-sub">Est. 1969 · MFHA Recognized</div>
+      </div>
+    </a>
+    <nav class="site-nav">
+      <a href="/">Welcome</a>
+      <a href="/about">About</a>
+      <a href="/hounds">Hounds</a>
+      <a href="/etiquette">Etiquette</a>
+      <a href="/join">Join</a>
+      <a href="/events" class="active">Events</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/members">Members</a>
+      <a href="https://santa-fe-hunt.myshopify.com" target="_blank" rel="noopener noreferrer">Shop</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="eyebrow">Sunday, October 11, 2026 · Costo Ranch, Anza</span>
+  <h1>Halloween Hunter Pace</h1>
+  <p>Teams of two or three riders through open countryside, over optional fences, competing to finish closest to the ideal time. Vendors, lunch, and ribbons to follow.</p>
+</div>
+
+<div class="page-body">
+
+  <!-- ABOUT THE PACE -->
+  <div class="section">
+    <div class="section-eyebrow">About the Event</div>
+    <h2 class="section-heading">An East-Coast-Style Pace</h2>
+    <div class="section-rule"></div>
+
+    <div class="glance">
+      <div class="glance-item">
+        <div class="glance-label">Date</div>
+        <div class="glance-value">Sunday, October 11</div>
+        <div class="glance-sub">2026</div>
+      </div>
+      <div class="glance-item">
+        <div class="glance-label">Location</div>
+        <div class="glance-value">Costo Ranch</div>
+        <div class="glance-sub">Anza, California</div>
+      </div>
+      <div class="glance-item">
+        <div class="glance-label">Format</div>
+        <div class="glance-value">Teams of 2 or 3</div>
+        <div class="glance-sub">Four divisions · Optional fences</div>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>Join us for our Halloween Hunter Pace. In this East-Coast-style event, teams of two or three riders are invited to ride through open countryside and over optional fences, competing to finish the course closest to the ideal time. There will be vendors and a delicious lunch following the ride, with ribbons awarded at the luncheon.</p>
+      <p>Costumes are encouraged — it is a Halloween pace, after all. ASTM-certified helmets are required for all riders.</p>
+    </div>
+  </div>
+
+  <!-- DIVISIONS -->
+  <div class="section">
+    <div class="section-eyebrow">Choose Your Ride</div>
+    <h2 class="section-heading">The Four Divisions</h2>
+    <div class="section-rule"></div>
+
+    <div class="prose" style="margin-bottom: 32px;">
+      <p>There are four divisions, offering an option for every skill level and riding style. Each division is set to its own ideal time, and the guidelines below describe the pace expected over different footing.</p>
+    </div>
+
+    <div class="division-grid">
+
+      <!-- Hunt -->
+      <div class="division-card">
+        <img class="division-photo" src="./assets/photos/pace-division-hunt.jpg" alt="A rider in scarlet at the hunter pace">
+        <div class="division-head">
+          <div class="division-tagline">Fastest Time</div>
+          <h3 class="division-name">Hunt Division</h3>
+        </div>
+        <div class="division-body">
+          <ul class="gait-list">
+            <li><span class="gait-label">Time</span> — This division has the fastest time</li>
+            <li><span class="gait-label">Walk</span> — Deep sand, very rocky footing, when passing other teams</li>
+            <li><span class="gait-label">Trot</span> — Trappy or winding tracks, rocky footing</li>
+            <li><span class="gait-label">Canter</span> — Winding tracks on good footing</li>
+            <li><span class="gait-label">Gallop</span> — Open straightaways</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Pleasure -->
+      <div class="division-card">
+        <img class="division-photo" src="./assets/photos/pace-division-pleasure.jpg" alt="A view between the ears on the pace course">
+        <div class="division-head">
+          <div class="division-tagline">Relaxed Time</div>
+          <h3 class="division-name">Pleasure Division</h3>
+        </div>
+        <div class="division-body">
+          <ul class="gait-list">
+            <li><span class="gait-label">Time</span> — This division has a more relaxed time</li>
+            <li><span class="gait-label">Walk</span> — Deep sand, poor footing, winding tracks, when passing other teams</li>
+            <li><span class="gait-label">Trot</span> — Winding tracks on good footing</li>
+            <li><span class="gait-label">Canter</span> — Open straightaways</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Junior -->
+      <div class="division-card">
+        <img class="division-photo" src="./assets/photos/pace-division-junior.jpg" alt="Two junior riders on the pace course">
+        <div class="division-head">
+          <div class="division-tagline">Most Relaxed Time</div>
+          <h3 class="division-name">Junior Division</h3>
+        </div>
+        <div class="division-body">
+          <ul class="gait-list">
+            <li><span class="gait-label">Time</span> — The most relaxed time, to allow riders extra time making choices about pace and jumps</li>
+            <li><span class="gait-label">Walk</span> — Deep sand, poor footing, winding tracks, when passing other teams</li>
+            <li><span class="gait-label">Trot</span> — Winding tracks on good footing</li>
+            <li><span class="gait-label">Canter</span> — Open straightaways</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Western -->
+      <div class="division-card">
+        <img class="division-photo" src="./assets/photos/pace-division-western.jpg" alt="Western riders crossing open grassland">
+        <div class="division-head">
+          <div class="division-tagline">Moderate Pace</div>
+          <h3 class="division-name">Western Division</h3>
+        </div>
+        <div class="division-body">
+          <ul class="gait-list">
+            <li><span class="gait-label">Time</span> — This division has a moderate pace</li>
+            <li><span class="gait-label">Walk</span> — Deep sand, poor footing, when passing other teams</li>
+            <li><span class="gait-label">Trot</span> — Winding tracks on fair footing</li>
+            <li><span class="gait-label">Canter</span> — Winding tracks on good footing, some open straightaways</li>
+            <li><span class="gait-label">Gallop</span> — Open straightaways on good footing</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COSTS -->
+  <div class="section">
+    <div class="section-eyebrow">Entry</div>
+    <h2 class="section-heading">Costs &amp; Fees</h2>
+    <div class="section-rule"></div>
+
+    <div class="fees">
+      <div class="fees-col">
+        <div class="fees-group-label">Members</div>
+        <div class="fees-row"><span>Adult SFH Members</span><span>$65</span></div>
+        <div class="fees-row"><span>Junior SFH Members (12 and under)</span><span>$50</span></div>
+      </div>
+      <div class="fees-col">
+        <div class="fees-group-label">Non-Members</div>
+        <div class="fees-row"><span>Adult Non-Members</span><span>$95</span></div>
+        <div class="fees-row"><span>Junior Non-Members (12 and under)</span><span>$80</span></div>
+        <div class="fees-row"><span>Non-Rider Lunch Only</span><span>$20</span></div>
+      </div>
+    </div>
+
+    <p class="fees-note">Every rider entry includes a Santa Fe Hunt Hunter Pace t-shirt — please give each rider's shirt size when you register.</p>
+  </div>
+
+  <!-- BEFORE YOU RIDE -->
+  <div class="section">
+    <div class="section-eyebrow">Before You Ride</div>
+    <h2 class="section-heading">Waivers &amp; Requirements</h2>
+    <div class="section-rule"></div>
+
+    <div class="notice">
+      <div class="notice-heading">Please note</div>
+      <p><strong>ASTM-certified helmets are required for all riders</strong>, in every division, for the duration of the ride.</p>
+      <!-- NOTE: this is the 2026-27 season waiver linked from the Members page.
+           If non-members sign a different SmartWaiver form for the pace, swap the href below. -->
+      <p>Non-members will also need to complete a <a href="https://waiver.smartwaiver.com/w/uynxuhks8mmj6bgbecunhn/web/" target="_blank" rel="noopener noreferrer">digital waiver</a> before riding.</p>
+      <p>Got questions? <a href="/contact">Contact us</a> and we'll be glad to help.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- REGISTER -->
+<!-- ============================================================
+     WHEN THE PAYABLE FORM IS READY:
+     Delete the <span class="btn-pending"> line below and un-comment
+     the <a class="btn-primary"> line above it, pasting the form URL
+     in place of PASTE_FORM_URL.
+     ============================================================ -->
+<div class="register-strip">
+  <span class="eyebrow">Sunday, October 11, 2026</span>
+  <h2>Ride With Us</h2>
+  <p>Grab two friends, pick your division, and come ride Costo Ranch with us. Lunch and ribbons to follow.</p>
+  <!-- <a class="btn-primary" href="PASTE_FORM_URL" target="_blank" rel="noopener noreferrer">Register Now</a> -->
+  <span class="btn-pending">Registration Opening Soon</span>
+</div>
+
+<footer class="site-footer">
+  <!-- MAILING LIST SIGNUP -->
+  <div class="sfh-mc-wrap" style="max-width:400px; margin:0 auto 48px; text-align:center;">
+    <div style="font-family:var(--font-sans); font-size:10px; letter-spacing:0.24em; text-transform:uppercase; font-weight:600; color:var(--sfh-gold-400); margin-bottom:10px;">Stay in the Loop</div>
+    <div style="font-family:var(--font-display); font-size:24px; color:var(--sfh-cream); margin-bottom:10px; letter-spacing:0.03em;">Join Our Mailing List</div>
+    <p style="font-family:var(--font-serif); font-size:14px; color:rgba(250,246,238,0.6); margin:0 0 20px; line-height:1.6;">Hunt news, event announcements, and seasonal updates.</p>
+    <form action="https://santafehunt.us4.list-manage.com/subscribe/post?u=aaf6ca70722a337ce1f9f9c05&amp;id=9741c32bf5&amp;f_id=0043d0e7f0" method="post" target="_blank" novalidate style="display:flex; flex-direction:column; gap:8px;">
+      <input class="sfh-signup-input" type="text" name="FNAME" placeholder="First Name">
+      <input class="sfh-signup-input" type="email" name="EMAIL" placeholder="Email Address" required>
+      <div aria-hidden="true" style="position:absolute; left:-5000px;"><input type="text" name="b_aaf6ca70722a337ce1f9f9c05_9741c32bf5" tabindex="-1" value=""></div>
+      <button type="submit" style="font-family:var(--font-sans); font-size:11px; letter-spacing:0.22em; text-transform:uppercase; font-weight:600; background:var(--sfh-gold-400); color:var(--sfh-navy-900); border:none; padding:13px 28px; cursor:pointer; margin-top:4px;">Subscribe</button>
+    </form>
+  </div>
+  <div style="width:56px; height:1px; background:rgba(250,246,238,0.15); margin:0 auto 40px;"></div>  <div>
+    <a href="/">Welcome</a>
+    <a href="/about">About</a>
+    <a href="/hounds">Hounds</a>
+    <a href="/etiquette">Etiquette</a>
+    <a href="/join">Join</a>
+    <a href="/events">Events</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/members">Members</a>
+    <a href="https://santa-fe-hunt.myshopify.com" target="_blank" rel="noopener noreferrer">Shop</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div style="margin-top: 20px;">
+    <a href="https://www.instagram.com/santafehounds/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <span style="color: rgba(250,246,238,0.4);">·</span>
+    <a href="https://www.facebook.com/SantaFeHunt" target="_blank" rel="noopener noreferrer">Facebook</a>
+  </div>
+  <div class="site-footer-copy">© 2026 Santafehunt.com</div>
+</footer>
+
+</body>
+</html>
