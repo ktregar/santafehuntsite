@@ -61,6 +61,13 @@ body { margin: 0; background: var(--sfh-cream); }
   max-width: 640px; margin: 0 auto; line-height: 1.7;
 }
 .hero-photo { width: 100%; height: clamp(240px, 34vw, 420px); object-fit: cover; display: block; }
+.page-hero .hero-cta { margin-top: 28px; }
+.page-hero .hero-cta .btn-primary { background: var(--sfh-gold-400); color: var(--sfh-navy-900); }
+.page-hero .hero-cta .btn-primary:hover { background: var(--sfh-gold-300); }
+.page-hero .hero-cta-note {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(250,246,238,0.5); margin: 14px 0 0;
+}
 
 /* ── Body ── */
 .page-body { max-width: 1080px; margin: 0 auto; padding: 64px 32px 96px; }
@@ -278,6 +285,10 @@ body { margin: 0; background: var(--sfh-cream); }
   <span class="eyebrow">Saturday, October 17, 2026 · Garner Ranch</span>
   <h1>Mock Hunt &amp; Foxhunting Clinic</h1>
   <p>Riders from any discipline are welcome, with groups for a range of experience and comfort levels. No foxhunting experience required.</p>
+  <div class="hero-cta">
+    <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfH5Eg44gvA8GG5I1gBbiWyrycJCeeft3tizXwT33S7CLnjlA/viewform" target="_blank" rel="noopener noreferrer">Register Now</a>
+    <p class="hero-cta-note">RSVP by Monday, October 12</p>
+  </div>
 </div>
 
 <img class="hero-photo" src="./assets/photos/master-pack.jpg" alt="The huntsman and the pack moving off across open country">
@@ -435,18 +446,11 @@ body { margin: 0; background: var(--sfh-cream); }
 </div>
 
 <!-- REGISTER -->
-<!-- ============================================================
-     WHEN THE PAYABLE FORM IS READY:
-     Delete the <span class="btn-pending"> line below and un-comment
-     the <a class="btn-primary"> line above it, pasting the form URL
-     in place of PASTE_FORM_URL.
-     ============================================================ -->
 <div class="register-strip">
   <span class="eyebrow">RSVP by Monday, October 12</span>
   <h2>Come Ride With Us</h2>
   <p>Any discipline, any experience level. Bring your horse, bring your kids, and find out what riding to hounds is all about.</p>
-  <!-- <a class="btn-primary" href="PASTE_FORM_URL" target="_blank" rel="noopener noreferrer">Register Now</a> -->
-  <span class="btn-pending">Registration Opening Soon</span>
+  <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfH5Eg44gvA8GG5I1gBbiWyrycJCeeft3tizXwT33S7CLnjlA/viewform" target="_blank" rel="noopener noreferrer">Register Now</a>
 </div>
 
 <footer class="site-footer">
