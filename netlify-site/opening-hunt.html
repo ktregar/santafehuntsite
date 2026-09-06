@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Opening Hunt | Santa Fe Hunt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Santa Fe Hunt Opening Hunt and Blessing of the Hounds — Saturday, November 14, 2026 at Garner Ranch. Stirrup cup, the blessing, and the formal opening of the season.">
+<meta property="og:title" content="Opening Hunt | Santa Fe Hunt">
+<meta property="og:description" content="Saturday, November 14, 2026 · Garner Ranch. Stirrup cup at 9:15, the Blessing of the Hounds at 9:45, hounds move off at 10:00.">
+<meta property="og:image" content="https://santafehunt.com/assets/photos/staff-line.jpg">
+<meta property="og:url" content="https://santafehunt.com/opening-hunt">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Santa Fe Hunt">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Opening Hunt | Santa Fe Hunt">
+<meta name="twitter:description" content="Saturday, November 14, 2026 · Garner Ranch. Stirrup cup at 9:15, the Blessing of the Hounds at 9:45, hounds move off at 10:00.">
+<meta name="twitter:image" content="https://santafehunt.com/assets/photos/staff-line.jpg">
+<link rel="icon" type="image/jpeg" href="./assets/logo-color.jpg">
+<link rel="stylesheet" href="./colors_and_type.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sfh-cream); }
+
+/* ── Header ── */
+.site-header {
+  background: var(--sfh-cream);
+  border-top: 1px solid var(--sfh-navy-500);
+  border-bottom: 1px solid var(--sfh-navy-500);
+}
+.site-header-inner {
+  max-width: 1320px; margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.site-header-logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+.site-header-logo img { height: 56px; width: 56px; object-fit: contain; }
+.site-header-name {
+  font-family: var(--font-display); font-size: 22px; font-weight: 600;
+  letter-spacing: 0.04em; color: var(--sfh-navy-900); line-height: 1.1;
+}
+.site-header-sub {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--sfh-gold-500);
+}
+.site-nav { display: flex; gap: 28px; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+.site-nav a { color: var(--fg-2); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent; transition: all 200ms; }
+.site-nav a:hover, .site-nav a.active { color: var(--sfh-navy-500); border-bottom-color: var(--sfh-gold-400); }
+
+/* ── Hero ── */
+.page-hero { background: var(--sfh-navy-900); padding: 72px 32px; text-align: center; }
+.page-hero .eyebrow {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600;
+  color: var(--sfh-gold-400); margin-bottom: 12px; display: block;
+}
+.page-hero h1 {
+  font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500; color: var(--sfh-cream); letter-spacing: 0.04em; margin: 0 0 16px;
+}
+.page-hero p {
+  font-family: var(--font-serif); font-size: 18px; color: rgba(250,246,238,0.75);
+  max-width: 640px; margin: 0 auto; line-height: 1.7;
+}
+.page-hero .hero-cta { margin-top: 28px; }
+.page-hero .hero-cta .btn-primary { background: var(--sfh-gold-400); color: var(--sfh-navy-900); }
+.page-hero .hero-cta .btn-primary:hover { background: var(--sfh-gold-300); }
+.page-hero .hero-cta-note {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(250,246,238,0.5); margin: 14px 0 0;
+}
+.hero-photo { width: 100%; height: clamp(240px, 34vw, 420px); object-fit: cover; display: block; }
+
+/* ── Body ── */
+.page-body { max-width: 1080px; margin: 0 auto; padding: 64px 32px 96px; }
+.section { margin-bottom: 76px; }
+.section:last-child { margin-bottom: 0; }
+.section-eyebrow {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin: 0 0 8px;
+}
+.section-heading {
+  font-family: var(--font-display); font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500; color: var(--sfh-navy-900); margin: 0 0 6px;
+}
+.section-rule { width: 56px; height: 2px; background: var(--sfh-gold-400); margin: 0 0 36px; }
+
+.prose p {
+  font-family: var(--font-serif); font-size: 17px; line-height: 1.8;
+  color: var(--fg-2); margin: 0 0 18px; max-width: 66ch;
+}
+.prose p:last-child { margin-bottom: 0; }
+.lead { font-size: 19px !important; color: var(--sfh-navy-900) !important; }
+
+/* ── At-a-glance ── */
+.glance {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border-soft);
+  border: 1px solid var(--border-soft); margin-bottom: 40px;
+}
+.glance-item { background: var(--sfh-cream); padding: 22px 26px; }
+.glance-label {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin: 0 0 5px;
+}
+.glance-value {
+  font-family: var(--font-display); font-size: 19px; font-weight: 500;
+  color: var(--sfh-navy-900); line-height: 1.3; margin: 0;
+}
+.glance-sub { font-family: var(--font-sans); font-size: 11px; color: var(--fg-3); margin: 3px 0 0; letter-spacing: 0.04em; }
+
+/* ── Running order ── */
+.order { border: 1px solid var(--border-soft); background: var(--sfh-parchment); }
+.order-row {
+  display: grid; grid-template-columns: 132px 1fr;
+  gap: 24px; align-items: baseline;
+  padding: 20px 30px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.order-row:last-child { border-bottom: none; }
+.order-time {
+  font-family: var(--font-display); font-size: 22px; font-weight: 600;
+  color: var(--sfh-navy-900); letter-spacing: 0.01em;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: 'lnum' 1, 'tnum' 1;
+}
+.order-what {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.18em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-navy-900);
+  margin: 0 0 4px;
+}
+.order-detail {
+  font-family: var(--font-serif); font-size: 15px; line-height: 1.6;
+  color: var(--fg-2); margin: 0;
+}
+
+/* ── Fees ── */
+.fees { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border-soft); border: 1px solid var(--border-soft); }
+.fees-col { background: var(--sfh-cream); padding: 26px 30px; }
+.fees-group-label {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin-bottom: 6px;
+}
+.fees-group-sub { font-family: var(--font-serif); font-size: 13px; color: var(--fg-3); margin-bottom: 12px; font-style: italic; }
+.fees-row {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  font-family: var(--font-serif); font-size: 15px; color: var(--sfh-navy-900);
+  padding: 8px 0; border-bottom: 1px solid var(--border-hairline);
+}
+.fees-row:last-child { border-bottom: none; }
+.fees-row span:last-child { font-weight: 600; white-space: nowrap; }
+.fees-note { font-family: var(--font-serif); font-size: 14px; line-height: 1.65; color: var(--fg-3); margin: 16px 0 0; }
+
+/* ── Notice ── */
+.notice { background: var(--sfh-parchment); border: 1px solid var(--border-soft); padding: 26px 30px; }
+.notice-heading {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-navy-900); margin: 0 0 12px;
+}
+.notice p { font-family: var(--font-serif); font-size: 15px; line-height: 1.7; color: var(--fg-2); margin: 0 0 12px; }
+.notice p:last-child { margin-bottom: 0; }
+.notice a { color: var(--sfh-navy-900); font-weight: 600; }
+
+/* ── Buttons ── */
+.btn-primary {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 600;
+  background: var(--sfh-navy-900); color: var(--sfh-cream);
+  border: none; padding: 16px 32px; cursor: pointer;
+  text-decoration: none; display: inline-block; transition: background 200ms;
+}
+.btn-primary:hover { background: var(--sfh-navy-500); }
+.btn-pending {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 600;
+  background: transparent; color: var(--fg-3);
+  border: 1px dashed var(--border-soft); padding: 15px 28px; display: inline-block;
+}
+
+/* ── Register strip ── */
+.register-strip {
+  background: var(--sfh-navy-900); padding: 48px 40px 56px; text-align: center;
+  border-bottom: 1px solid rgba(250,246,238,0.15);
+}
+.register-strip .eyebrow {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-400);
+  display: block; margin-bottom: 10px;
+}
+.register-strip h2 {
+  font-family: var(--font-display); font-size: clamp(24px, 3vw, 34px);
+  font-weight: 500; color: var(--sfh-cream); margin: 0 0 10px; letter-spacing: 0.03em;
+}
+.register-strip p {
+  font-family: var(--font-serif); font-size: 16px; color: rgba(250,246,238,0.7);
+  max-width: 54ch; margin: 0 auto 26px; line-height: 1.7;
+}
+.register-strip .btn-primary { background: var(--sfh-gold-400); color: var(--sfh-navy-900); }
+.register-strip .btn-primary:hover { background: var(--sfh-gold-300); }
+.register-strip .btn-pending { color: rgba(250,246,238,0.55); border-color: rgba(250,246,238,0.28); }
+
+/* ── Footer ── */
+.site-footer { background: var(--sfh-navy-900); padding: 48px 32px; text-align: center; }
+.site-footer a {
+  color: var(--sfh-gold-300); font-family: var(--font-sans);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; margin: 0 16px;
+}
+.site-footer a:hover { color: var(--sfh-cream); }
+.site-footer-copy {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(250,246,238,0.4); margin-top: 24px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 760px) {
+  .glance { grid-template-columns: 1fr; }
+  .fees { grid-template-columns: 1fr; }
+  .fees-col, .notice { padding: 22px 24px; }
+  .order-row { grid-template-columns: 1fr; gap: 6px; padding: 18px 24px; }
+  .register-strip { padding: 40px 24px; }
+  .site-nav { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-header-logo">
+      <img src="./assets/logo-color.jpg" alt="Santa Fe Hunt">
+      <div>
+        <div class="site-header-name">SANTA FE HUNT</div>
+        <div class="site-header-sub">Est. 1969 · MFHA Recognized</div>
+      </div>
+    </a>
+    <nav class="site-nav">
+      <a href="/">Welcome</a>
+      <a href="/about">About</a>
+      <a href="/hounds">Hounds</a>
+      <a href="/etiquette">Etiquette</a>
+      <a href="/join">Join</a>
+      <a href="/events" class="active">Events</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/members">Members</a>
+      <a href="https://santa-fe-hunt.myshopify.com" target="_blank" rel="noopener noreferrer">Shop</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="eyebrow">Saturday, November 14, 2026 · Garner Ranch</span>
+  <h1>Opening Hunt</h1>
+  <p>Our formal hunting season officially begins with Opening Hunt and the Blessing of the Hounds. Riders and non-riding visitors alike are welcome.</p>
+  <!-- ============================================================
+       WHEN THE PAYABLE FORM IS READY:
+       Delete the <span class="btn-pending"> line below and un-comment
+       the <a class="btn-primary"> line above it, pasting the form URL
+       in place of PASTE_FORM_URL. Do the same in the strip at the
+       foot of this page and on the Events card.
+       ============================================================ -->
+  <div class="hero-cta">
+    <!-- <a class="btn-primary" href="PASTE_FORM_URL" target="_blank" rel="noopener noreferrer">Register Now</a> -->
+    <span class="btn-pending">Registration Opening Soon</span>
+  </div>
+</div>
+
+<img class="hero-photo" src="./assets/photos/staff-line.jpg" alt="Hunt staff in scarlet with the pack at Garner Ranch">
+
+<div class="page-body">
+
+  <!-- THE DAY -->
+  <div class="section">
+    <div class="section-eyebrow">About the Day</div>
+    <h2 class="section-heading">Pageantry and Tradition</h2>
+    <div class="section-rule"></div>
+
+    <div class="glance">
+      <div class="glance-item">
+        <div class="glance-label">Date</div>
+        <div class="glance-value">Saturday, November 14</div>
+        <div class="glance-sub">2026</div>
+      </div>
+      <div class="glance-item">
+        <div class="glance-label">Location</div>
+        <div class="glance-value">Garner Ranch</div>
+        <div class="glance-sub">Catered lunch after hunting</div>
+      </div>
+      <div class="glance-item">
+        <div class="glance-label">Turnout</div>
+        <div class="glance-value">Formal</div>
+        <div class="glance-sub">Horses braided · Finest hunting attire</div>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p class="lead">Join us for the pageantry and tradition of the Santa Fe Hounds' Opening Hunt.</p>
+      <p>This occasion marks the start of our formal foxhunting season. Everyone is dressed in their finest hunting attire, our horses are braided and most likely clipped, and everyone is ready to celebrate the start of a new season in style. The day begins with arrival at Garner Ranch and a festive stirrup cup before riders mount up.</p>
+      <p>The annual Blessing of the Hounds follows — a tradition that goes all the way back to 8th century France, when St. Hubert, the patron saint of hunters, first petitioned for God's favor for horses and hounds.</p>
+      <p>Then we're off. Our MFH Terry Paine will lead the pack, hoping the quarry will favor us by giving us all a good chase.</p>
+      <p>Non-riding visitors are also welcome to come out, watch, and join us for a catered lunch after hunting.</p>
+    </div>
+  </div>
+
+  <!-- RUNNING ORDER -->
+  <div class="section">
+    <div class="section-eyebrow">The Morning</div>
+    <h2 class="section-heading">Running Order</h2>
+    <div class="section-rule"></div>
+
+    <div class="order">
+      <div class="order-row">
+        <div class="order-time">9:15 am</div>
+        <div>
+          <div class="order-what">Stirrup Cup</div>
+          <p class="order-detail">Arrive, greet the field, and take a cup before mounting up.</p>
+        </div>
+      </div>
+      <div class="order-row">
+        <div class="order-time">9:45 am</div>
+        <div>
+          <div class="order-what">Blessing of the Hounds</div>
+          <p class="order-detail">The blessing of horses, hounds, and field — the ceremony that opens the season.</p>
+        </div>
+      </div>
+      <div class="order-row">
+        <div class="order-time">10:00 am</div>
+        <div>
+          <div class="order-what">Hounds Move Off</div>
+          <p class="order-detail">The pack moves off behind our MFH, and the season is underway.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="fees-note"><strong>Horses should be braided.</strong> Please plan your arrival so you are mounted and ready well before the stirrup cup.</p>
+  </div>
+
+  <!-- COSTS -->
+  <!-- ============================================================
+       PRICING NOT YET CONFIRMED. These are last year's fees with a
+       proposed increase on the adult tiers only; youth held at $20.
+       Last year: adult member $55, adult non-member $225, all youth
+       $20, non-rider lunch $45.
+       ============================================================ -->
+  <div class="section">
+    <div class="section-eyebrow">Entry</div>
+    <h2 class="section-heading">Costs &amp; Fees</h2>
+    <div class="section-rule"></div>
+
+    <div class="fees">
+      <div class="fees-col">
+        <div class="fees-group-label">Members</div>
+        <div class="fees-group-sub">Including lunch and ranch fee for riders</div>
+        <div class="fees-row"><span>Adult SFH Members</span><span>$65</span></div>
+        <div class="fees-row"><span>Junior SFH Members (13–18)</span><span>$20</span></div>
+        <div class="fees-row"><span>Young Rider SFH Members (12 and under)</span><span>$20</span></div>
+      </div>
+      <div class="fees-col">
+        <div class="fees-group-label">Non-Members</div>
+        <div class="fees-group-sub">Including day membership, lunch, and ranch fee for riders</div>
+        <div class="fees-row"><span>Adult Riding Non-Members</span><span>$245</span></div>
+        <div class="fees-row"><span>Junior Non-Members (13–18)</span><span>$20</span></div>
+        <div class="fees-row"><span>Young Rider Non-Members (12 and under)</span><span>$20</span></div>
+        <div class="fees-row"><span>US Pony Club Members (13–18)</span><span>$20</span></div>
+        <div class="fees-row"><span>Non-Rider Lunch Only</span><span>$50</span></div>
+      </div>
+    </div>
+
+    <p class="fees-note">The adult non-member rate includes a day membership, so there is no separate capping fee to pay on the day.</p>
+  </div>
+
+  <!-- BEFORE YOU RIDE -->
+  <div class="section">
+    <div class="section-eyebrow">Before You Ride</div>
+    <h2 class="section-heading">Waivers &amp; Questions</h2>
+    <div class="section-rule"></div>
+
+    <div class="notice">
+      <div class="notice-heading">Please note</div>
+      <p>Non-members will need to complete a <a href="https://waiver.smartwaiver.com/w/uynxuhks8mmj6bgbecunhn/web/" target="_blank" rel="noopener noreferrer">digital waiver</a> before riding.</p>
+      <p>Got questions? <a href="/contact">Contact us</a>, email <a href="mailto:santafehounds@gmail.com">santafehounds@gmail.com</a>, or call <a href="tel:+19514284265">(951) 428-4265</a>.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- REGISTER -->
+<div class="register-strip">
+  <span class="eyebrow">Saturday, November 14, 2026</span>
+  <h2>Open the Season With Us</h2>
+  <p>Braid up, dress in your best, and join us at Garner Ranch for the stirrup cup, the blessing, and the first hunt of the season.</p>
+  <!-- <a class="btn-primary" href="PASTE_FORM_URL" target="_blank" rel="noopener noreferrer">Register Now</a> -->
+  <span class="btn-pending">Registration Opening Soon</span>
+</div>
+
+<footer class="site-footer">
+  <!-- MAILING LIST SIGNUP -->
+  <div class="sfh-mc-wrap" style="max-width:400px; margin:0 auto 48px; text-align:center;">
+    <div style="font-family:var(--font-sans); font-size:10px; letter-spacing:0.24em; text-transform:uppercase; font-weight:600; color:var(--sfh-gold-400); margin-bottom:10px;">Stay in the Loop</div>
+    <div style="font-family:var(--font-display); font-size:24px; color:var(--sfh-cream); margin-bottom:10px; letter-spacing:0.03em;">Join Our Mailing List</div>
+    <p style="font-family:var(--font-serif); font-size:14px; color:rgba(250,246,238,0.6); margin:0 0 20px; line-height:1.6;">Hunt news, event announcements, and seasonal updates.</p>
+    <form action="https://santafehunt.us4.list-manage.com/subscribe/post?u=aaf6ca70722a337ce1f9f9c05&amp;id=9741c32bf5&amp;f_id=0043d0e7f0" method="post" target="_blank" novalidate style="display:flex; flex-direction:column; gap:8px;">
+      <input class="sfh-signup-input" type="text" name="FNAME" placeholder="First Name">
+      <input class="sfh-signup-input" type="email" name="EMAIL" placeholder="Email Address" required>
+      <div aria-hidden="true" style="position:absolute; left:-5000px;"><input type="text" name="b_aaf6ca70722a337ce1f9f9c05_9741c32bf5" tabindex="-1" value=""></div>
+      <button type="submit" style="font-family:var(--font-sans); font-size:11px; letter-spacing:0.22em; text-transform:uppercase; font-weight:600; background:var(--sfh-gold-400); color:var(--sfh-navy-900); border:none; padding:13px 28px; cursor:pointer; margin-top:4px;">Subscribe</button>
+    </form>
+  </div>
+  <div style="width:56px; height:1px; background:rgba(250,246,238,0.15); margin:0 auto 40px;"></div>  <div>
+    <a href="/">Welcome</a>
+    <a href="/about">About</a>
+    <a href="/hounds">Hounds</a>
+    <a href="/etiquette">Etiquette</a>
+    <a href="/join">Join</a>
+    <a href="/events">Events</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/members">Members</a>
+    <a href="https://santa-fe-hunt.myshopify.com" target="_blank" rel="noopener noreferrer">Shop</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div style="margin-top: 20px;">
+    <a href="https://www.instagram.com/santafehounds/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <span style="color: rgba(250,246,238,0.4);">·</span>
+    <a href="https://www.facebook.com/SantaFeHunt" target="_blank" rel="noopener noreferrer">Facebook</a>
+  </div>
+  <div class="site-footer-copy">© 2026 Santafehunt.com</div>
+</footer>
+
+</body>
+</html>

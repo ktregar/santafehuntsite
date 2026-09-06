@@ -38,6 +38,10 @@
 /clinic        /clinic.html       200
 /clinic/       /clinic.html       200
 
+# Opening Hunt
+/opening-hunt   /opening-hunt.html  200
+/opening-hunt/  /opening-hunt.html  200
+
 # Gallery
 /gallery     /gallery.html  200
 /gallery/    /gallery.html  200
