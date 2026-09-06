@@ -11,3 +11,11 @@ Thumbs.db
 # Claude Code machine-local settings (permissions, local paths).
 # .claude/launch.json IS tracked — it's the shared dev server config.
 .claude/settings.local.json
+
+# Media dropped at the repo root for drafting — never publish these
+*.mp4
+*.mov
+*.m4v
+*.webm
+*.mkv
+!netlify-site/assets/videos/*
