@@ -173,8 +173,15 @@ body { margin: 0; background: var(--sfh-cream); }
 .hunt-dates-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .hunt-date-chip { background: var(--sfh-navy-900); color: var(--sfh-cream); font-family: var(--font-sans); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; padding: 7px 14px; }
 
+/* ── Livery (horse lease) note ── */
+.livery-note { background: var(--sfh-parchment); border: 1px solid var(--border-soft); border-left: 3px solid var(--sfh-gold-400); padding: 26px 32px; margin-bottom: 64px; }
+.livery-note-title { font-family: var(--font-display); font-size: 24px; font-weight: 500; color: var(--sfh-navy-900); line-height: 1.25; margin: 0 0 10px; }
+.livery-note p { font-family: var(--font-serif); font-size: 16px; line-height: 1.7; color: var(--fg-2); margin: 0; }
+.livery-note a { color: var(--sfh-navy-900); font-weight: 600; white-space: nowrap; }
+
 /* ── Responsive ── */
 @media (max-width: 760px) {
+  .livery-note { padding: 22px 24px; margin-bottom: 56px; }
   .reg-cards { grid-template-columns: 1fr; }
   .reg-card-photo { height: 200px; }
   .reg-card-body { padding: 22px 24px 24px; }
@@ -218,6 +225,13 @@ body { margin: 0; background: var(--sfh-cream); }
 </div>
 
 <div class="page-body">
+
+  <!-- LIVERY / HORSE LEASE NOTE -->
+  <div class="livery-note">
+    <div class="section-eyebrow">Need a Horse?</div>
+    <div class="livery-note-title">Leasing a Horse for Hunt Events</div>
+    <p>Don't have a horse, or can't bring your own? Horses may be available to lease for the day — or longer — for Santa Fe Hunt events. Our Livery Liaison, Talena, can help. Please text her at <a href="sms:+19282312022">(928) 231-2022</a>.</p>
+  </div>
 
   <!-- REGISTRATION -->
   <!-- ============================================================
