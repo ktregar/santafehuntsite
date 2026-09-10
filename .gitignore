@@ -19,3 +19,7 @@ Thumbs.db
 *.webm
 *.mkv
 !netlify-site/assets/videos/*
+
+# Print cards: the HTML source is tracked; the PDF/PNG exports are rebuilt with print/render.ps1
+print/*.pdf
+print/*-card-*.png
