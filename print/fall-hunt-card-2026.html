@@ -104,8 +104,9 @@ p { margin: 0; max-width: none; }
 
 /* ── Fixture columns ── */
 .fixtures {
-  display: grid; grid-template-columns: 1fr 1px 1fr; column-gap: 24px;
-  padding: 10px 36px 0;
+  /* minmax(0,1fr) keeps both columns exactly equal regardless of content width */
+  display: grid; grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr); column-gap: 20px;
+  padding: 10px 30px 0;
   position: relative; z-index: 2;
 }
 .divider { background: linear-gradient(to bottom, transparent, var(--sfh-gold-500) 8%, var(--sfh-gold-500) 92%, transparent); }
@@ -118,7 +119,7 @@ p { margin: 0; max-width: none; }
   box-shadow: 0 3px 0 -2px var(--sfh-gold-500);
 }
 .row {
-  display: grid; grid-template-columns: 72px 1fr; column-gap: 11px;
+  display: grid; grid-template-columns: 70px 1fr; column-gap: 11px;
   align-items: center;
   padding: 4px 0;
   border-bottom: 1px dotted rgba(122,113,91,0.45);
@@ -140,7 +141,7 @@ p { margin: 0; max-width: none; }
   color: var(--sfh-navy-900);
 }
 .ev-name {
-  font-family: var(--font-display); font-weight: 600; font-size: 19.5px; line-height: 1.1;
+  font-family: var(--font-display); font-weight: 600; font-size: 19px; line-height: 1.1;
   color: var(--sfh-ink); white-space: nowrap;
 }
 .ev-sub {
