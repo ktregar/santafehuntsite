@@ -8,6 +8,7 @@ HERE = pathlib.Path(__file__).parent
 
 CODES = {
     "qr-clinic": "https://santafehunt.com/clinic",
+    "qr-shop": "https://santafehunt.com/shop",
     "qr-waiver": "https://waiver.smartwaiver.com/w/uynxuhks8mmj6bgbecunhn/web/",
     # Decoded from the bank app's "My code" screen (Zelle, SANTA FE HUNT / santafehounds@gmail.com).
     # The data param is base64 of {"name","token","action":"payment"}.

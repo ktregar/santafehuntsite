@@ -54,6 +54,10 @@
 /meet-payden    /meet-payden.html   200
 /meet-payden/   /meet-payden.html   200
 
+# Shop (external Shopify store) — short link used on printed signs
+/shop    https://santa-fe-hunt.myshopify.com  302
+/shop/   https://santa-fe-hunt.myshopify.com  302
+
 # Catch-all: render a branded 404 page with the correct status code.
 # Known slugs (above) still redirect; only truly unmatched paths land here.
 /*    /404.html     404

@@ -1,0 +1,165 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Santa Fe Hunt — Merch Table Sign</title>
+<!--
+  Printable merch table sign (US Letter, 8.5 x 11 in): on-hand items + prices,
+  Zelle QR for payment, shop QR for ordering other colours/products.
+  Not deployed — rendered to PDF + PNG with headless Chrome.
+  To re-render after editing:  powershell -File print\render.ps1 merch-sign
+  QR codes come from make-qr.py. qr-shop points to santafehunt.com/shop
+  (a redirect in netlify-site/_redirects to the Shopify store).
+-->
+<link rel="stylesheet" href="../netlify-site/colors_and_type.css">
+<style>
+@page { size: 8.5in 11in; margin: 0; }
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0; background: #fff;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+p { margin: 0; max-width: none; }
+
+.card {
+  position: relative;
+  width: 816px; height: 1056px; overflow: hidden;
+  font-variant-numeric: lining-nums;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 60%),
+    radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 62%, rgba(117,82,26,0.16) 100%),
+    var(--sfh-parchment);
+}
+.card::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 5;
+  opacity: 0.10; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.45  0 0 0 0 0.33  0 0 0 0 0.15  0 0 0 1 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>");
+}
+.frame {
+  position: absolute; inset: 20px;
+  border: 2.5px solid var(--sfh-navy-800);
+  display: flex; flex-direction: column; align-items: center;
+  padding: 28px 44px 20px;
+}
+.frame::after {
+  content: ''; position: absolute; inset: 5px; pointer-events: none; z-index: 4;
+  border: 1px solid var(--sfh-gold-500);
+}
+
+.club {
+  display: flex; align-items: center; justify-content: center; gap: 20px;
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 28px; line-height: 1; letter-spacing: 0.22em;
+  color: var(--sfh-navy-900); padding-left: 0.22em;
+}
+.club::before, .club::after { content: ''; height: 1.5px; width: 70px; background: var(--sfh-gold-500); }
+.headline {
+  font-family: var(--font-display); font-style: italic; font-weight: 600;
+  font-size: 84px; line-height: 1; color: var(--sfh-navy-500); margin-top: 8px;
+}
+.sub {
+  font-family: var(--font-display); font-style: italic; font-weight: 500;
+  font-size: 20px; color: var(--sfh-stone-500); margin-top: 4px;
+}
+
+/* products */
+.products { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; width: 100%; margin-top: 22px; }
+.product {
+  background: #fff; text-align: center;
+  border: 1.5px solid var(--sfh-navy-800);
+  outline: 1px solid var(--sfh-gold-500); outline-offset: 4px;
+  padding: 0 0 16px; overflow: hidden;
+}
+.product .photo { height: 330px; overflow: hidden; background: #fff; }
+.product .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.product .photo img.cap { object-fit: contain; padding: 10px 20px 0; }
+.product .photo img.tee { transform: scale(1.6); transform-origin: 50% 74%; }
+.p-name {
+  font-family: var(--font-display); font-weight: 700; font-size: 25px;
+  letter-spacing: 0.05em; color: var(--sfh-navy-900); margin-top: 12px; line-height: 1.1;
+}
+.p-desc {
+  font-family: var(--font-display); font-style: italic; font-weight: 500;
+  font-size: 15.5px; color: var(--sfh-stone-500); margin-top: 3px;
+}
+.price {
+  display: inline-block; margin-top: 10px;
+  font-family: var(--font-display); font-weight: 700; font-size: 44px; line-height: 1;
+  color: var(--sfh-cream); background: var(--sfh-navy-900);
+  padding: 8px 26px 10px;
+}
+
+/* pay + shop */
+.ways { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; width: 100%; margin-top: 30px; }
+.way {
+  display: grid; grid-template-columns: 150px 1fr; column-gap: 16px; align-items: center;
+  border-top: 1.5px solid var(--sfh-navy-800); padding-top: 14px;
+  box-shadow: inset 0 3px 0 -2px var(--sfh-gold-500);
+}
+.way img { width: 150px; height: 150px; display: block; background: #fff; padding: 6px; }
+.w-lbl {
+  font-family: var(--font-sans); font-weight: 600; font-size: 10.5px;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--sfh-pink-600);
+}
+.w-title { font-family: var(--font-display); font-weight: 700; font-size: 23px; color: var(--sfh-navy-900); margin-top: 3px; line-height: 1.1; }
+.w-email { font-family: var(--font-display); font-weight: 700; font-size: 15.5px; color: var(--sfh-navy-900); margin-top: 4px; white-space: nowrap; }
+.w-text { font-family: var(--font-display); font-weight: 500; font-size: 15.5px; line-height: 1.35; color: var(--sfh-ink); margin-top: 5px; }
+.w-text b { color: var(--sfh-navy-900); }
+
+.footer {
+  margin-top: auto;
+  font-family: var(--font-display); font-style: italic; font-weight: 500;
+  font-size: 16px; color: var(--sfh-stone-500); text-align: center;
+}
+.footer b { font-style: normal; font-weight: 700; color: var(--sfh-navy-900); letter-spacing: 0.12em; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="frame">
+
+    <div class="club">SANTA FE HUNT</div>
+    <div class="headline">Hunt Gear</div>
+    <div class="sub">Available right here, today</div>
+
+    <div class="products">
+      <div class="product">
+        <div class="photo"><img class="cap" src="merch/rope-cap-blue.png" alt="Santa Fe Hunt rope cap"></div>
+        <div class="p-name">CLASSIC ROPE CAP</div>
+        <div class="p-desc">Embroidered crest · Adjustable</div>
+        <div class="price">$35</div>
+      </div>
+      <div class="product">
+        <div class="photo"><img class="tee" src="merch/crest-tee-navy-front.jpg" alt="Santa Fe Hunt Crest Tee in navy"></div>
+        <div class="p-name">CREST TEE · NAVY</div>
+        <div class="p-desc">Gold crest · Soft cotton</div>
+        <div class="price">$30</div>
+      </div>
+    </div>
+
+    <div class="ways">
+      <div class="way">
+        <img src="qr-zelle.svg" alt="Zelle QR code for the Santa Fe Hunt">
+        <div>
+          <div class="w-lbl">No fees</div>
+          <div class="w-title">Pay with Zelle</div>
+          <div class="w-email">santafehounds@gmail.com</div>
+          <div class="w-text">Scan from the Zelle screen in your bank app. Memo: <b>your name &amp; item</b>.</div>
+        </div>
+      </div>
+      <div class="way">
+        <img src="qr-shop.svg" alt="QR code to the Santa Fe Hunt online shop">
+        <div>
+          <div class="w-lbl">More styles</div>
+          <div class="w-title">Shop Online</div>
+          <div class="w-text">Other colors, plus hoodies, polos, mugs &amp; more — shipped to you.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">santafehunt.com/shop &nbsp;·&nbsp; <b>SANTAFEHUNT.COM</b></div>
+
+  </div>
+</div>
+</body>
+</html>
