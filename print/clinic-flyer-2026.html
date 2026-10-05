@@ -1,0 +1,209 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Santa Fe Hunt — 2026 Foxhunting Clinic Flyer</title>
+<!--
+  Printable clinic flyer for tack shops etc. (US Letter, 8.5 x 11 in).
+  Not deployed — rendered to PDF + PNG with headless Chrome.
+  To re-render after editing:  powershell -File print\render.ps1 clinic-flyer-2026
+  QR code (qr-clinic.svg) points to santafehunt.com/clinic — regenerate with make-qr.py.
+-->
+<link rel="stylesheet" href="../netlify-site/colors_and_type.css">
+<style>
+@page { size: 8.5in 11in; margin: 0; }
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0; background: #fff;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+p { margin: 0; max-width: none; }
+
+.card {
+  position: relative;
+  width: 816px; height: 1056px; overflow: hidden;
+  font-variant-numeric: lining-nums;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 60%),
+    radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 62%, rgba(117,82,26,0.16) 100%),
+    var(--sfh-parchment);
+}
+.card::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 5;
+  opacity: 0.10; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.45  0 0 0 0 0.33  0 0 0 0 0.15  0 0 0 1 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>");
+}
+.frame {
+  position: absolute; inset: 20px;
+  border: 2.5px solid var(--sfh-navy-800);
+  display: flex; flex-direction: column;
+}
+.frame::after {
+  content: ''; position: absolute; inset: 5px; pointer-events: none; z-index: 4;
+  border: 1px solid var(--sfh-gold-500);
+}
+
+/* hero photo */
+.band { position: relative; flex: none; overflow: hidden; margin: 6px 6px 0; height: 236px; }
+.band img {
+  display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%;
+  filter: sepia(0.28) saturate(0.85) contrast(1.03) brightness(1.03);
+  -webkit-mask-image: linear-gradient(to bottom, #000 68%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 68%, transparent 100%);
+}
+
+/* title */
+.title { text-align: center; margin-top: -30px; position: relative; z-index: 2; }
+.club {
+  display: flex; align-items: center; justify-content: center; gap: 20px;
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 30px; line-height: 1; letter-spacing: 0.22em;
+  color: var(--sfh-navy-900); padding-left: 0.22em;
+}
+.club::before, .club::after { content: ''; height: 1.5px; width: 80px; background: var(--sfh-gold-500); }
+.pitch {
+  font-family: var(--font-display); font-style: italic; font-weight: 500;
+  font-size: 21px; color: var(--sfh-stone-500); margin-top: 8px;
+}
+.headline {
+  font-family: var(--font-display); font-style: italic; font-weight: 600;
+  font-size: 78px; line-height: 0.95; letter-spacing: -0.01em;
+  color: var(--sfh-navy-500); margin-top: 2px;
+}
+.subhead {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 22px; letter-spacing: 0.2em; color: var(--sfh-navy-900);
+  margin-top: 4px; padding-left: 0.2em;
+}
+
+/* date banner */
+.when {
+  margin: 14px auto 0; width: 650px;
+  background: var(--sfh-navy-900); color: var(--sfh-cream);
+  outline: 1px solid var(--sfh-gold-500); outline-offset: 3px;
+  display: flex; align-items: center; justify-content: center; gap: 18px;
+  padding: 11px 0 12px;
+  font-family: var(--font-display); font-weight: 700; font-size: 24px; letter-spacing: 0.12em; white-space: nowrap;
+}
+.when .dot { width: 6px; height: 6px; background: var(--sfh-gold-400); transform: rotate(45deg); flex: none; }
+.when-sub {
+  text-align: center; margin-top: 10px;
+  font-family: var(--font-display); font-style: italic; font-weight: 500;
+  font-size: 17px; color: var(--sfh-stone-500);
+}
+
+/* three fields */
+.fields {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+  padding: 14px 44px 0;
+}
+.field { border: 1px solid rgba(122,113,91,0.55); background: rgba(250,246,238,0.6); text-align: center; padding: 9px 6px 10px; }
+.field .ord {
+  font-family: var(--font-sans); font-weight: 600; font-size: 9.5px;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--sfh-gold-600);
+}
+.field .nm { font-family: var(--font-display); font-weight: 700; font-size: 22px; color: var(--sfh-navy-900); line-height: 1.15; }
+.field .gt { font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 14.5px; color: var(--sfh-stone-500); line-height: 1.3; }
+
+/* lower: details + QR */
+.lower {
+  display: grid; grid-template-columns: minmax(0, 1fr) 216px; column-gap: 28px;
+  padding: 14px 44px 0; align-items: start;
+}
+.points { list-style: none; margin: 0; padding: 0; }
+.points li {
+  position: relative; padding: 5px 0 5px 22px;
+  font-family: var(--font-display); font-weight: 500; font-size: 16.5px; line-height: 1.28;
+  color: var(--sfh-ink);
+  border-bottom: 1px dotted rgba(122,113,91,0.45);
+}
+.points li:last-child { border-bottom: 0; }
+.points li::before {
+  content: ''; position: absolute; left: 4px; top: 13px;
+  width: 6px; height: 6px; background: var(--sfh-gold-500); transform: rotate(45deg);
+}
+.points b { color: var(--sfh-navy-900); font-weight: 700; }
+
+.qr-box {
+  text-align: center;
+  border: 1.5px solid var(--sfh-navy-800);
+  outline: 1px solid var(--sfh-gold-500); outline-offset: 3px;
+  background: #fff; padding: 12px 14px 12px;
+}
+.qr-box .lbl {
+  font-family: var(--font-sans); font-weight: 600; font-size: 10.5px;
+  letter-spacing: 0.24em; text-transform: uppercase; color: var(--sfh-pink-600);
+}
+.qr-box img { display: block; width: 150px; height: 150px; margin: 8px auto 7px; }
+.qr-box .rsvp { font-family: var(--font-display); font-weight: 700; font-size: 19px; color: var(--sfh-navy-900); letter-spacing: 0.04em; }
+.qr-box .url { font-family: var(--font-display); font-style: italic; font-size: 14px; color: var(--sfh-stone-500); margin-top: 1px; }
+
+/* footer pinned to bottom */
+.footer {
+  margin-top: auto; padding: 10px 36px 20px;
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  position: relative; z-index: 2;
+}
+.footer img { width: 74px; height: 57px; object-fit: contain; }
+.footer-site { font-family: var(--font-display); font-weight: 700; font-size: 19px; letter-spacing: 0.14em; color: var(--sfh-navy-900); line-height: 1.1; }
+.footer-meta { font-family: var(--font-sans); font-weight: 600; font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sfh-gold-600); margin-top: 3px; }
+.footer-note {
+  font-family: var(--font-display); font-style: italic; font-weight: 500;
+  font-size: 15px; color: var(--sfh-stone-500);
+  border-left: 1px solid var(--sfh-gold-500); padding-left: 14px; margin-left: 4px; line-height: 1.35;
+}
+.footer-note b { font-style: normal; font-weight: 700; color: var(--sfh-navy-900); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="frame">
+
+    <div class="band"><img src="../netlify-site/assets/photos/riders-pines.jpg" alt=""></div>
+
+    <div class="title">
+      <div class="club">SANTA FE HUNT</div>
+      <div class="pitch">Ever wanted to try riding to hounds?</div>
+      <div class="headline">Foxhunting Clinic</div>
+      <div class="subhead">&amp; MOCK HUNT</div>
+    </div>
+
+    <div class="when"><span>SATURDAY, OCTOBER 17</span><span class="dot"></span><span>GARNER RANCH</span></div>
+    <div class="when-sub">Riders of every discipline welcome — English or Western. No experience needed.</div>
+
+    <div class="fields">
+      <div class="field"><div class="ord">First Field</div><div class="nm">Advanced</div><div class="gt">Walk · trot · canter · gallop<br>Jumps up to 3 ft</div></div>
+      <div class="field"><div class="ord">Second Field</div><div class="nm">Intermediate</div><div class="gt">Walk · trot · canter<br>Jumping optional</div></div>
+      <div class="field"><div class="ord">Third Field</div><div class="nm">Hilltoppers</div><div class="gt">Walk · some trotting<br>No jumping</div></div>
+    </div>
+
+    <div class="lower">
+      <ul class="points">
+        <li>Learn the <b>tradition, etiquette &amp; lingo</b> of the hunt, then ride out behind the hounds</li>
+        <li>Go at your own pace in beautiful open country</li>
+        <li><b>Juniors welcome</b> — bring the kids!</li>
+        <li>Entry includes <b>lunch, ranch fee &amp; a Santa Fe Hunt cap</b> for every rider</li>
+        <li>Non-members <b>$170</b> · SFH members <b>$40</b> · Juniors <b>$30</b></li>
+      </ul>
+
+      <div class="qr-box">
+        <div class="lbl">Scan to Register</div>
+        <img src="qr-clinic.svg" alt="QR code to santafehunt.com/clinic">
+        <div class="rsvp">RSVP by October 12</div>
+        <div class="url">santafehunt.com/clinic</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <img src="logo-transparent.png" alt="Santa Fe Hunt">
+      <div>
+        <div class="footer-site">SANTAFEHUNT.COM</div>
+        <div class="footer-meta">Est. 1969 · MFHA Recognized</div>
+      </div>
+      <div class="footer-note">Questions? <b>(951) 428-4265</b><br>santafehounds@gmail.com</div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
