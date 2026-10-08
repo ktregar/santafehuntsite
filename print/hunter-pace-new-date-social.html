@@ -10,7 +10,7 @@
     chrome --headless=new --hide-scrollbars --window-size=1080,1080 --screenshot=hunter-pace-new-date-social.png hunter-pace-new-date-social.html
 -->
 <link rel="stylesheet" href="../netlify-site/colors_and_type.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,700&family=Source+Sans+3:wght@300;400;600;700;800&display=swap">
 <style>
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; background: var(--sfh-cream); }
@@ -21,10 +21,25 @@ html, body { margin: 0; padding: 0; background: var(--sfh-cream); }
 }
 .frame { position: absolute; inset: 22px; border: 3px solid var(--sfh-gold-400); }
 .photo {
-  position: absolute; left: 52px; top: 52px; width: 976px; height: 408px;
+  position: absolute; left: 52px; top: 162px; width: 976px; height: 298px;
   border: 2px solid var(--sfh-navy-900); overflow: hidden;
 }
-.photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; display: block; }
+.photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; display: block; }
+.splash {
+  position: absolute; left: 52px; top: 52px; width: 976px; height: 112px; z-index: 2;
+  background: var(--sfh-navy-900);
+  border-bottom: 4px solid var(--sfh-gold-400);
+  display: flex; align-items: center; justify-content: center; gap: 26px;
+}
+.splash-new {
+  font-family: var(--font-sans); font-weight: 800; font-size: 58px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--sfh-gold-300); line-height: 1;
+}
+.splash-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--sfh-gold-400); }
+.splash-date {
+  font-family: 'Libre Caslon Text', Georgia, serif; font-weight: 700; font-size: 50px;
+  color: var(--sfh-cream); line-height: 1;
+}
 .text { position: absolute; left: 52px; right: 52px; top: 482px; text-align: center; }
 .eyebrow {
   font-family: var(--font-sans); font-weight: 700; font-size: 19px;
@@ -69,11 +84,12 @@ h1 {
 <div class="card">
   <div class="frame"></div>
   <div class="photo"><img src="../netlify-site/assets/photos/pace-cloaked-rider.jpg" alt=""></div>
+  <div class="splash"><span class="splash-new">New Date</span><span class="splash-dot"></span><span class="splash-date">Sunday, Oct 25</span></div>
   <div class="text">
     <div class="eyebrow">Open to the Public</div>
     <h1>Halloween Hunter Pace</h1>
     <div class="rule"></div>
-    <div class="date-row"><span class="tag">New Date</span><span class="date">Sunday, October 25, 2026</span></div>
+    <div class="date-row"><span class="date">Sunday, October 25, 2026</span></div>
     <div class="place">Costo Ranch · Anza, California</div>
     <div class="details">
       Teams of two or three · Four divisions<br>
