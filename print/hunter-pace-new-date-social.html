@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Halloween Hunter Pace — New Date (social)</title>
+<!--
+  1080x1080 social graphic announcing the rescheduled Fall 2026 pace.
+  Matches "SFH 2026 Halloween Hunter Pace - Social.png" on the Hunt Drive.
+  Not deployed. Render with headless Chrome:
+    chrome --headless=new --hide-scrollbars --window-size=1080,1080 --screenshot=hunter-pace-new-date-social.png hunter-pace-new-date-social.html
+-->
+<link rel="stylesheet" href="../netlify-site/colors_and_type.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--sfh-cream); }
+.card {
+  position: relative; width: 1080px; height: 1080px; overflow: hidden;
+  background: var(--sfh-cream);
+  font-variant-numeric: lining-nums;
+}
+.frame { position: absolute; inset: 22px; border: 3px solid var(--sfh-gold-400); }
+.photo {
+  position: absolute; left: 52px; top: 52px; width: 976px; height: 408px;
+  border: 2px solid var(--sfh-navy-900); overflow: hidden;
+}
+.photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; display: block; }
+.text { position: absolute; left: 52px; right: 52px; top: 482px; text-align: center; }
+.eyebrow {
+  font-family: var(--font-sans); font-weight: 700; font-size: 19px;
+  letter-spacing: 0.24em; color: var(--sfh-navy-500); text-transform: uppercase;
+}
+h1 {
+  margin: 12px 0 0; font-family: 'Libre Caslon Text', Georgia, serif;
+  font-style: italic; font-weight: 700; font-size: 62px; line-height: 1.1;
+  color: #1c1712;
+}
+.rule { width: 140px; height: 3px; background: var(--sfh-gold-400); margin: 18px auto 0; }
+.date-row { margin-top: 18px; display: flex; align-items: center; justify-content: center; gap: 16px; }
+.tag {
+  font-family: var(--font-sans); font-weight: 700; font-size: 17px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--sfh-cream); background: var(--sfh-navy-500);
+  padding: 7px 12px 6px 14px; border-radius: 3px;
+}
+.date {
+  font-family: 'Libre Caslon Text', Georgia, serif; font-weight: 700; font-size: 32px;
+  color: var(--sfh-navy-900);
+}
+.place { margin-top: 6px; font-family: 'Libre Caslon Text', Georgia, serif; font-size: 25px; color: #4a4339; }
+.details {
+  margin-top: 10px; font-family: var(--font-sans); font-weight: 300; font-size: 25px;
+  line-height: 1.38; color: #3a352e;
+}
+.note {
+  margin-top: 8px; font-family: var(--font-sans); font-weight: 700; font-size: 23px;
+  color: var(--sfh-gold-600);
+}
+.footer-rule { position: absolute; left: 52px; right: 52px; top: 910px; height: 2px; background: var(--sfh-gold-400); }
+.logo { position: absolute; left: 46px; top: 914px; width: 150px; height: 134px; object-fit: contain; }
+.cta { position: absolute; right: 58px; top: 944px; text-align: right; }
+.cta-label {
+  font-family: var(--font-sans); font-weight: 700; font-size: 17px; letter-spacing: 0.24em;
+  color: var(--sfh-gold-600); text-transform: uppercase;
+}
+.cta-url { margin-top: 8px; font-family: var(--font-sans); font-weight: 700; font-size: 29px; color: var(--sfh-navy-900); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="frame"></div>
+  <div class="photo"><img src="../netlify-site/assets/photos/pace-cloaked-rider.jpg" alt=""></div>
+  <div class="text">
+    <div class="eyebrow">Open to the Public</div>
+    <h1>Halloween Hunter Pace</h1>
+    <div class="rule"></div>
+    <div class="date-row"><span class="tag">New Date</span><span class="date">Sunday, October 25, 2026</span></div>
+    <div class="place">Costo Ranch · Anza, California</div>
+    <div class="details">
+      Teams of two or three · Four divisions<br>
+      English &amp; Western · Optional fences<br>
+      Costumes encouraged · Lunch &amp; ribbons to follow
+    </div>
+    <div class="note">Rescheduled for weather · Entries reopened through Oct 21</div>
+  </div>
+  <div class="footer-rule"></div>
+  <img class="logo" src="logo-transparent.png" alt="Santa Fe Hunt">
+  <div class="cta">
+    <div class="cta-label">Register At</div>
+    <div class="cta-url">santafehunt.com/hunter-pace</div>
+  </div>
+</div>
+</body>
+</html>
