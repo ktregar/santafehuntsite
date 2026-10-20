@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Santa Fe Hunt — 2026&ndash;27 Fixture Card</title>
+<!--
+  Printable full-season fixture card (US Letter, 8.5 x 11 in).
+  Not deployed — rendered to PDF + PNG with headless Chrome.
+  To re-render after editing: see render.ps1 in this folder.
+-->
+<link rel="stylesheet" href="../netlify-site/colors_and_type.css">
+<style>
+@page { size: 8.5in 11in; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+p { margin: 0; max-width: none; }
+.card { position: relative; width: 816px; height: 1056px; overflow: hidden; font-variant-numeric: lining-nums;
+  background: radial-gradient(ellipse at 50% 45%, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 60%),
+              radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 62%, rgba(117,82,26,0.16) 100%), var(--sfh-parchment); }
+.card::before { content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 5; opacity: 0.10; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.45  0 0 0 0 0.33  0 0 0 0 0.15  0 0 0 1 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>"); }
+.frame { position: absolute; inset: 20px; border: 2.5px solid var(--sfh-navy-800); display: flex; flex-direction: column; }
+.frame::after { content: ''; position: absolute; inset: 5px; pointer-events: none; z-index: 4; border: 1px solid var(--sfh-gold-500); }
+.band { position: relative; flex: none; overflow: hidden; margin: 6px 6px 0; height: 96px; }
+.band img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%;
+  filter: sepia(0.32) saturate(0.82) contrast(1.03) brightness(1.03);
+  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%); mask-image: linear-gradient(to bottom, #000 55%, transparent 100%); }
+.title { text-align: center; margin-top: -20px; position: relative; z-index: 2; }
+.club { display: flex; align-items: center; justify-content: center; gap: 18px; font-family: var(--font-display); font-weight: 600;
+  font-size: 30px; line-height: 1; letter-spacing: 0.2em; color: var(--sfh-navy-900); padding-left: 0.2em; }
+.club::before, .club::after { content: ''; height: 1.5px; width: 80px; background: var(--sfh-gold-500); }
+.headline { font-family: var(--font-display); font-style: italic; font-weight: 600; font-size: 54px; line-height: 1; color: var(--sfh-navy-500); margin: 2px 0 4px; }
+.banner { width: 540px; margin: 0 auto; border-top: 1px dotted var(--sfh-stone-400); border-bottom: 1px dotted var(--sfh-stone-400); padding: 5px 0 6px; }
+.banner-main { font-family: var(--font-display); font-weight: 700; font-size: 20px; letter-spacing: 0.14em; color: var(--sfh-navy-900); }
+.banner-sub { font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 14px; color: var(--sfh-stone-500); margin-top: 1px; }
+.grid { line-height: 1.15; display: grid; grid-template-columns: minmax(0,1fr) 1px minmax(0,1fr) 1px minmax(0,1fr); column-gap: 16px; padding: 14px 26px 0; position: relative; z-index: 2; flex: 1 1 auto; }
+.vline { background: linear-gradient(to bottom, transparent, var(--sfh-gold-500) 6%, var(--sfh-gold-500) 94%, transparent); }
+.month { font-family: var(--font-display); font-weight: 700; font-size: 16.5px; letter-spacing: 0.18em; line-height: 1; color: var(--sfh-navy-900);
+  padding: 8px 0 4px; margin-bottom: 1px; border-bottom: 1.5px solid var(--sfh-navy-800); box-shadow: 0 3px 0 -2px var(--sfh-gold-500); }
+.col > .month:first-child { padding-top: 0; }
+.row { display: grid; grid-template-columns: 28px 44px 1fr; align-items: baseline; line-height: 1.15; padding: 3px 0; border-bottom: 1px dotted rgba(122,113,91,0.4); }
+.dow { font-family: var(--font-sans); font-weight: 600; font-size: 8.5px; letter-spacing: 0.14em; color: var(--sfh-gold-600); }
+.dn { white-space: nowrap; font-family: var(--font-display); font-weight: 700; font-size: 15.5px; color: var(--sfh-navy-900); }
+.place { font-family: var(--font-display); font-weight: 500; font-size: 15px; color: var(--sfh-ink); }
+.nm { display: block; font-family: var(--font-display); font-weight: 700; font-size: 15px; line-height: 1.1; color: var(--sfh-navy-900); }
+.pl { display: block; font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 13px; line-height: 1.15; color: var(--sfh-stone-500); }
+.row.special .nm::before { content: '\25C6  '; color: var(--sfh-gold-500); font-size: 9px; vertical-align: 2px; }
+.row.special { background: rgba(250,246,238,0.65); }
+.key { margin-top: 14px; line-height: 1.3; border: 1.5px solid var(--sfh-navy-800); outline: 1px solid var(--sfh-gold-500); outline-offset: 3px; background: rgba(250,246,238,0.7); padding: 11px 12px 12px; text-align: center; }
+.key-title { font-family: var(--font-sans); font-weight: 600; font-size: 10px; letter-spacing: 0.24em; color: var(--sfh-pink-600); margin-bottom: 6px; }
+.key-row { font-family: var(--font-display); font-size: 14px; line-height: 1.3; color: var(--sfh-ink); margin-bottom: 7px; }
+.key-row b { color: var(--sfh-navy-900); }
+.key-row span { font-style: italic; color: var(--sfh-stone-500); font-size: 12.5px; }
+.key-rule { width: 60px; height: 1px; background: var(--sfh-gold-500); margin: 4px auto 8px; }
+.key-note { font-family: var(--font-display); font-style: italic; font-size: 13.5px; line-height: 1.35; color: var(--sfh-stone-500); }
+.key-note b { font-style: normal; color: var(--sfh-navy-900); letter-spacing: 0.04em; }
+.footer { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 6px 36px 16px; position: relative; z-index: 2; }
+.footer img { width: 60px; height: 46px; object-fit: contain; }
+.footer-site { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: 0.14em; color: var(--sfh-navy-900); line-height: 1.1; }
+.footer-meta { font-family: var(--font-sans); font-weight: 600; font-size: 8.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sfh-gold-600); margin-top: 3px; }
+.footer-note { font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 13.5px; color: var(--sfh-stone-500); border-left: 1px solid var(--sfh-gold-500); padding-left: 14px; margin-left: 4px; line-height: 1.3; max-width: 300px; }
+
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="frame">
+    <div class="band"><img src="../netlify-site/assets/photos/hounds-running.jpg" alt=""></div>
+    <div class="title">
+      <div class="club">SANTA FE HUNT</div>
+      <div class="headline">Fixture Card</div>
+      <div class="banner">
+        <div class="banner-main">2026&ndash;2027 SEASON</div>
+        <div class="banner-sub">Fixtures are always subject to weather and the condition of the country.</div>
+      </div>
+    </div>
+    <div class="grid">
+<div class="col"><div class="month">OCTOBER</div>
+<div class="row special"><span class="dow">TUE</span><span class="dn">20</span><span class="body"><span class="nm">Opening Meet</span><span class="pl">Costo · Autumn hunting begins</span></span></div>
+<div class="row hunt"><span class="dow">SAT</span><span class="dn">24</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">27</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">SAT</span><span class="dn">31</span><span class="body"><span class="place">Garner Ranch</span></span></div>
+<div class="month">NOVEMBER</div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">3</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">SAT</span><span class="dn">7</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">10</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row special"><span class="dow">SAT</span><span class="dn">14</span><span class="body"><span class="nm">Opening Hunt</span><span class="pl">Garner Ranch</span></span></div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">17</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">SAT</span><span class="dn">21</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">24</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row special"><span class="dow">SAT</span><span class="dn">28</span><span class="body"><span class="nm">Thanksgiving Hunt</span><span class="pl">Garner Ranch</span></span></div>
+<div class="month">DECEMBER</div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">1</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">SAT</span><span class="dn">5</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">8</span><span class="body"><span class="place">Garner Ranch</span></span></div>
+<div class="row hunt"><span class="dow">SAT</span><span class="dn">12</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">15</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">SAT</span><span class="dn">19</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row special"><span class="dow">SAT</span><span class="dn">26</span><span class="body"><span class="nm">Boxing Day</span><span class="pl">Garner Ranch</span></span></div></div>
+<div class="vline"></div>
+<div class="col"><div class="month">JANUARY</div>
+<div class="row hunt"><span class="dow">SAT</span><span class="dn">2</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">MON</span><span class="dn">4</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">SAT</span><span class="dn">9</span><span class="body"><span class="place">Garner Ranch</span></span></div>
+<div class="row tbd"><span class="dow"></span><span class="dn">11–17</span><span class="body"><span class="pl">To be announced</span></span></div>
+<div class="row special"><span class="dow">MON</span><span class="dn">18</span><span class="body"><span class="nm">MLK Day</span><span class="pl">Costo</span></span></div>
+<div class="row hunt"><span class="dow">SAT</span><span class="dn">23</span><span class="body"><span class="place">Garner Ranch</span></span></div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">26</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">SAT</span><span class="dn">30</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="month">FEBRUARY</div>
+<div class="row special"><span class="dow">TUE</span><span class="dn">2</span><span class="body"><span class="nm">Groundhog Day</span><span class="pl">Costo</span></span></div>
+<div class="row joint"><span class="dow"></span><span class="dn">6–7</span><span class="body"><span class="nm">Joint Meet</span><span class="pl">Hosted by SYH · Tentative</span></span></div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">9</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row special"><span class="dow">SAT</span><span class="dn">13</span><span class="body"><span class="nm">Valentine's Day</span><span class="pl">Garner Ranch</span></span></div>
+<div class="row special"><span class="dow">MON</span><span class="dn">15</span><span class="body"><span class="nm">Presidents' Day</span><span class="pl">Costo</span></span></div>
+<div class="row tbd"><span class="dow"></span><span class="dn">16–22</span><span class="body"><span class="pl">To be announced</span></span></div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">23</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">SAT</span><span class="dn">27</span><span class="body"><span class="place">Garner Ranch</span></span></div></div>
+<div class="vline"></div>
+<div class="col"><div class="month">MARCH</div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">2</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row joint"><span class="dow"></span><span class="dn">6–7</span><span class="body"><span class="nm">Joint Meet</span><span class="pl">Hosted by SYH · Tentative</span></span></div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">9</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row special"><span class="dow">SAT</span><span class="dn">13</span><span class="body"><span class="nm">St. Patrick's Day Hunt</span><span class="pl">Garner Ranch</span></span></div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">16</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">SAT</span><span class="dn">20</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">23</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row hunt"><span class="dow">SAT</span><span class="dn">27</span><span class="body"><span class="place">Garner Ranch</span></span></div>
+<div class="row tbd"><span class="dow">TUE</span><span class="dn">30</span><span class="body"><span class="pl">To be announced</span></span></div>
+<div class="month">APRIL</div>
+<div class="row tbd"><span class="dow"></span><span class="dn">1–4</span><span class="body"><span class="pl">To be announced</span></span></div>
+<div class="row hunt"><span class="dow">TUE</span><span class="dn">6</span><span class="body"><span class="place">Costo</span></span></div>
+<div class="row special"><span class="dow">SAT</span><span class="dn">10</span><span class="body"><span class="nm">Closing Hunt</span><span class="pl">Garner Ranch</span></span></div>
+<div class="key">
+  <div class="key-title">MEET TIMES</div>
+  <div class="key-row"><b>Autumn hunting</b> <span>(to Nov 10)</span><br>Tuesdays 8:00 &middot; Saturdays 9:00</div>
+  <div class="key-row"><b>Regular season</b><br>[[REGULAR-SEASON TIMES]]</div>
+  <div class="key-row"><b>Hound exercise</b><br>Fridays 8:00 &middot; Kingsway Farm</div>
+  <div class="key-rule"></div>
+  <div class="key-note">Visitors are welcome to cap.<br>Register at <b>santafehunt.com</b></div>
+</div></div>
+    </div>
+    <div class="footer">
+      <img src="logo-transparent.png" alt="Santa Fe Hunt">
+      <div><div class="footer-site">SANTAFEHUNT.COM</div><div class="footer-meta">Est. 1969 &middot; MFHA Recognized</div></div>
+      <div class="footer-note">&#9670; marks a special hunt. A punch bowl follows every weekend hunt.</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
