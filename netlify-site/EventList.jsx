@@ -14,8 +14,9 @@ function SectionEyebrow({ label, gold }) {
 
 function EventList() {
   const events = [
-    { date: 'Oct 25',  day: 'Sun', title: 'Halloween Hunter Pace',   location: 'Costo Ranch · Anza, CA',  tag: 'Pace' },
     { date: 'Nov 14',  day: 'Sat', title: 'Opening Hunt',            location: 'Garner Ranch',            tag: 'Formal' },
+    { date: 'Nov 28',  day: 'Sat', title: 'Thanksgiving Hunt',       location: 'Garner Ranch',            tag: 'Special Hunt' },
+    { date: 'Dec 26',  day: 'Sat', title: 'Boxing Day Hunt',         location: 'Garner Ranch',            tag: 'Special Hunt' },
   ];
   return (
     <section style={{ padding: '96px 32px', background: 'var(--sfh-cream)' }}>
