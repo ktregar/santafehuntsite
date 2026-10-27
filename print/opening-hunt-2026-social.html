@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Opening Hunt 2026 (social)</title>
+<!--
+  1080x1080 social graphic for Opening Hunt, Sat Nov 14, 2026.
+  Same layout family as hunter-pace-new-date-social.html.
+  Not deployed. Render with headless Chrome:
+    chrome --headless=new --hide-scrollbars --window-size=1080,1080 --screenshot=opening-hunt-2026-social.png opening-hunt-2026-social.html
+-->
+<link rel="stylesheet" href="../netlify-site/colors_and_type.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,700&family=Source+Sans+3:wght@300;400;600;700;800&display=swap">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--sfh-cream); }
+.card {
+  position: relative; width: 1080px; height: 1080px; overflow: hidden;
+  background: var(--sfh-cream);
+  font-variant-numeric: lining-nums;
+}
+.frame { position: absolute; inset: 22px; border: 3px solid var(--sfh-gold-400); }
+.photo {
+  position: absolute; left: 52px; top: 52px; width: 976px; height: 360px;
+  border: 2px solid var(--sfh-navy-900); overflow: hidden;
+}
+.photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 92%; display: block; }
+.splash {
+  position: absolute; left: 52px; top: 412px; width: 976px; height: 80px;
+  background: var(--sfh-navy-900);
+  border-top: 4px solid var(--sfh-gold-400);
+  display: flex; align-items: center; justify-content: center; gap: 24px;
+}
+.splash-day {
+  font-family: var(--font-sans); font-weight: 800; font-size: 38px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--sfh-gold-300); line-height: 1;
+}
+.splash-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--sfh-gold-400); }
+.splash-date {
+  font-family: 'Libre Caslon Text', Georgia, serif; font-weight: 700; font-size: 40px;
+  color: var(--sfh-cream); line-height: 1;
+}
+.text { position: absolute; left: 52px; right: 52px; top: 512px; text-align: center; }
+.eyebrow {
+  font-family: var(--font-sans); font-weight: 700; font-size: 19px;
+  letter-spacing: 0.24em; color: var(--sfh-navy-500); text-transform: uppercase;
+}
+h1 {
+  margin: 8px 0 0; font-family: 'Libre Caslon Text', Georgia, serif;
+  font-style: italic; font-weight: 700; font-size: 68px; line-height: 1.05;
+  color: #1c1712;
+}
+.sub {
+  margin-top: 6px; font-family: 'Libre Caslon Text', Georgia, serif; font-size: 28px; color: #4a4339;
+}
+.rule { width: 140px; height: 3px; background: var(--sfh-gold-400); margin: 16px auto 0; }
+.order { margin-top: 20px; display: flex; justify-content: center; gap: 0; }
+.step { width: 250px; padding: 0 10px; }
+.step + .step { border-left: 1px solid var(--sfh-gold-400); }
+.step-time {
+  font-family: 'Libre Caslon Text', Georgia, serif; font-weight: 700; font-size: 30px;
+  color: var(--sfh-navy-900);
+}
+.step-what {
+  margin-top: 4px; font-family: var(--font-sans); font-weight: 600; font-size: 20px;
+  letter-spacing: 0.04em; color: #3a352e;
+}
+.details {
+  margin-top: 16px; font-family: var(--font-sans); font-weight: 300; font-size: 24px;
+  line-height: 1.38; color: #3a352e;
+}
+.footer-rule { position: absolute; left: 52px; right: 52px; top: 910px; height: 2px; background: var(--sfh-gold-400); }
+.logo { position: absolute; left: 46px; top: 914px; width: 150px; height: 134px; object-fit: contain; }
+.cta { position: absolute; right: 58px; top: 944px; text-align: right; }
+.cta-label {
+  font-family: var(--font-sans); font-weight: 700; font-size: 17px; letter-spacing: 0.24em;
+  color: var(--sfh-gold-600); text-transform: uppercase;
+}
+.cta-url { margin-top: 8px; font-family: var(--font-sans); font-weight: 700; font-size: 29px; color: var(--sfh-navy-900); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="frame"></div>
+  <div class="photo"><img src="../netlify-site/assets/photos/staff-line.jpg" alt=""></div>
+  <div class="splash"><span class="splash-day">Saturday</span><span class="splash-dot"></span><span class="splash-date">November 14, 2026</span></div>
+  <div class="text">
+    <div class="eyebrow">The 2026–27 Season Begins</div>
+    <h1>Opening Hunt</h1>
+    <div class="sub">&amp; the Blessing of the Hounds · Garner Ranch</div>
+    <div class="rule"></div>
+    <div class="order">
+      <div class="step"><div class="step-time">9:15 am</div><div class="step-what">Stirrup Cup</div></div>
+      <div class="step"><div class="step-time">9:45 am</div><div class="step-what">The Blessing</div></div>
+      <div class="step"><div class="step-time">10:00 am</div><div class="step-what">Hounds Move Off</div></div>
+    </div>
+    <div class="details">
+      Formal turnout · Catered lunch to follow<br>
+      Riders &amp; non-riding guests welcome
+    </div>
+  </div>
+  <div class="footer-rule"></div>
+  <img class="logo" src="logo-transparent.png" alt="Santa Fe Hunt">
+  <div class="cta">
+    <div class="cta-label">Register At</div>
+    <div class="cta-url">santafehunt.com/opening-hunt</div>
+  </div>
+</div>
+</body>
+</html>
