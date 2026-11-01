@@ -34,6 +34,10 @@
 /hunter-pace   /hunter-pace.html  200
 /hunter-pace/  /hunter-pace.html  200
 
+# Hound naming auction
+/name-our-hound   /name-our-hound.html  200
+/name-our-hound/  /name-our-hound.html  200
+
 # Mock Hunt & Foxhunting Clinic
 /clinic        /clinic.html       200
 /clinic/       /clinic.html       200

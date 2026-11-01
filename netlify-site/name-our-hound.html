@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Name Our New Hound | Santa Fe Hunt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bid to name one of Santa Fe Hunt's newest hounds. Highest bid wins the honor of naming her.">
+<meta property="og:title" content="Name Our New Hound — Santa Fe Hunt">
+<meta property="og:description" content="Bid to name one of Santa Fe Hunt's newest hounds. Highest bid wins the honor of naming her.">
+<meta property="og:image" content="https://santafehunt.com/assets/photos/hound-j-portrait.jpg">
+<meta property="og:url" content="https://santafehunt.com/name-our-hound">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Santa Fe Hunt">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Name Our New Hound — Santa Fe Hunt">
+<meta name="twitter:description" content="Bid to name one of Santa Fe Hunt's newest hounds. Highest bid wins the honor of naming her.">
+<meta name="twitter:image" content="https://santafehunt.com/assets/photos/hound-j-portrait.jpg">
+<link rel="icon" type="image/jpeg" href="./assets/logo-color.jpg">
+<link rel="stylesheet" href="./colors_and_type.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sfh-cream); }
+
+/* ── Header ── */
+.site-header {
+  background: var(--sfh-cream);
+  border-top: 1px solid var(--sfh-navy-500);
+  border-bottom: 1px solid var(--sfh-navy-500);
+}
+.site-header-inner {
+  max-width: 1320px; margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.site-header-logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+.site-header-logo img { height: 56px; width: 56px; object-fit: contain; }
+.site-header-name {
+  font-family: var(--font-display); font-size: 22px; font-weight: 600;
+  letter-spacing: 0.04em; color: var(--sfh-navy-900); line-height: 1.1;
+}
+.site-header-sub {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--sfh-gold-500);
+}
+.site-nav { display: flex; gap: 28px; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+.site-nav a { color: var(--fg-2); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent; transition: all 200ms; }
+.site-nav a:hover, .site-nav a.active { color: var(--sfh-navy-500); border-bottom-color: var(--sfh-gold-400); }
+
+/* ── Hero ── */
+.page-hero {
+  background: var(--sfh-navy-900);
+  padding: 72px 32px;
+  text-align: center;
+}
+.page-hero .eyebrow {
+  color: var(--sfh-gold-400); margin-bottom: 12px; display: block;
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600;
+}
+.page-hero h1 {
+  font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500; color: var(--sfh-cream); letter-spacing: 0.04em; margin: 0 0 16px;
+}
+.page-hero p {
+  font-family: var(--font-serif); font-size: 18px; color: rgba(250,246,238,0.75);
+  max-width: 600px; margin: 0 auto; line-height: 1.7;
+}
+
+/* ── Body ── */
+.page-body { max-width: 1080px; margin: 0 auto; padding: 64px 32px 96px; }
+.section { margin-bottom: 80px; }
+.section-eyebrow {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500);
+  margin: 0 0 8px;
+}
+.section-heading {
+  font-family: var(--font-display); font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500; color: var(--sfh-navy-900); margin: 0 0 6px;
+}
+.section-rule { width: 56px; height: 2px; background: var(--sfh-gold-400); margin: 0 0 32px; }
+.body-text p {
+  font-family: var(--font-serif); font-size: 17px; line-height: 1.8;
+  color: var(--fg-2); margin: 0 0 20px; max-width: 68ch;
+}
+
+/* ── Auction: portrait + live panel ── */
+.auction-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: stretch;
+}
+.portrait {
+  background: var(--sfh-parchment);
+  border: 2px dashed var(--sfh-gold-400);
+  min-height: 460px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 32px;
+}
+.portrait:has(img) { padding: 0; border: 0; }
+.portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.portrait-placeholder-mark {
+  font-family: var(--font-display); font-size: 56px; color: var(--sfh-gold-400); line-height: 1; margin-bottom: 12px;
+}
+.portrait-placeholder-text {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500);
+}
+
+.bid-panel {
+  background: var(--sfh-navy-900); color: var(--sfh-cream);
+  padding: 40px 36px; display: flex; flex-direction: column;
+}
+.panel-label {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-400);
+  margin: 0 0 8px;
+}
+.high-bid {
+  font-family: var(--font-display); font-size: clamp(56px, 7vw, 84px);
+  font-weight: 500; line-height: 1; color: var(--sfh-cream); margin: 0 0 8px;
+}
+.bid-meta {
+  font-family: var(--font-serif); font-size: 15px; color: rgba(250,246,238,0.7); margin: 0;
+}
+.panel-rule { height: 1px; background: rgba(250,246,238,0.15); margin: 28px 0; }
+
+.countdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; text-align: center; }
+.countdown-cell { border: 1px solid rgba(250,246,238,0.18); padding: 14px 4px 10px; }
+.countdown-num {
+  font-family: var(--font-display); font-size: 36px; font-weight: 500; line-height: 1;
+  color: var(--sfh-cream); font-variant-numeric: tabular-nums;
+}
+.countdown-unit {
+  font-family: var(--font-sans); font-size: 9px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--sfh-gold-300); margin-top: 6px;
+}
+.closes-at {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.08em;
+  color: rgba(250,246,238,0.55); margin: 12px 0 0; text-align: center;
+}
+.closed-note {
+  display: none; font-family: var(--font-display); font-size: 26px;
+  color: var(--sfh-gold-300); text-align: center; padding: 18px 0;
+}
+
+.panel-cta {
+  margin-top: auto; padding-top: 28px;
+}
+.btn-gold {
+  display: block; text-align: center;
+  background: var(--sfh-gold-400); color: var(--sfh-navy-900);
+  font-family: var(--font-sans); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none;
+  padding: 16px 24px; border: 2px solid var(--sfh-gold-400); transition: all 200ms;
+}
+.btn-gold:hover { background: transparent; color: var(--sfh-gold-300); }
+
+/* ── Quick facts ── */
+.facts {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--border-soft); border: 1px solid var(--border-soft);
+  margin: 0 0 40px;
+}
+.fact { background: var(--sfh-cream); padding: 24px 16px; text-align: center; }
+.fact-value {
+  font-family: var(--font-display); font-size: 30px; font-weight: 500;
+  color: var(--sfh-navy-900); line-height: 1; margin-bottom: 8px;
+}
+.fact-label {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--sfh-gold-500); font-weight: 600;
+}
+
+.rules-list { margin: 0; padding: 0; list-style: none; max-width: 72ch; }
+.rules-list li {
+  font-family: var(--font-serif); font-size: 17px; line-height: 1.7; color: var(--fg-2);
+  padding: 14px 0 14px 32px; border-bottom: 1px solid var(--border-soft); position: relative;
+}
+.rules-list li::before {
+  content: "✦"; position: absolute; left: 4px; top: 14px; color: var(--sfh-gold-400); font-size: 14px;
+}
+.rules-list strong { color: var(--sfh-navy-900); }
+
+.support-panel {
+  border-left: 3px solid var(--sfh-gold-400);
+  padding: 24px 28px; background: var(--sfh-parchment); margin-top: 32px; max-width: 72ch;
+}
+.support-panel p { font-family: var(--font-serif); font-size: 16px; line-height: 1.7; color: var(--fg-2); margin: 0; }
+
+/* ── Bid form ── */
+.bid-form { display: flex; flex-direction: column; gap: 20px; max-width: 640px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field label {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-navy-900);
+}
+.form-field input, .form-field select {
+  font-family: var(--font-serif); font-size: 15px; color: var(--sfh-navy-900);
+  background: var(--sfh-cream); border: 1px solid var(--sfh-navy-500);
+  padding: 12px 14px; outline: none; transition: border-color 200ms;
+  border-radius: 0; appearance: none; -webkit-appearance: none; width: 100%;
+}
+.form-field input:focus, .form-field select:focus {
+  border-color: var(--sfh-navy-900); box-shadow: 0 0 0 3px rgba(10,29,57,0.08);
+}
+.form-field select {
+  cursor: pointer; padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230a1d39' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center;
+}
+.form-hint { font-family: var(--font-sans); font-size: 12px; color: var(--fg-3); margin: 0; }
+.form-error { font-family: var(--font-sans); font-size: 12px; color: #9b2c2c; margin: 0; display: none; }
+.check-row { display: flex; gap: 12px; align-items: flex-start; }
+.check-row input { margin-top: 4px; width: 18px; height: 18px; flex: none; }
+.check-row label {
+  font-family: var(--font-serif); font-size: 15px; line-height: 1.6; color: var(--fg-2);
+  text-transform: none; letter-spacing: 0; font-weight: 400;
+}
+.form-submit {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 600;
+  background: var(--sfh-navy-900); color: var(--sfh-cream);
+  border: none; padding: 16px 40px; cursor: pointer;
+  transition: background 200ms; align-self: flex-start;
+}
+.form-submit:hover { background: var(--sfh-navy-500); }
+.bot-field { display: none; }
+
+.success-message { display: none; background: var(--sfh-navy-900); padding: 40px; text-align: center; max-width: 640px; }
+.success-message .success-icon { font-family: var(--font-display); font-size: 48px; color: var(--sfh-gold-400); margin-bottom: 16px; }
+.success-message h3 { font-family: var(--font-display); font-size: 28px; font-weight: 500; color: var(--sfh-cream); margin: 0 0 12px; }
+.success-message p { font-family: var(--font-serif); font-size: 16px; color: rgba(250,246,238,0.75); margin: 0; line-height: 1.7; }
+
+/* ── Footer ── */
+.site-footer { background: var(--sfh-navy-900); padding: 48px 32px; text-align: center; }
+.site-footer a {
+  color: var(--sfh-gold-300); font-family: var(--font-sans);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; margin: 0 16px;
+}
+.site-footer a:hover { color: var(--sfh-cream); }
+.site-footer-copy {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(250,246,238,0.4); margin-top: 24px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 760px) {
+  .site-nav { display: none; }
+  .site-header-inner { padding: 14px 16px; }
+  .page-hero { padding: 56px 16px; }
+  .page-body { padding: 48px 16px 72px; }
+  .auction-grid { grid-template-columns: 1fr; gap: 0; }
+  .portrait { min-height: 300px; }
+  .bid-panel { padding: 32px 20px; }
+  .facts { grid-template-columns: 1fr 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .countdown-num { font-size: 30px; }
+  .site-footer { padding: 48px 16px; }
+  .site-footer a { display: inline-block; margin: 6px 10px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-header-logo">
+      <img src="./assets/logo-color.jpg" alt="Santa Fe Hunt">
+      <div>
+        <div class="site-header-name">SANTA FE HUNT</div>
+        <div class="site-header-sub">Est. 1969 · MFHA Recognized</div>
+      </div>
+    </a>
+    <nav class="site-nav">
+      <a href="/">Welcome</a>
+      <a href="/about">About</a>
+      <a href="/hounds" class="active">Hounds</a>
+      <a href="/etiquette">Etiquette</a>
+      <a href="/join">Join</a>
+      <a href="/events">Events</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/members">Members</a>
+      <a href="https://santa-fe-hunt.myshopify.com" target="_blank" rel="noopener noreferrer">Shop</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="eyebrow">Naming Auction · Bidding Closes November 13</span>
+  <h1>Name Our New Hound</h1>
+  <p>One of the newest members of our pack is still waiting for her name. Place the winning bid and you'll choose it, and hear it called in the hunt field for years to come.</p>
+</div>
+
+<div class="page-body">
+
+  <!-- PORTRAIT + LIVE BID PANEL -->
+  <div class="section">
+    <div class="auction-grid">
+      <div class="portrait">
+        <img src="./assets/photos/hound-j-portrait.jpg" alt="A young white hound with tan ears standing in the kennel, looking straight at the camera">
+      </div>
+
+      <div class="bid-panel">
+        <div class="panel-label">Current High Bid</div>
+        <div class="high-bid" id="highBid">$150</div>
+        <p class="bid-meta" id="bidMeta">Opening bid. Be the first!</p>
+
+        <div class="panel-rule"></div>
+
+        <div class="panel-label" id="countdownLabel">Bidding Closes In</div>
+        <div class="countdown" id="countdown">
+          <div class="countdown-cell"><div class="countdown-num" id="cdDays">--</div><div class="countdown-unit">Days</div></div>
+          <div class="countdown-cell"><div class="countdown-num" id="cdHours">--</div><div class="countdown-unit">Hours</div></div>
+          <div class="countdown-cell"><div class="countdown-num" id="cdMins">--</div><div class="countdown-unit">Min</div></div>
+          <div class="countdown-cell"><div class="countdown-num" id="cdSecs">--</div><div class="countdown-unit">Sec</div></div>
+        </div>
+        <div class="closed-note" id="closedNote">Bidding has closed. Thank you!</div>
+        <p class="closes-at" id="closesAt"></p>
+
+        <div class="panel-cta" id="panelCta">
+          <a href="#bid" class="btn-gold" id="panelCtaBtn">Bid $175 or More &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="section" id="rules">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-heading">The Rules of the Auction</h2>
+    <div class="section-rule"></div>
+
+    <div class="facts">
+      <div class="fact"><div class="fact-value">$150</div><div class="fact-label">Opening Bid</div></div>
+      <div class="fact"><div class="fact-value">$25</div><div class="fact-label">Bid Increments</div></div>
+      <div class="fact"><div class="fact-value">J</div><div class="fact-label">Her Name Starts With</div></div>
+      <div class="fact"><div class="fact-value">2</div><div class="fact-label">Syllables, Ideally</div></div>
+    </div>
+
+    <ul class="rules-list">
+      <li><strong>Highest bid wins.</strong> Bidding opens at $150 and goes up in $25 steps. We post the current high bid on this page as bids come in.</li>
+      <li><strong>Her name must start with J.</strong> Hounds in a litter share a first letter, and hers is J. Two-syllable names carry best across the hunt field, like Juno, Jewel or Jessie.</li>
+      <li><strong>Your name idea stays private.</strong> We show only the bid amount, never the bidder or the name, until the winner is announced. We'll reveal her name at the Blessing of the Hounds on Opening Day, Saturday, November 14.</li>
+      <li><strong>The Master and Huntsman have final approval.</strong> If they can't approve the winning name, we'll work with the winner on another J name they love.</li>
+      <li><strong>The winner pays after bidding closes.</strong> We'll contact you by email with payment instructions.</li>
+      <li><strong>If there's a tie, the earlier bid wins.</strong> If the winner hasn't paid within one week, the honor passes to the next-highest bidder.</li>
+    </ul>
+
+    <div class="support-panel">
+      <p><strong style="color: var(--sfh-navy-900);">Paying:</strong> Zelle to <strong>santafehounds@gmail.com</strong> (no fee) or PayPal (a small handling fee applies). All proceeds go to the care and keep of the pack.</p>
+    </div>
+  </div>
+
+  <!-- BID FORM -->
+  <div class="section" id="bid" style="margin-bottom: 0;">
+    <div class="section-eyebrow">Place Your Bid</div>
+    <h2 class="section-heading">Make Your Bid</h2>
+    <div class="section-rule"></div>
+
+    <div class="success-message" id="successMessage">
+      <div class="success-icon">✦</div>
+      <h3>Bid Received</h3>
+      <p>Thank you! Once we confirm your bid, it will show on this page as the new high bid. We'll email you if you're outbid, and we'll be in touch when bidding closes.</p>
+    </div>
+
+    <form
+      id="bidForm"
+      class="bid-form"
+      name="hound-naming-auction"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      action="/name-our-hound?success#bid"
+    >
+      <input type="hidden" name="form-name" value="hound-naming-auction">
+      <p class="bot-field"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="Jane Smith">
+        </div>
+        <div class="form-field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="jane@example.com">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+        </div>
+        <div class="form-field">
+          <label for="bidAmount">Your Bid</label>
+          <select id="bidAmount" name="bid" required></select>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="houndName">Your Name for Her</label>
+        <input type="text" id="houndName" name="hound-name" required placeholder="Must start with J, e.g. Juno">
+        <p class="form-hint">Two syllables are best. The Master and Huntsman have final approval.</p>
+        <p class="form-error" id="nameError">Her name needs to start with the letter J.</p>
+      </div>
+
+      <div class="check-row">
+        <input type="checkbox" id="agree" name="agree-to-rules" value="yes" required>
+        <label for="agree">I've read the rules. If I win, I'll pay my bid within one week of bidding closing.</label>
+      </div>
+
+      <button type="submit" class="form-submit">Submit My Bid</button>
+    </form>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <!-- MAILING LIST SIGNUP -->
+  <div class="sfh-mc-wrap" style="max-width:400px; margin:0 auto 48px; text-align:center;">
+    <div style="font-family:var(--font-sans); font-size:10px; letter-spacing:0.24em; text-transform:uppercase; font-weight:600; color:var(--sfh-gold-400); margin-bottom:10px;">Stay in the Loop</div>
+    <div style="font-family:var(--font-display); font-size:24px; color:var(--sfh-cream); margin-bottom:10px; letter-spacing:0.03em;">Join Our Mailing List</div>
+    <p style="font-family:var(--font-serif); font-size:14px; color:rgba(250,246,238,0.6); margin:0 0 20px; line-height:1.6;">Hunt news, event announcements, and seasonal updates.</p>
+    <form action="https://santafehunt.us4.list-manage.com/subscribe/post?u=aaf6ca70722a337ce1f9f9c05&amp;id=9741c32bf5&amp;f_id=0043d0e7f0" method="post" target="_blank" novalidate style="display:flex; flex-direction:column; gap:8px;">
+      <input class="sfh-signup-input" type="text" name="FNAME" placeholder="First Name">
+      <input class="sfh-signup-input" type="email" name="EMAIL" placeholder="Email Address" required>
+      <div aria-hidden="true" style="position:absolute; left:-5000px;"><input type="text" name="b_aaf6ca70722a337ce1f9f9c05_9741c32bf5" tabindex="-1" value=""></div>
+      <button type="submit" style="font-family:var(--font-sans); font-size:11px; letter-spacing:0.22em; text-transform:uppercase; font-weight:600; background:var(--sfh-gold-400); color:var(--sfh-navy-900); border:none; padding:13px 28px; cursor:pointer; margin-top:4px;">Subscribe</button>
+    </form>
+  </div>
+  <div style="width:56px; height:1px; background:rgba(250,246,238,0.15); margin:0 auto 40px;"></div>
+  <div>
+    <a href="/">Welcome</a>
+    <a href="/about">About</a>
+    <a href="/hounds">Hounds</a>
+    <a href="/etiquette">Etiquette</a>
+    <a href="/join">Join</a>
+    <a href="/events">Events</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/members">Members</a>
+    <a href="https://santa-fe-hunt.myshopify.com" target="_blank" rel="noopener noreferrer">Shop</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div style="margin-top: 20px;">
+    <a href="https://www.instagram.com/santafehounds/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <span style="color: rgba(250,246,238,0.4);">·</span>
+    <a href="https://www.facebook.com/SantaFeHunt" target="_blank" rel="noopener noreferrer">Facebook</a>
+  </div>
+  <div class="site-footer-copy">&copy; 2026 Santa Fe Hunt</div>
+</footer>
+
+<script>
+  // ── Auction settings: update these as bids come in ──
+  var AUCTION = {
+    openingBid: 150,
+    increment: 25,
+    currentHighBid: 150,   // set to the latest confirmed high bid
+    bidCount: 0,           // number of confirmed bids so far
+    closes: '2026-11-13T20:00:00-08:00'  // 8:00 pm Pacific, Fri Nov 13 (night before Opening Hunt)
+  };
+
+  function money(n) { return '$' + n.toLocaleString('en-US'); }
+
+  var nextMin = AUCTION.bidCount === 0 ? AUCTION.openingBid : AUCTION.currentHighBid + AUCTION.increment;
+
+  document.getElementById('highBid').textContent = money(AUCTION.currentHighBid);
+  document.getElementById('bidMeta').textContent = AUCTION.bidCount === 0
+    ? 'Opening bid. Be the first!'
+    : AUCTION.bidCount + (AUCTION.bidCount === 1 ? ' bid' : ' bids') + ' so far';
+  document.getElementById('panelCtaBtn').innerHTML = 'Bid ' + money(nextMin) + ' or More &rarr;';
+
+  // Bid dropdown: next minimum and up, in $25 steps
+  var sel = document.getElementById('bidAmount');
+  for (var amt = nextMin; amt <= nextMin + AUCTION.increment * 40; amt += AUCTION.increment) {
+    var opt = document.createElement('option');
+    opt.value = amt; opt.textContent = money(amt);
+    sel.appendChild(opt);
+  }
+
+  // Countdown
+  var closeTime = new Date(AUCTION.closes).getTime();
+  document.getElementById('closesAt').textContent = 'Closes ' + new Date(closeTime).toLocaleString('en-US', {
+    weekday: 'long', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit',
+    timeZone: 'America/Los_Angeles', timeZoneName: 'short'
+  });
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+  function tick() {
+    var left = closeTime - Date.now();
+    if (left <= 0) {
+      document.getElementById('countdown').style.display = 'none';
+      document.getElementById('countdownLabel').style.display = 'none';
+      document.getElementById('closedNote').style.display = 'block';
+      document.getElementById('panelCta').style.display = 'none';
+      document.getElementById('bidForm').style.display = 'none';
+      document.getElementById('highBid').previousElementSibling.textContent = 'Winning Bid';
+      clearInterval(timer);
+      return;
+    }
+    var s = Math.floor(left / 1000);
+    document.getElementById('cdDays').textContent = Math.floor(s / 86400);
+    document.getElementById('cdHours').textContent = pad(Math.floor(s % 86400 / 3600));
+    document.getElementById('cdMins').textContent = pad(Math.floor(s % 3600 / 60));
+    document.getElementById('cdSecs').textContent = pad(s % 60);
+  }
+  var timer = setInterval(tick, 1000);
+  tick();
+
+  // Name must start with J
+  var form = document.getElementById('bidForm');
+  form.addEventListener('submit', function (e) {
+    var nm = document.getElementById('houndName').value.trim();
+    var err = document.getElementById('nameError');
+    if (!/^j/i.test(nm)) {
+      e.preventDefault();
+      err.style.display = 'block';
+      document.getElementById('houndName').focus();
+    } else {
+      err.style.display = 'none';
+    }
+  });
+
+  if (window.location.search.includes('success')) {
+    form.style.display = 'none';
+    document.getElementById('successMessage').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
