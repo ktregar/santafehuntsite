@@ -156,6 +156,14 @@ body { margin: 0; background: var(--sfh-cream); }
 .event-row-tag { font-family: var(--font-sans); font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sfh-gold-600); margin-bottom: 4px; }
 .event-row-name { font-family: var(--font-display); font-size: 20px; font-weight: 500; color: var(--sfh-navy-900); margin: 0 0 3px; }
 .event-row-location { font-family: var(--font-serif); font-size: 14px; color: var(--fg-3); }
+.event-row.is-past .event-row-date { background: var(--sfh-navy-500); }
+.event-row.is-past .event-row-name, .event-row.is-past .event-row-location { color: var(--fg-3); }
+
+/* ── Past-event marker and recap photos ── */
+.past-badge { display: inline-block; align-self: flex-start; font-family: var(--font-sans); font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; background: var(--sfh-navy-900); color: var(--sfh-gold-300); padding: 5px 10px; margin-bottom: 12px; }
+.reg-card-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin: 0 0 8px; }
+.reg-card-thumbs img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+.photo-credit { font-family: var(--font-serif); font-size: 12px; font-style: italic; color: var(--fg-3); margin: 0 0 22px; }
 
 /* ── Registration cards ── */
 .reg-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -243,15 +251,22 @@ body { margin: 0; background: var(--sfh-cream); }
 
 
       <div class="reg-card">
-        <img class="reg-card-photo" src="./assets/photos/blessing-of-hounds.jpg" alt="Hunt staff in scarlet moving off with the pack">
+        <img class="reg-card-photo" src="./assets/photos/opening-2026-field.jpg" alt="Staff in scarlet lead the field across the meadow at Garner Ranch, with cloud-topped mountains behind">
         <div class="reg-card-body">
+          <div class="past-badge">Past Event · The Formal Season Is Underway</div>
           <div class="reg-card-eyebrow">Saturday, November 14 · Formal Hunt</div>
           <h3 class="reg-card-title">Opening Hunt</h3>
           <div class="reg-card-meta">Garner Ranch</div>
-          <p class="reg-card-desc">The formal opening of the 2026–27 season. Stirrup cup at 9:15, the Blessing of the Hounds at 9:45, hounds move off at 10:00. Braided horses and finest turnout; catered lunch after. Non-riding visitors welcome.</p>
+          <p class="reg-card-desc">Thank you to everyone who turned out to open the 2026–27 season! Three fields went out on a cool, overcast morning after the stirrup cup and the Blessing of the Hounds, and our young pack hunted hard through the creek bed. Formal-season hunting continues Tuesdays and Saturdays.</p>
+          <div class="reg-card-thumbs">
+            <img src="./assets/photos/opening-2026-stirrup-cup.jpg" alt="The stirrup cup table set out by the trailers">
+            <img src="./assets/photos/opening-2026-juniors.jpg" alt="Two junior riders in black coats and white stocks, smiling">
+            <img src="./assets/photos/opening-2026-scarlet.jpg" alt="A member in scarlet on a dark bay horse at the meet">
+            <img src="./assets/photos/opening-2026-trailer.jpg" alt="A member in scarlet and a flat cap by the trailers before the meet">
+          </div>
+          <p class="photo-credit">Photos by Alisa Brandt.</p>
           <div class="reg-card-cta" style="display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdcNeq5q0czf0bHR9shFA53Lf6kz08vCbIbF_0zX2cgZp2iCQ/viewform" target="_blank" rel="noopener noreferrer">Register Now</a>
-            <a class="btn-secondary" href="/opening-hunt">The Day &amp; Fees</a>
+            <a class="btn-primary" href="#hunt-dates">See Upcoming Hunt Days</a>
           </div>
         </div>
       </div>
@@ -263,7 +278,7 @@ body { margin: 0; background: var(--sfh-cream); }
           <div class="reg-card-eyebrow">Ride as a Guest · Tuesdays &amp; Saturdays</div>
           <h3 class="reg-card-title">Day Membership</h3>
           <div class="reg-card-meta">Costo Ranch &amp; Garner Ranch</div>
-          <p class="reg-card-desc">Not a member yet? Come cap with us for a single hunt day. Adults $75 for Tuesdays and autumn Saturdays, $150 for Saturdays in the formal season. Juniors (13–18) $50; riders 12 and under and Pony Club members ride free. Please register in advance.</p>
+          <p class="reg-card-desc">Not a member yet? Come cap with us for a single hunt day. Adults $75 for Tuesdays, $150 for Saturdays in the formal season. Juniors (13–18) $50; riders 12 and under and Pony Club members ride free. Please register in advance.</p>
           <div class="reg-card-cta" style="display:flex; gap:10px; flex-wrap:wrap;">
             <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSckqvJ73wLp6glqQaqzrAPlwpbcw-ebQ3h5fQUnnChyD5uW0g/viewform" target="_blank" rel="noopener noreferrer">Get a Day Membership</a>
             <a class="btn-secondary" href="#hunt-dates">See Hunt Dates</a>
@@ -288,13 +303,13 @@ body { margin: 0; background: var(--sfh-cream); }
 
     <!-- Confirmed events list -->
     <div class="event-list">
-      <div class="event-row">
+      <div class="event-row is-past">
         <div class="event-row-date">
           <div class="event-row-day">Sat</div>
           <div class="event-row-datenum">Nov 14</div>
         </div>
         <div class="event-row-body">
-          <div class="event-row-tag">Formal Hunt</div>
+          <div class="event-row-tag">Past · The Formal Season Is Underway</div>
           <div class="event-row-name">Opening Hunt</div>
           <div class="event-row-location">Garner Ranch</div>
         </div>
@@ -328,13 +343,17 @@ body { margin: 0; background: var(--sfh-cream); }
 
     <!-- Autumn hunt dates -->
     <div class="hunt-dates" id="hunt-dates">
-      <div class="event-row-tag">Autumn Hunting · Tuesdays 8:00 · Saturdays 9:00</div>
-      <div class="event-row-name" style="font-family: var(--font-display); font-size: 20px; font-weight: 500; color: var(--sfh-navy-900); margin: 4px 0 0;">Autumn Hunt Days</div>
+      <div class="event-row-tag">Formal Season · Tuesdays 8:00 · Saturdays 9:00</div>
+      <div class="event-row-name" style="font-family: var(--font-display); font-size: 20px; font-weight: 500; color: var(--sfh-navy-900); margin: 4px 0 0;">Upcoming Hunt Days</div>
       <div class="hunt-dates-chips">
-        <div class="hunt-date-chip">Sat · Nov 7 · Costo</div>
-        <div class="hunt-date-chip">Tue · Nov 10 · Costo</div>
+        <div class="hunt-date-chip">Sat · Nov 21 · Costo</div>
+        <div class="hunt-date-chip">Tue · Nov 24 · Costo</div>
+        <div class="hunt-date-chip">Sat · Nov 28 · Garner · Thanksgiving</div>
+        <div class="hunt-date-chip">Tue · Dec 1 · Costo</div>
+        <div class="hunt-date-chip">Sat · Dec 5 · Costo</div>
+        <div class="hunt-date-chip">Tue · Dec 8 · Garner</div>
       </div>
-      <p style="font-family: var(--font-serif); font-size: 15px; line-height: 1.7; color: var(--fg-2); margin: 20px 0 16px;">Not a member? You're welcome to cap. Adult non-members: $75 for Tuesdays and autumn Saturdays, $150 for Saturdays in the formal season. Juniors $50.</p>
+      <p style="font-family: var(--font-serif); font-size: 15px; line-height: 1.7; color: var(--fg-2); margin: 20px 0 16px;">Not a member? You're welcome to cap. Adult non-members: $75 for Tuesdays, $150 for Saturdays in the formal season. Juniors $50. Fixtures are always subject to weather and the condition of the country.</p>
       <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSckqvJ73wLp6glqQaqzrAPlwpbcw-ebQ3h5fQUnnChyD5uW0g/viewform" target="_blank" rel="noopener noreferrer">Cap With Us</a>
     </div>
 
