@@ -14,7 +14,7 @@ function SectionEyebrow({ label, gold }) {
 
 function EventList() {
   const events = [
-    { date: 'Nov 14',  day: 'Sat', title: 'Opening Hunt',            location: 'Garner Ranch',            tag: 'Formal' },
+    { date: 'Nov 14',  day: 'Sat', title: 'Opening Hunt',            location: 'Garner Ranch',            tag: 'Past · The Formal Season Is Underway', past: true },
     { date: 'Nov 28',  day: 'Sat', title: 'Thanksgiving Hunt',       location: 'Garner Ranch',            tag: 'Special Hunt' },
     { date: 'Dec 26',  day: 'Sat', title: 'Boxing Day Hunt',         location: 'Garner Ranch',            tag: 'Special Hunt' },
   ];
@@ -39,7 +39,7 @@ function EventList() {
             onMouseLeave={ev => ev.currentTarget.style.boxShadow = '0 1px 2px rgba(26,20,16,0.06)'}
             >
               <div style={{
-                background: 'var(--sfh-navy-900)', color: 'var(--sfh-cream)',
+                background: e.past ? 'var(--sfh-navy-500)' : 'var(--sfh-navy-900)', color: 'var(--sfh-cream)',
                 padding: '12px 14px', minWidth: 78, textAlign: 'center',
                 fontFamily: 'var(--font-sans)',
               }}>
@@ -53,7 +53,7 @@ function EventList() {
                   letterSpacing: '0.16em', textTransform: 'uppercase',
                   color: 'var(--sfh-gold-600)', marginBottom: 6,
                 }}>{e.tag}</div>
-                <h4 style={{ fontFamily: 'var(--font-display)', fontSize: 26, fontWeight: 500, margin: '0 0 6px', color: 'var(--fg-1)' }}>{e.title}</h4>
+                <h4 style={{ fontFamily: 'var(--font-display)', fontSize: 26, fontWeight: 500, margin: '0 0 6px', color: e.past ? 'var(--fg-3)' : 'var(--fg-1)' }}>{e.title}</h4>
                 <div style={{ fontFamily: 'var(--font-serif)', fontSize: 15, color: 'var(--fg-3)' }}>{e.location}</div>
               </div>
             </div>
