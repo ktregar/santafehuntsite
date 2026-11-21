@@ -163,7 +163,18 @@ function getTemplate_() {
   const msg = draft.getMessage();
   return {
     subject: msg.getSubject().slice(CONFIG.TEMPLATE_PREFIX.length).trim(),
-    html: msg.getBody(),
-    plain: msg.getPlainBody(),
+    html: unwrapLinks_(msg.getBody()),
+    plain: unwrapLinks_(msg.getPlainBody()),
   };
+}
+
+/**
+ * Gmail hands back draft links wrapped in expiring google.com/url?q=...
+ * redirects. Turn them back into the real addresses.
+ */
+function unwrapLinks_(text) {
+  return text.replace(/https?:\/\/www\.google\.com\/url\?q=([^&"<>\s]+)(?:&amp;|&)?[^"<>\s]*/g,
+    function (all, target) {
+      try { return decodeURIComponent(target); } catch (e) { return target; }
+    });
 }
