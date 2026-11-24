@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (Google Analytics) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TR6NPB75"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="utf-8">
+<title>Name a Coop | Santa Fe Hunt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Put your name on one of five new coops at Costo, or buy a tracking collar for a Santa Fe Hunt hound.">
+<meta property="og:title" content="Name a Coop — Santa Fe Hunt">
+<meta property="og:description" content="Put your name on one of five new coops at Costo, or buy a tracking collar for a Santa Fe Hunt hound.">
+<meta property="og:image" content="https://santafehunt.com/assets/logo-color.jpg">
+<meta property="og:url" content="https://santafehunt.com/name-a-coop">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Santa Fe Hunt">
+<link rel="icon" type="image/jpeg" href="./assets/logo-color.jpg">
+<link rel="stylesheet" href="./colors_and_type.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--sfh-cream); }
+
+/* ── Header ── */
+.site-header {
+  background: var(--sfh-cream);
+  border-top: 1px solid var(--sfh-navy-500);
+  border-bottom: 1px solid var(--sfh-navy-500);
+}
+.site-header-inner {
+  max-width: 1320px; margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.site-header-logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+.site-header-logo img { height: 56px; width: 56px; object-fit: contain; }
+.site-header-name {
+  font-family: var(--font-display); font-size: 22px; font-weight: 600;
+  letter-spacing: 0.04em; color: var(--sfh-navy-900); line-height: 1.1;
+}
+.site-header-sub {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--sfh-gold-500);
+}
+.site-nav { display: flex; gap: 28px; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+.site-nav a { color: var(--fg-2); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent; transition: all 200ms; }
+.site-nav a:hover, .site-nav a.active { color: var(--sfh-navy-500); border-bottom-color: var(--sfh-gold-400); }
+
+/* ── Hero ── */
+.page-hero {
+  background: var(--sfh-navy-900);
+  padding: 72px 32px;
+  text-align: center;
+}
+.page-hero .eyebrow {
+  color: var(--sfh-gold-400); margin-bottom: 12px; display: block;
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600;
+}
+.page-hero h1 {
+  font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500; color: var(--sfh-cream); letter-spacing: 0.04em; margin: 0 0 16px;
+}
+.page-hero p {
+  font-family: var(--font-serif); font-size: 18px; color: rgba(250,246,238,0.75);
+  max-width: 600px; margin: 0 auto; line-height: 1.7;
+}
+
+.hero-photo { display: block; width: 100%; max-height: 480px; object-fit: cover; object-position: center 65%; }
+
+/* ── Body ── */
+.page-body { max-width: 1080px; margin: 0 auto; padding: 64px 32px 96px; }
+.section { margin-bottom: 80px; }
+.section-eyebrow {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500);
+  margin: 0 0 8px;
+}
+.section-heading {
+  font-family: var(--font-display); font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500; color: var(--sfh-navy-900); margin: 0 0 6px;
+}
+.section-rule { width: 56px; height: 2px; background: var(--sfh-gold-400); margin: 0 0 32px; }
+.body-text p {
+  font-family: var(--font-serif); font-size: 17px; line-height: 1.8;
+  color: var(--fg-2); margin: 0 0 20px; max-width: 68ch;
+}
+
+/* ── Giving options ── */
+.options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.option {
+  background: var(--sfh-parchment); padding: 36px 28px;
+  display: flex; flex-direction: column;
+}
+.option.featured { background: var(--sfh-navy-900); }
+.option-label {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500); margin: 0 0 10px;
+}
+.option.featured .option-label { color: var(--sfh-gold-400); }
+.option h3 {
+  font-family: var(--font-display); font-size: 28px; font-weight: 500;
+  color: var(--sfh-navy-900); margin: 0 0 8px;
+}
+.option.featured h3 { color: var(--sfh-cream); }
+.option-price {
+  font-family: var(--font-display); font-size: 52px; font-weight: 500; line-height: 1;
+  color: var(--sfh-navy-900); margin: 0 0 20px;
+}
+.option.featured .option-price { color: var(--sfh-cream); }
+.option ul { margin: 0 0 28px; padding: 0; list-style: none; }
+.option li {
+  font-family: var(--font-serif); font-size: 15px; line-height: 1.6; color: var(--fg-2);
+  padding: 8px 0 8px 22px; position: relative;
+}
+.option.featured li { color: rgba(250,246,238,0.8); }
+.option li::before {
+  content: "✦"; position: absolute; left: 0; top: 8px; color: var(--sfh-gold-400); font-size: 12px;
+}
+.btn-gold {
+  display: block; text-align: center; margin-top: auto;
+  background: var(--sfh-gold-400); color: var(--sfh-navy-900);
+  font-family: var(--font-sans); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none;
+  padding: 16px 20px; border: 2px solid var(--sfh-gold-400); transition: all 200ms;
+}
+.btn-gold:hover { background: transparent; color: var(--sfh-gold-500); }
+.option.featured .btn-gold:hover { color: var(--sfh-gold-300); }
+
+/* ── Coop list + map ── */
+.coop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: stretch; }
+.coop-list { margin: 0; padding: 0; list-style: none; }
+.coop-list li {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding: 18px 0; border-bottom: 1px solid var(--border-soft);
+}
+.coop-name { font-family: var(--font-display); font-size: 22px; color: var(--sfh-navy-900); line-height: 1.2; }
+.coop-where { font-family: var(--font-serif); font-size: 15px; color: var(--fg-3); margin-top: 4px; }
+.coop-status {
+  flex: none; font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; font-weight: 600; padding: 6px 10px;
+  color: var(--sfh-navy-900); border: 1px solid var(--sfh-gold-400);
+}
+.coop-status.claimed { background: var(--sfh-navy-900); color: var(--sfh-cream); border-color: var(--sfh-navy-900); }
+.map-slot {
+  background: var(--sfh-parchment); border: 2px dashed var(--sfh-gold-400);
+  min-height: 380px; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center; padding: 32px;
+}
+.map-slot-mark { font-family: var(--font-display); font-size: 56px; color: var(--sfh-gold-400); line-height: 1; margin-bottom: 12px; }
+.map-slot-text {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-gold-500);
+}
+#collarSponsors { display: none; margin-top: 32px; max-width: 72ch; }
+
+/* ── Terms ── */
+.rules-list { margin: 0; padding: 0; list-style: none; max-width: 72ch; }
+.rules-list li {
+  font-family: var(--font-serif); font-size: 17px; line-height: 1.7; color: var(--fg-2);
+  padding: 14px 0 14px 32px; border-bottom: 1px solid var(--border-soft); position: relative;
+}
+.rules-list li::before {
+  content: "✦"; position: absolute; left: 4px; top: 14px; color: var(--sfh-gold-400); font-size: 14px;
+}
+.rules-list strong { color: var(--sfh-navy-900); }
+
+.support-panel {
+  border-left: 3px solid var(--sfh-gold-400);
+  padding: 24px 28px; background: var(--sfh-parchment); margin-top: 32px; max-width: 72ch;
+}
+.support-panel p { font-family: var(--font-serif); font-size: 16px; line-height: 1.7; color: var(--fg-2); margin: 0; }
+
+/* ── Form ── */
+.claim-form { display: flex; flex-direction: column; gap: 20px; max-width: 640px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field label {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; color: var(--sfh-navy-900);
+}
+.form-field input, .form-field select {
+  font-family: var(--font-serif); font-size: 15px; color: var(--sfh-navy-900);
+  background: var(--sfh-cream); border: 1px solid var(--sfh-navy-500);
+  padding: 12px 14px; outline: none; transition: border-color 200ms;
+  border-radius: 0; appearance: none; -webkit-appearance: none; width: 100%;
+}
+.form-field input:focus, .form-field select:focus {
+  border-color: var(--sfh-navy-900); box-shadow: 0 0 0 3px rgba(10,29,57,0.08);
+}
+.form-field select {
+  cursor: pointer; padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230a1d39' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center;
+}
+.form-hint { font-family: var(--font-sans); font-size: 12px; color: var(--fg-3); margin: 0; }
+.coop-fields { display: flex; flex-direction: column; gap: 20px; }
+.check-row { display: flex; gap: 12px; align-items: flex-start; }
+.check-row input { margin-top: 4px; width: 18px; height: 18px; flex: none; }
+.check-row label {
+  font-family: var(--font-serif); font-size: 15px; line-height: 1.6; color: var(--fg-2);
+  text-transform: none; letter-spacing: 0; font-weight: 400;
+}
+.form-submit {
+  font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 600;
+  background: var(--sfh-navy-900); color: var(--sfh-cream);
+  border: none; padding: 16px 40px; cursor: pointer;
+  transition: background 200ms; align-self: flex-start;
+}
+.form-submit:hover { background: var(--sfh-navy-500); }
+.bot-field { display: none; }
+
+.success-message { display: none; background: var(--sfh-navy-900); padding: 40px; text-align: center; max-width: 640px; }
+.success-message .success-icon { font-family: var(--font-display); font-size: 48px; color: var(--sfh-gold-400); margin-bottom: 16px; }
+.success-message h3 { font-family: var(--font-display); font-size: 28px; font-weight: 500; color: var(--sfh-cream); margin: 0 0 12px; }
+.success-message p { font-family: var(--font-serif); font-size: 16px; color: rgba(250,246,238,0.75); margin: 0; line-height: 1.7; }
+
+/* ── Footer ── */
+.site-footer { background: var(--sfh-navy-900); padding: 48px 32px; text-align: center; }
+.site-footer a {
+  color: var(--sfh-gold-300); font-family: var(--font-sans);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; margin: 0 16px;
+}
+.site-footer a:hover { color: var(--sfh-cream); }
+.site-footer-copy {
+  font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: rgba(250,246,238,0.4); margin-top: 24px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .options { grid-template-columns: 1fr; }
+  .coop-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 760px) {
+  .site-nav { display: none; }
+  .site-header-inner { padding: 14px 16px; }
+  .page-hero { padding: 56px 16px; }
+  .page-body { padding: 48px 16px 72px; }
+  .map-slot { min-height: 260px; }
+  .form-row { grid-template-columns: 1fr; }
+  .site-footer { padding: 48px 16px; }
+  .site-footer a { display: inline-block; margin: 6px 10px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-header-logo">
+      <img src="./assets/logo-color.jpg" alt="Santa Fe Hunt">
+      <div>
+        <div class="site-header-name">SANTA FE HUNT</div>
+        <div class="site-header-sub">Est. 1969 · MFHA Recognized</div>
+      </div>
+    </a>
+    <nav class="site-nav">
+      <a href="/">Welcome</a>
+      <a href="/about">About</a>
+      <a href="/hounds" class="active">Hounds</a>
+      <a href="/etiquette">Etiquette</a>
+      <a href="/join">Join</a>
+      <a href="/events">Events</a>
+      <a href="/gallery">Gallery</a>
+      <a href="/members">Members</a>
+      <a href="https://santa-fe-hunt.myshopify.com" target="_blank" rel="noopener noreferrer">Shop</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <span class="eyebrow">Five Coops at Costo · While They Last</span>
+  <h1>Name a Coop</h1>
+  <p>We've paneled Costo with new coops, so staff can stay with hounds and there's proper country to ride. Put your name on one, and it goes on the map of our country for the whole field to know.</p>
+</div>
+
+<img class="hero-photo" src="./assets/photos/costo-coops-placed.jpg" alt="Two people standing behind a newly built wooden coop in a wire fence line at Costo Ranch, with mountains in the distance">
+
+<div class="page-body">
+
+  <!-- OPTIONS -->
+  <div class="section">
+    <div class="section-eyebrow">Ways to Give</div>
+    <h2 class="section-heading">Choose Your Part</h2>
+    <div class="section-rule"></div>
+
+    <div class="options">
+      <div class="option">
+        <div class="option-label">Only Five Available</div>
+        <h3>Name a Coop</h3>
+        <div class="option-price">$500</div>
+        <ul>
+          <li>Choose your coop and its name</li>
+          <li>A small plaque on the coop</li>
+          <li>A named spot on our Costo map</li>
+          <li>Your name listed on this page</li>
+        </ul>
+        <a href="#claim" class="btn-gold" data-option="coop">Name a Coop &rarr;</a>
+      </div>
+
+      <div class="option featured">
+        <div class="option-label">Best Value</div>
+        <h3>Coop &amp; Collar</h3>
+        <div class="option-price">$750</div>
+        <ul>
+          <li>Everything in Name a Coop</li>
+          <li>A GPS tracking collar for a hound</li>
+          <li>Credit for the collar on this page</li>
+        </ul>
+        <a href="#claim" class="btn-gold" data-option="both">Coop &amp; Collar &rarr;</a>
+      </div>
+
+      <div class="option">
+        <div class="option-label">No Limit</div>
+        <h3>Collar a Hound</h3>
+        <div class="option-price">$300</div>
+        <ul>
+          <li>A GPS tracking collar for a hound</li>
+          <li>Helps staff find hounds fast and keep them safe</li>
+          <li>Credit for the collar on this page</li>
+        </ul>
+        <a href="#claim" class="btn-gold" data-option="collar">Collar a Hound &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- COOPS + MAP -->
+  <div class="section" id="coops">
+    <div class="section-eyebrow">The Coops</div>
+    <h2 class="section-heading">Pick Your Fence</h2>
+    <div class="section-rule"></div>
+
+    <div class="body-text" id="mapNote">
+      <p>We're mapping the five coops now, and their locations will be posted here soon. You can reserve yours today. Choose "No preference" or a coop number, and we'll confirm your coop with you once the map is up.</p>
+    </div>
+
+    <div class="coop-grid">
+      <ul class="coop-list" id="coopList"></ul>
+      <div class="map-slot">
+        <div class="map-slot-mark">✦</div>
+        <div class="map-slot-text">Costo Map Coming Soon</div>
+      </div>
+    </div>
+
+    <div class="body-text" id="collarSponsors">
+      <p><strong style="color: var(--sfh-navy-900);">Collars given by:</strong> <span id="collarNames"></span></p>
+    </div>
+  </div>
+
+  <!-- TERMS -->
+  <div class="section" id="terms">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-heading">The Details</h2>
+    <div class="section-rule"></div>
+
+    <ul class="rules-list">
+      <li><strong>First come, first served.</strong> Tell us your first and second choice. We confirm each coop by email in the order requests arrive, then mark it as claimed here.</li>
+      <li><strong>Name it for anyone.</strong> Yourself, your family, your farm, a favorite horse or someone you'd like to remember. The Master has final approval, and we'll work with you if a name can't be used.</li>
+      <li><strong>How long it lasts.</strong> Your name stays on the coop as long as the coop stands and the Hunt rides at Costo.</li>
+      <li><strong>Collars go where they're needed.</strong> The Huntsman chooses which hound wears each collar, and a collar may move between hounds as the pack changes.</li>
+      <li><strong>Pay after we confirm.</strong> We'll email you payment instructions. If we don't receive payment within one week, the coop goes back on the list.</li>
+    </ul>
+
+    <div class="support-panel">
+      <p><strong style="color: var(--sfh-navy-900);">Paying:</strong> Zelle to <strong>santafehounds@gmail.com</strong> (no fee) or PayPal (a small handling fee applies). Proceeds support the paneling at Costo and the care of the pack.</p>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="section" id="claim" style="margin-bottom: 0;">
+    <div class="section-eyebrow">Make It Yours</div>
+    <h2 class="section-heading">Reserve Yours</h2>
+    <div class="section-rule"></div>
+
+    <div class="success-message" id="successMessage">
+      <div class="success-icon">✦</div>
+      <h3>Request Received</h3>
+      <p>Thank you! We'll email you to confirm and send payment instructions. If you don't hear from us within a day, please text us at (951) 428-4265 or email santafehounds@gmail.com.</p>
+    </div>
+
+    <form
+      id="claimForm"
+      class="claim-form"
+      name="coop-naming"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      action="/name-a-coop?success#claim"
+    >
+      <input type="hidden" name="form-name" value="coop-naming">
+      <p class="bot-field"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="Jane Smith">
+        </div>
+        <div class="form-field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="jane@example.com">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+        </div>
+        <div class="form-field">
+          <label for="option">I'd Like To</label>
+          <select id="option" name="option" required>
+            <option value="Name a Coop - $500">Name a Coop, $500</option>
+            <option value="Coop and Collar - $750">Coop &amp; Collar, $750</option>
+            <option value="Collar a Hound - $300">Collar a Hound, $300</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="coop-fields" id="coopFields">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="firstChoice">First Choice</label>
+            <select id="firstChoice" name="first-choice"></select>
+          </div>
+          <div class="form-field">
+            <label for="secondChoice">Second Choice</label>
+            <select id="secondChoice" name="second-choice"></select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="coopName">Name for the Coop</label>
+          <input type="text" id="coopName" name="coop-name" placeholder="e.g. The Smith Coop">
+          <p class="form-hint">This is what goes on the plaque and the map. The Master has final approval.</p>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="creditAs">List Me As</label>
+        <input type="text" id="creditAs" name="credit-as" placeholder="Jane Smith, or Anonymous">
+        <p class="form-hint">How your name should appear on this page.</p>
+      </div>
+
+      <div class="check-row">
+        <input type="checkbox" id="agree" name="agree-to-terms" value="yes" required>
+        <label for="agree">I've read the details. Once you confirm, I'll pay within one week.</label>
+      </div>
+
+      <button type="submit" class="form-submit">Send My Request</button>
+    </form>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <!-- MAILING LIST SIGNUP -->
+  <div class="sfh-mc-wrap" style="max-width:400px; margin:0 auto 48px; text-align:center;">
+    <div style="font-family:var(--font-sans); font-size:10px; letter-spacing:0.24em; text-transform:uppercase; font-weight:600; color:var(--sfh-gold-400); margin-bottom:10px;">Stay in the Loop</div>
+    <div style="font-family:var(--font-display); font-size:24px; color:var(--sfh-cream); margin-bottom:10px; letter-spacing:0.03em;">Join Our Mailing List</div>
+    <p style="font-family:var(--font-serif); font-size:14px; color:rgba(250,246,238,0.6); margin:0 0 20px; line-height:1.6;">Hunt news, event announcements, and seasonal updates.</p>
+    <form action="https://santafehunt.us4.list-manage.com/subscribe/post?u=aaf6ca70722a337ce1f9f9c05&amp;id=9741c32bf5&amp;f_id=0043d0e7f0" method="post" target="_blank" novalidate style="display:flex; flex-direction:column; gap:8px;">
+      <input class="sfh-signup-input" type="text" name="FNAME" placeholder="First Name">
+      <input class="sfh-signup-input" type="email" name="EMAIL" placeholder="Email Address" required>
+      <div aria-hidden="true" style="position:absolute; left:-5000px;"><input type="text" name="b_aaf6ca70722a337ce1f9f9c05_9741c32bf5" tabindex="-1" value=""></div>
+      <button type="submit" style="font-family:var(--font-sans); font-size:11px; letter-spacing:0.22em; text-transform:uppercase; font-weight:600; background:var(--sfh-gold-400); color:var(--sfh-navy-900); border:none; padding:13px 28px; cursor:pointer; margin-top:4px;">Subscribe</button>
+    </form>
+  </div>
+  <div style="width:56px; height:1px; background:rgba(250,246,238,0.15); margin:0 auto 40px;"></div>
+  <div>
+    <a href="/">Welcome</a>
+    <a href="/about">About</a>
+    <a href="/hounds">Hounds</a>
+    <a href="/etiquette">Etiquette</a>
+    <a href="/join">Join</a>
+    <a href="/events">Events</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/members">Members</a>
+    <a href="https://santa-fe-hunt.myshopify.com" target="_blank" rel="noopener noreferrer">Shop</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div style="margin-top: 20px;">
+    <a href="https://www.instagram.com/santafehounds/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <span style="color: rgba(250,246,238,0.4);">·</span>
+    <a href="https://www.facebook.com/SantaFeHunt" target="_blank" rel="noopener noreferrer">Facebook</a>
+  </div>
+  <div class="site-footer-copy">&copy; 2026 Santa Fe Hunt</div>
+</footer>
+
+<script>
+  // ── Fundraiser settings: update these as coops are claimed ──
+  // To claim a coop, fill in its claimedBy with the name it now carries.
+  var COOPS = [
+    { label: 'Coop 1', where: 'Location to come', claimedBy: '' },
+    { label: 'Coop 2', where: 'Location to come', claimedBy: '' },
+    { label: 'Coop 3', where: 'Location to come', claimedBy: '' },
+    { label: 'Coop 4', where: 'Location to come', claimedBy: '' },
+    { label: 'Coop 5', where: 'Location to come', claimedBy: '' }
+  ];
+  var COLLAR_SPONSORS = [];  // names to credit, e.g. ['Jane Smith', 'Anonymous']
+
+  var openCoops = COOPS.filter(function (c) { return !c.claimedBy; });
+
+  // Coop list
+  var list = document.getElementById('coopList');
+  COOPS.forEach(function (c) {
+    var li = document.createElement('li');
+    var text = document.createElement('div');
+    var nm = document.createElement('div');
+    nm.className = 'coop-name';
+    nm.textContent = c.claimedBy || c.label;
+    var wh = document.createElement('div');
+    wh.className = 'coop-where';
+    wh.textContent = c.where;
+    text.appendChild(nm); text.appendChild(wh);
+    var st = document.createElement('div');
+    st.className = 'coop-status' + (c.claimedBy ? ' claimed' : '');
+    st.textContent = c.claimedBy ? 'Named' : 'Available';
+    li.appendChild(text); li.appendChild(st);
+    list.appendChild(li);
+  });
+
+  if (COLLAR_SPONSORS.length) {
+    document.getElementById('collarNames').textContent = COLLAR_SPONSORS.join(', ');
+    document.getElementById('collarSponsors').style.display = 'block';
+  }
+
+  // Coop choices in the form
+  var first = document.getElementById('firstChoice');
+  var second = document.getElementById('secondChoice');
+  var TBA = 'Location to come';
+  var mapped = COOPS.some(function (c) { return c.where !== TBA; });
+  if (mapped) document.getElementById('mapNote').style.display = 'none';
+  else first.add(new Option('No preference', 'No preference'));
+  openCoops.forEach(function (c) {
+    var text = c.where === TBA ? c.label : c.label + ' (' + c.where + ')';
+    first.add(new Option(text, c.label));
+    second.add(new Option(text, c.label));
+  });
+  second.add(new Option('No second choice', 'None'));
+  if (!mapped) second.value = 'None';
+  else if (openCoops.length > 1) second.selectedIndex = 1;
+
+  // Once all five are named, only the collar option remains
+  var optionSel = document.getElementById('option');
+  if (!openCoops.length) {
+    optionSel.remove(1); optionSel.remove(0);
+    document.querySelectorAll('[data-option="coop"], [data-option="both"]').forEach(function (a) {
+      a.textContent = 'All Five Named';
+      a.removeAttribute('href');
+      a.removeAttribute('data-option');
+    });
+  }
+
+  // Coop fields apply only when a coop is part of the choice
+  var coopFields = document.getElementById('coopFields');
+  var coopName = document.getElementById('coopName');
+  function syncOption() {
+    var wantsCoop = optionSel.value.indexOf('Coop') === 0 || optionSel.value.indexOf('Name a Coop') === 0;
+    coopFields.style.display = wantsCoop ? '' : 'none';
+    coopName.required = wantsCoop;
+    first.required = wantsCoop;
+    first.disabled = !wantsCoop;
+    second.disabled = !wantsCoop;
+  }
+  optionSel.addEventListener('change', syncOption);
+  syncOption();
+
+  // Option buttons preselect the form
+  var optionIndex = { coop: 0, both: 1, collar: 2 };
+  document.querySelectorAll('[data-option]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      optionSel.selectedIndex = optionIndex[a.getAttribute('data-option')];
+      syncOption();
+    });
+  });
+
+  var form = document.getElementById('claimForm');
+  if (window.location.search.includes('success')) {
+    form.style.display = 'none';
+    document.getElementById('successMessage').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
